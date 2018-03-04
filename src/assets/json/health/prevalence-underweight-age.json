@@ -56,10 +56,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Aruba",
-    "Country Code": "ABW",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Aruba",
+    "countryCode": "ABW",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -119,10 +119,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Afghanistan",
-    "Country Code": "AFG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Afghanistan",
+    "countryCode": "AFG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -182,10 +182,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Angola",
-    "Country Code": "AGO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Angola",
+    "countryCode": "AGO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -245,10 +245,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Albania",
-    "Country Code": "ALB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Albania",
+    "countryCode": "ALB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -308,10 +308,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Andorra",
-    "Country Code": "AND",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Andorra",
+    "countryCode": "AND",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -371,10 +371,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Arab World",
-    "Country Code": "ARB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Arab World",
+    "countryCode": "ARB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -434,10 +434,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "United Arab Emirates",
-    "Country Code": "ARE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "United Arab Emirates",
+    "countryCode": "ARE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -497,10 +497,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Argentina",
-    "Country Code": "ARG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Argentina",
+    "countryCode": "ARG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -560,10 +560,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Armenia",
-    "Country Code": "ARM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Armenia",
+    "countryCode": "ARM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -623,10 +623,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "American Samoa",
-    "Country Code": "ASM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "American Samoa",
+    "countryCode": "ASM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -686,10 +686,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Antigua and Barbuda",
-    "Country Code": "ATG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Antigua and Barbuda",
+    "countryCode": "ATG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -749,10 +749,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Australia",
-    "Country Code": "AUS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Australia",
+    "countryCode": "AUS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -812,10 +812,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Austria",
-    "Country Code": "AUT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Austria",
+    "countryCode": "AUT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -875,10 +875,10 @@
     "2013": 4.9,
     "2014": "",
     "2015": "",
-    "Country Name": "Azerbaijan",
-    "Country Code": "AZE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Azerbaijan",
+    "countryCode": "AZE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -938,10 +938,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Burundi",
-    "Country Code": "BDI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Burundi",
+    "countryCode": "BDI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1001,10 +1001,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Belgium",
-    "Country Code": "BEL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Belgium",
+    "countryCode": "BEL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1064,10 +1064,10 @@
     "2013": "",
     "2014": 18,
     "2015": "",
-    "Country Name": "Benin",
-    "Country Code": "BEN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Benin",
+    "countryCode": "BEN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1127,10 +1127,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Burkina Faso",
-    "Country Code": "BFA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Burkina Faso",
+    "countryCode": "BFA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1190,10 +1190,10 @@
     "2013": 31.9,
     "2014": 32.9,
     "2015": "",
-    "Country Name": "Bangladesh",
-    "Country Code": "BGD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bangladesh",
+    "countryCode": "BGD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1253,10 +1253,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bulgaria",
-    "Country Code": "BGR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bulgaria",
+    "countryCode": "BGR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1316,10 +1316,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bahrain",
-    "Country Code": "BHR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bahrain",
+    "countryCode": "BHR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1379,10 +1379,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bahamas, The",
-    "Country Code": "BHS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bahamas, The",
+    "countryCode": "BHS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1442,10 +1442,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bosnia and Herzegovina",
-    "Country Code": "BIH",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bosnia and Herzegovina",
+    "countryCode": "BIH",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1505,10 +1505,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Belarus",
-    "Country Code": "BLR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Belarus",
+    "countryCode": "BLR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1568,10 +1568,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Belize",
-    "Country Code": "BLZ",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Belize",
+    "countryCode": "BLZ",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1631,10 +1631,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bermuda",
-    "Country Code": "BMU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bermuda",
+    "countryCode": "BMU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1694,10 +1694,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bolivia",
-    "Country Code": "BOL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bolivia",
+    "countryCode": "BOL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1757,10 +1757,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Brazil",
-    "Country Code": "BRA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1820,10 +1820,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Barbados",
-    "Country Code": "BRB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Barbados",
+    "countryCode": "BRB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1883,10 +1883,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Brunei Darussalam",
-    "Country Code": "BRN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Brunei Darussalam",
+    "countryCode": "BRN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -1946,10 +1946,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bhutan",
-    "Country Code": "BTN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Bhutan",
+    "countryCode": "BTN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2009,10 +2009,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Botswana",
-    "Country Code": "BWA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Botswana",
+    "countryCode": "BWA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2072,10 +2072,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Central African Republic",
-    "Country Code": "CAF",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Central African Republic",
+    "countryCode": "CAF",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2135,10 +2135,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Canada",
-    "Country Code": "CAN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Canada",
+    "countryCode": "CAN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2198,10 +2198,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Central Europe and the Baltics",
-    "Country Code": "CEB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Central Europe and the Baltics",
+    "countryCode": "CEB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2261,10 +2261,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Switzerland",
-    "Country Code": "CHE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Switzerland",
+    "countryCode": "CHE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2324,10 +2324,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Channel Islands",
-    "Country Code": "CHI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Channel Islands",
+    "countryCode": "CHI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2387,10 +2387,10 @@
     "2013": 0.5,
     "2014": 0.5,
     "2015": "",
-    "Country Name": "Chile",
-    "Country Code": "CHL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Chile",
+    "countryCode": "CHL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2450,10 +2450,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "China",
-    "Country Code": "CHN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "China",
+    "countryCode": "CHN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2513,10 +2513,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cote d'Ivoire",
-    "Country Code": "CIV",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Cote d'Ivoire",
+    "countryCode": "CIV",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2576,10 +2576,10 @@
     "2013": "",
     "2014": 14.8,
     "2015": "",
-    "Country Name": "Cameroon",
-    "Country Code": "CMR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Cameroon",
+    "countryCode": "CMR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2639,10 +2639,10 @@
     "2013": 23.4,
     "2014": "",
     "2015": "",
-    "Country Name": "Congo, Dem. Rep.",
-    "Country Code": "COD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Congo, Dem. Rep.",
+    "countryCode": "COD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2702,10 +2702,10 @@
     "2013": "",
     "2014": "",
     "2015": 12.3,
-    "Country Name": "Congo, Rep.",
-    "Country Code": "COG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Congo, Rep.",
+    "countryCode": "COG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2765,10 +2765,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Colombia",
-    "Country Code": "COL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Colombia",
+    "countryCode": "COL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2828,10 +2828,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Comoros",
-    "Country Code": "COM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Comoros",
+    "countryCode": "COM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2891,10 +2891,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cabo Verde",
-    "Country Code": "CPV",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Cabo Verde",
+    "countryCode": "CPV",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -2954,10 +2954,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Costa Rica",
-    "Country Code": "CRI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Costa Rica",
+    "countryCode": "CRI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3017,10 +3017,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Caribbean small states",
-    "Country Code": "CSS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Caribbean small states",
+    "countryCode": "CSS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3080,10 +3080,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cuba",
-    "Country Code": "CUB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Cuba",
+    "countryCode": "CUB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3143,10 +3143,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Curacao",
-    "Country Code": "CUW",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Curacao",
+    "countryCode": "CUW",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3206,10 +3206,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cayman Islands",
-    "Country Code": "CYM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Cayman Islands",
+    "countryCode": "CYM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3269,10 +3269,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cyprus",
-    "Country Code": "CYP",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Cyprus",
+    "countryCode": "CYP",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3332,10 +3332,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Czech Republic",
-    "Country Code": "CZE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Czech Republic",
+    "countryCode": "CZE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3395,10 +3395,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Germany",
-    "Country Code": "DEU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Germany",
+    "countryCode": "DEU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3458,10 +3458,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Djibouti",
-    "Country Code": "DJI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Djibouti",
+    "countryCode": "DJI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3521,10 +3521,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Dominica",
-    "Country Code": "DMA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Dominica",
+    "countryCode": "DMA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3584,10 +3584,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Denmark",
-    "Country Code": "DNK",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Denmark",
+    "countryCode": "DNK",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3647,10 +3647,10 @@
     "2013": 4,
     "2014": "",
     "2015": "",
-    "Country Name": "Dominican Republic",
-    "Country Code": "DOM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Dominican Republic",
+    "countryCode": "DOM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3710,10 +3710,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Algeria",
-    "Country Code": "DZA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Algeria",
+    "countryCode": "DZA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3773,10 +3773,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "East Asia & Pacific (excluding high income)",
-    "Country Code": "EAP",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "East Asia & Pacific (excluding high income)",
+    "countryCode": "EAP",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3836,10 +3836,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Early-demographic dividend",
-    "Country Code": "EAR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Early-demographic dividend",
+    "countryCode": "EAR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3899,10 +3899,10 @@
     "2013": "",
     "2014": "",
     "2015": 6.3,
-    "Country Name": "East Asia & Pacific",
-    "Country Code": "EAS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "East Asia & Pacific",
+    "countryCode": "EAS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -3962,10 +3962,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Europe & Central Asia (excluding high income)",
-    "Country Code": "ECA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Europe & Central Asia (excluding high income)",
+    "countryCode": "ECA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4025,10 +4025,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Europe & Central Asia",
-    "Country Code": "ECS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Europe & Central Asia",
+    "countryCode": "ECS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4088,10 +4088,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Ecuador",
-    "Country Code": "ECU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Ecuador",
+    "countryCode": "ECU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4151,10 +4151,10 @@
     "2013": "",
     "2014": 7,
     "2015": "",
-    "Country Name": "Egypt, Arab Rep.",
-    "Country Code": "EGY",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Egypt, Arab Rep.",
+    "countryCode": "EGY",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4214,10 +4214,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Euro area",
-    "Country Code": "EMU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Euro area",
+    "countryCode": "EMU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4277,10 +4277,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Eritrea",
-    "Country Code": "ERI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Eritrea",
+    "countryCode": "ERI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4340,10 +4340,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Spain",
-    "Country Code": "ESP",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Spain",
+    "countryCode": "ESP",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4403,10 +4403,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Estonia",
-    "Country Code": "EST",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Estonia",
+    "countryCode": "EST",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4466,10 +4466,10 @@
     "2013": "",
     "2014": 25.2,
     "2015": "",
-    "Country Name": "Ethiopia",
-    "Country Code": "ETH",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Ethiopia",
+    "countryCode": "ETH",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4529,10 +4529,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "European Union",
-    "Country Code": "EUU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "European Union",
+    "countryCode": "EUU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4592,10 +4592,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Fragile and conflict affected situations",
-    "Country Code": "FCS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Fragile and conflict affected situations",
+    "countryCode": "FCS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4655,10 +4655,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Finland",
-    "Country Code": "FIN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Finland",
+    "countryCode": "FIN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4718,10 +4718,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Fiji",
-    "Country Code": "FJI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Fiji",
+    "countryCode": "FJI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4781,10 +4781,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "France",
-    "Country Code": "FRA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "France",
+    "countryCode": "FRA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4844,10 +4844,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Faroe Islands",
-    "Country Code": "FRO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Faroe Islands",
+    "countryCode": "FRO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4907,10 +4907,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Micronesia, Fed. Sts.",
-    "Country Code": "FSM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Micronesia, Fed. Sts.",
+    "countryCode": "FSM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -4970,10 +4970,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Gabon",
-    "Country Code": "GAB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Gabon",
+    "countryCode": "GAB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5033,10 +5033,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "United Kingdom",
-    "Country Code": "GBR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "United Kingdom",
+    "countryCode": "GBR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5096,10 +5096,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Georgia",
-    "Country Code": "GEO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Georgia",
+    "countryCode": "GEO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5159,10 +5159,10 @@
     "2013": "",
     "2014": 11.2,
     "2015": "",
-    "Country Name": "Ghana",
-    "Country Code": "GHA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Ghana",
+    "countryCode": "GHA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5222,10 +5222,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Gibraltar",
-    "Country Code": "GIB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Gibraltar",
+    "countryCode": "GIB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5285,10 +5285,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Guinea",
-    "Country Code": "GIN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Guinea",
+    "countryCode": "GIN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5348,10 +5348,10 @@
     "2013": 16.4,
     "2014": "",
     "2015": "",
-    "Country Name": "Gambia, The",
-    "Country Code": "GMB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Gambia, The",
+    "countryCode": "GMB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5411,10 +5411,10 @@
     "2013": "",
     "2014": 17,
     "2015": "",
-    "Country Name": "Guinea-Bissau",
-    "Country Code": "GNB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Guinea-Bissau",
+    "countryCode": "GNB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5474,10 +5474,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Equatorial Guinea",
-    "Country Code": "GNQ",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Equatorial Guinea",
+    "countryCode": "GNQ",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5537,10 +5537,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Greece",
-    "Country Code": "GRC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Greece",
+    "countryCode": "GRC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5600,10 +5600,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Grenada",
-    "Country Code": "GRD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Grenada",
+    "countryCode": "GRD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5663,10 +5663,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Greenland",
-    "Country Code": "GRL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Greenland",
+    "countryCode": "GRL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5726,10 +5726,10 @@
     "2013": "",
     "2014": "",
     "2015": 12.6,
-    "Country Name": "Guatemala",
-    "Country Code": "GTM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Guatemala",
+    "countryCode": "GTM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5789,10 +5789,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Guam",
-    "Country Code": "GUM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Guam",
+    "countryCode": "GUM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5852,10 +5852,10 @@
     "2013": "",
     "2014": 8.5,
     "2015": "",
-    "Country Name": "Guyana",
-    "Country Code": "GUY",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Guyana",
+    "countryCode": "GUY",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5915,10 +5915,10 @@
     "2013": "",
     "2014": "",
     "2015": 1,
-    "Country Name": "High income",
-    "Country Code": "HIC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "High income",
+    "countryCode": "HIC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -5978,10 +5978,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Hong Kong SAR, China",
-    "Country Code": "HKG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Hong Kong SAR, China",
+    "countryCode": "HKG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6041,10 +6041,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Honduras",
-    "Country Code": "HND",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Honduras",
+    "countryCode": "HND",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6104,10 +6104,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Heavily indebted poor countries (HIPC)",
-    "Country Code": "HPC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Heavily indebted poor countries (HIPC)",
+    "countryCode": "HPC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6167,10 +6167,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Croatia",
-    "Country Code": "HRV",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Croatia",
+    "countryCode": "HRV",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6230,10 +6230,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Haiti",
-    "Country Code": "HTI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Haiti",
+    "countryCode": "HTI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6293,10 +6293,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Hungary",
-    "Country Code": "HUN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Hungary",
+    "countryCode": "HUN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6356,10 +6356,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IBRD only",
-    "Country Code": "IBD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "IBRD only",
+    "countryCode": "IBD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6419,10 +6419,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IDA & IBRD total",
-    "Country Code": "IBT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "IDA & IBRD total",
+    "countryCode": "IBT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6482,10 +6482,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IDA total",
-    "Country Code": "IDA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "IDA total",
+    "countryCode": "IDA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6545,10 +6545,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IDA blend",
-    "Country Code": "IDB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "IDA blend",
+    "countryCode": "IDB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6608,10 +6608,10 @@
     "2013": 19.9,
     "2014": "",
     "2015": "",
-    "Country Name": "Indonesia",
-    "Country Code": "IDN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Indonesia",
+    "countryCode": "IDN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6671,10 +6671,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IDA only",
-    "Country Code": "IDX",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "IDA only",
+    "countryCode": "IDX",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6734,10 +6734,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Isle of Man",
-    "Country Code": "IMN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Isle of Man",
+    "countryCode": "IMN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6797,10 +6797,10 @@
     "2013": "",
     "2014": 29.4,
     "2015": "",
-    "Country Name": "India",
-    "Country Code": "IND",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "India",
+    "countryCode": "IND",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6860,10 +6860,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Not classified",
-    "Country Code": "INX",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Not classified",
+    "countryCode": "INX",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6923,10 +6923,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Ireland",
-    "Country Code": "IRL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Ireland",
+    "countryCode": "IRL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -6986,10 +6986,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Iran, Islamic Rep.",
-    "Country Code": "IRN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Iran, Islamic Rep.",
+    "countryCode": "IRN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7049,10 +7049,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Iraq",
-    "Country Code": "IRQ",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Iraq",
+    "countryCode": "IRQ",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7112,10 +7112,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Iceland",
-    "Country Code": "ISL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Iceland",
+    "countryCode": "ISL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7175,10 +7175,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Israel",
-    "Country Code": "ISR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Israel",
+    "countryCode": "ISR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7238,10 +7238,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Italy",
-    "Country Code": "ITA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Italy",
+    "countryCode": "ITA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7301,10 +7301,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Jamaica",
-    "Country Code": "JAM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Jamaica",
+    "countryCode": "JAM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7364,10 +7364,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Jordan",
-    "Country Code": "JOR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Jordan",
+    "countryCode": "JOR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7427,10 +7427,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Japan",
-    "Country Code": "JPN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Japan",
+    "countryCode": "JPN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7490,10 +7490,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Kazakhstan",
-    "Country Code": "KAZ",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Kazakhstan",
+    "countryCode": "KAZ",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7553,10 +7553,10 @@
     "2013": "",
     "2014": 11,
     "2015": "",
-    "Country Name": "Kenya",
-    "Country Code": "KEN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Kenya",
+    "countryCode": "KEN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7616,10 +7616,10 @@
     "2013": "",
     "2014": 2.8,
     "2015": "",
-    "Country Name": "Kyrgyz Republic",
-    "Country Code": "KGZ",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Kyrgyz Republic",
+    "countryCode": "KGZ",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7679,10 +7679,10 @@
     "2013": "",
     "2014": 24.2,
     "2015": "",
-    "Country Name": "Cambodia",
-    "Country Code": "KHM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Cambodia",
+    "countryCode": "KHM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7742,10 +7742,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Kiribati",
-    "Country Code": "KIR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Kiribati",
+    "countryCode": "KIR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7805,10 +7805,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Kitts and Nevis",
-    "Country Code": "KNA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "St. Kitts and Nevis",
+    "countryCode": "KNA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7868,10 +7868,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Korea, Rep.",
-    "Country Code": "KOR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Korea, Rep.",
+    "countryCode": "KOR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7931,10 +7931,10 @@
     "2013": 3.1,
     "2014": 3,
     "2015": "",
-    "Country Name": "Kuwait",
-    "Country Code": "KWT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Kuwait",
+    "countryCode": "KWT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -7994,10 +7994,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Latin America & Caribbean (excluding high income)",
-    "Country Code": "LAC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Latin America & Caribbean (excluding high income)",
+    "countryCode": "LAC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8057,10 +8057,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Lao PDR",
-    "Country Code": "LAO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Lao PDR",
+    "countryCode": "LAO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8120,10 +8120,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Lebanon",
-    "Country Code": "LBN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Lebanon",
+    "countryCode": "LBN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8183,10 +8183,10 @@
     "2013": 15.3,
     "2014": "",
     "2015": "",
-    "Country Name": "Liberia",
-    "Country Code": "LBR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Liberia",
+    "countryCode": "LBR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8246,10 +8246,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Libya",
-    "Country Code": "LBY",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Libya",
+    "countryCode": "LBY",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8309,10 +8309,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Lucia",
-    "Country Code": "LCA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "St. Lucia",
+    "countryCode": "LCA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8372,10 +8372,10 @@
     "2013": "",
     "2014": "",
     "2015": 3,
-    "Country Name": "Latin America & Caribbean",
-    "Country Code": "LCN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Latin America & Caribbean",
+    "countryCode": "LCN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8435,10 +8435,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Least developed countries: UN classification",
-    "Country Code": "LDC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Least developed countries: UN classification",
+    "countryCode": "LDC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8498,10 +8498,10 @@
     "2013": "",
     "2014": "",
     "2015": 20.2,
-    "Country Name": "Low income",
-    "Country Code": "LIC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Low income",
+    "countryCode": "LIC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8561,10 +8561,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Liechtenstein",
-    "Country Code": "LIE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Liechtenstein",
+    "countryCode": "LIE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8624,10 +8624,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sri Lanka",
-    "Country Code": "LKA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sri Lanka",
+    "countryCode": "LKA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8687,10 +8687,10 @@
     "2013": "",
     "2014": "",
     "2015": 22.1,
-    "Country Name": "Lower middle income",
-    "Country Code": "LMC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Lower middle income",
+    "countryCode": "LMC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8750,10 +8750,10 @@
     "2013": "",
     "2014": "",
     "2015": 15.7,
-    "Country Name": "Low & middle income",
-    "Country Code": "LMY",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Low & middle income",
+    "countryCode": "LMY",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8813,10 +8813,10 @@
     "2013": "",
     "2014": 10.3,
     "2015": "",
-    "Country Name": "Lesotho",
-    "Country Code": "LSO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Lesotho",
+    "countryCode": "LSO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8876,10 +8876,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Late-demographic dividend",
-    "Country Code": "LTE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Late-demographic dividend",
+    "countryCode": "LTE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -8939,10 +8939,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Lithuania",
-    "Country Code": "LTU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Lithuania",
+    "countryCode": "LTU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9002,10 +9002,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Luxembourg",
-    "Country Code": "LUX",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Luxembourg",
+    "countryCode": "LUX",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9065,10 +9065,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Latvia",
-    "Country Code": "LVA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Latvia",
+    "countryCode": "LVA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9128,10 +9128,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Macao SAR, China",
-    "Country Code": "MAC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Macao SAR, China",
+    "countryCode": "MAC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9191,10 +9191,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Martin (French part)",
-    "Country Code": "MAF",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "St. Martin (French part)",
+    "countryCode": "MAF",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9254,10 +9254,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Morocco",
-    "Country Code": "MAR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Morocco",
+    "countryCode": "MAR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9317,10 +9317,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Monaco",
-    "Country Code": "MCO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Monaco",
+    "countryCode": "MCO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9380,10 +9380,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Moldova",
-    "Country Code": "MDA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Moldova",
+    "countryCode": "MDA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9443,10 +9443,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Madagascar",
-    "Country Code": "MDG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Madagascar",
+    "countryCode": "MDG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9506,10 +9506,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Maldives",
-    "Country Code": "MDV",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Maldives",
+    "countryCode": "MDV",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9569,10 +9569,10 @@
     "2013": "",
     "2014": "",
     "2015": 5.5,
-    "Country Name": "Middle East & North Africa",
-    "Country Code": "MEA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Middle East & North Africa",
+    "countryCode": "MEA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9632,10 +9632,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mexico",
-    "Country Code": "MEX",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Mexico",
+    "countryCode": "MEX",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9695,10 +9695,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Marshall Islands",
-    "Country Code": "MHL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Marshall Islands",
+    "countryCode": "MHL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9758,10 +9758,10 @@
     "2013": "",
     "2014": "",
     "2015": 14.8,
-    "Country Name": "Middle income",
-    "Country Code": "MIC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Middle income",
+    "countryCode": "MIC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9821,10 +9821,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Macedonia, FYR",
-    "Country Code": "MKD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Macedonia, FYR",
+    "countryCode": "MKD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9884,10 +9884,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mali",
-    "Country Code": "MLI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Mali",
+    "countryCode": "MLI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -9947,10 +9947,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Malta",
-    "Country Code": "MLT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Malta",
+    "countryCode": "MLT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10010,10 +10010,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Myanmar",
-    "Country Code": "MMR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Myanmar",
+    "countryCode": "MMR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10073,10 +10073,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Middle East & North Africa (excluding high income)",
-    "Country Code": "MNA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Middle East & North Africa (excluding high income)",
+    "countryCode": "MNA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10136,10 +10136,10 @@
     "2013": 1,
     "2014": "",
     "2015": "",
-    "Country Name": "Montenegro",
-    "Country Code": "MNE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Montenegro",
+    "countryCode": "MNE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10199,10 +10199,10 @@
     "2013": 1.6,
     "2014": "",
     "2015": "",
-    "Country Name": "Mongolia",
-    "Country Code": "MNG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Mongolia",
+    "countryCode": "MNG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10262,10 +10262,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Northern Mariana Islands",
-    "Country Code": "MNP",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Northern Mariana Islands",
+    "countryCode": "MNP",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10325,10 +10325,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mozambique",
-    "Country Code": "MOZ",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Mozambique",
+    "countryCode": "MOZ",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10388,10 +10388,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mauritania",
-    "Country Code": "MRT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Mauritania",
+    "countryCode": "MRT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10451,10 +10451,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mauritius",
-    "Country Code": "MUS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Mauritius",
+    "countryCode": "MUS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10514,10 +10514,10 @@
     "2013": "",
     "2014": 16.7,
     "2015": "",
-    "Country Name": "Malawi",
-    "Country Code": "MWI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Malawi",
+    "countryCode": "MWI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10577,10 +10577,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Malaysia",
-    "Country Code": "MYS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Malaysia",
+    "countryCode": "MYS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10640,10 +10640,10 @@
     "2013": "",
     "2014": "",
     "2015": 0.7,
-    "Country Name": "North America",
-    "Country Code": "NAC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "North America",
+    "countryCode": "NAC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10703,10 +10703,10 @@
     "2013": 13.2,
     "2014": "",
     "2015": "",
-    "Country Name": "Namibia",
-    "Country Code": "NAM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Namibia",
+    "countryCode": "NAM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10766,10 +10766,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "New Caledonia",
-    "Country Code": "NCL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "New Caledonia",
+    "countryCode": "NCL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10829,10 +10829,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Niger",
-    "Country Code": "NER",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Niger",
+    "countryCode": "NER",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10892,10 +10892,10 @@
     "2013": 31,
     "2014": 19.8,
     "2015": "",
-    "Country Name": "Nigeria",
-    "Country Code": "NGA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Nigeria",
+    "countryCode": "NGA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -10955,10 +10955,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Nicaragua",
-    "Country Code": "NIC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Nicaragua",
+    "countryCode": "NIC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11018,10 +11018,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Netherlands",
-    "Country Code": "NLD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Netherlands",
+    "countryCode": "NLD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11081,10 +11081,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Norway",
-    "Country Code": "NOR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Norway",
+    "countryCode": "NOR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11144,10 +11144,10 @@
     "2013": "",
     "2014": 30.1,
     "2015": "",
-    "Country Name": "Nepal",
-    "Country Code": "NPL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Nepal",
+    "countryCode": "NPL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11207,10 +11207,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Nauru",
-    "Country Code": "NRU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Nauru",
+    "countryCode": "NRU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11270,10 +11270,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "New Zealand",
-    "Country Code": "NZL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "New Zealand",
+    "countryCode": "NZL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11333,10 +11333,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "OECD members",
-    "Country Code": "OED",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "OECD members",
+    "countryCode": "OED",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11396,10 +11396,10 @@
     "2013": "",
     "2014": 9.7,
     "2015": "",
-    "Country Name": "Oman",
-    "Country Code": "OMN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Oman",
+    "countryCode": "OMN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11459,10 +11459,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Other small states",
-    "Country Code": "OSS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Other small states",
+    "countryCode": "OSS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11522,10 +11522,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Pakistan",
-    "Country Code": "PAK",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Pakistan",
+    "countryCode": "PAK",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11585,10 +11585,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Panama",
-    "Country Code": "PAN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Panama",
+    "countryCode": "PAN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11648,10 +11648,10 @@
     "2013": "",
     "2014": 3.1,
     "2015": "",
-    "Country Name": "Peru",
-    "Country Code": "PER",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Peru",
+    "countryCode": "PER",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11711,10 +11711,10 @@
     "2013": 19.9,
     "2014": "",
     "2015": "",
-    "Country Name": "Philippines",
-    "Country Code": "PHL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Philippines",
+    "countryCode": "PHL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11774,10 +11774,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Palau",
-    "Country Code": "PLW",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Palau",
+    "countryCode": "PLW",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11837,10 +11837,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Papua New Guinea",
-    "Country Code": "PNG",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Papua New Guinea",
+    "countryCode": "PNG",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11900,10 +11900,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Poland",
-    "Country Code": "POL",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Poland",
+    "countryCode": "POL",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -11963,10 +11963,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Pre-demographic dividend",
-    "Country Code": "PRE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Pre-demographic dividend",
+    "countryCode": "PRE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12026,10 +12026,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Puerto Rico",
-    "Country Code": "PRI",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Puerto Rico",
+    "countryCode": "PRI",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12089,10 +12089,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Korea, Dem. People�s Rep.",
-    "Country Code": "PRK",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Korea, Dem. People�s Rep.",
+    "countryCode": "PRK",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12152,10 +12152,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Portugal",
-    "Country Code": "PRT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Portugal",
+    "countryCode": "PRT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12215,10 +12215,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Paraguay",
-    "Country Code": "PRY",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Paraguay",
+    "countryCode": "PRY",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12278,10 +12278,10 @@
     "2013": "",
     "2014": 1.4,
     "2015": "",
-    "Country Name": "West Bank and Gaza",
-    "Country Code": "PSE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "West Bank and Gaza",
+    "countryCode": "PSE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12341,10 +12341,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Pacific island small states",
-    "Country Code": "PSS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Pacific island small states",
+    "countryCode": "PSS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12404,10 +12404,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Post-demographic dividend",
-    "Country Code": "PST",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Post-demographic dividend",
+    "countryCode": "PST",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12467,10 +12467,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "French Polynesia",
-    "Country Code": "PYF",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "French Polynesia",
+    "countryCode": "PYF",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12530,10 +12530,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Qatar",
-    "Country Code": "QAT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Qatar",
+    "countryCode": "QAT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12593,10 +12593,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Romania",
-    "Country Code": "ROU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Romania",
+    "countryCode": "ROU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12656,10 +12656,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Russian Federation",
-    "Country Code": "RUS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Russian Federation",
+    "countryCode": "RUS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12719,10 +12719,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Rwanda",
-    "Country Code": "RWA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Rwanda",
+    "countryCode": "RWA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12782,10 +12782,10 @@
     "2013": "",
     "2014": "",
     "2015": 30.6,
-    "Country Name": "South Asia",
-    "Country Code": "SAS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "South Asia",
+    "countryCode": "SAS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12845,10 +12845,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Saudi Arabia",
-    "Country Code": "SAU",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Saudi Arabia",
+    "countryCode": "SAU",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12908,10 +12908,10 @@
     "2013": "",
     "2014": 33,
     "2015": "",
-    "Country Name": "Sudan",
-    "Country Code": "SDN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sudan",
+    "countryCode": "SDN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -12971,10 +12971,10 @@
     "2013": 16.8,
     "2014": 12.8,
     "2015": "",
-    "Country Name": "Senegal",
-    "Country Code": "SEN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Senegal",
+    "countryCode": "SEN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13034,10 +13034,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Singapore",
-    "Country Code": "SGP",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Singapore",
+    "countryCode": "SGP",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13097,10 +13097,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Solomon Islands",
-    "Country Code": "SLB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Solomon Islands",
+    "countryCode": "SLB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13160,10 +13160,10 @@
     "2013": 18.1,
     "2014": "",
     "2015": "",
-    "Country Name": "Sierra Leone",
-    "Country Code": "SLE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sierra Leone",
+    "countryCode": "SLE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13223,10 +13223,10 @@
     "2013": "",
     "2014": 5,
     "2015": "",
-    "Country Name": "El Salvador",
-    "Country Code": "SLV",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "El Salvador",
+    "countryCode": "SLV",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13286,10 +13286,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "San Marino",
-    "Country Code": "SMR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "San Marino",
+    "countryCode": "SMR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13349,10 +13349,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Somalia",
-    "Country Code": "SOM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Somalia",
+    "countryCode": "SOM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13412,10 +13412,10 @@
     "2013": "",
     "2014": 1.8,
     "2015": "",
-    "Country Name": "Serbia",
-    "Country Code": "SRB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Serbia",
+    "countryCode": "SRB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13475,10 +13475,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sub-Saharan Africa (excluding high income)",
-    "Country Code": "SSA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sub-Saharan Africa (excluding high income)",
+    "countryCode": "SSA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13538,10 +13538,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "South Sudan",
-    "Country Code": "SSD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "South Sudan",
+    "countryCode": "SSD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13601,10 +13601,10 @@
     "2013": "",
     "2014": "",
     "2015": 18.9,
-    "Country Name": "Sub-Saharan Africa",
-    "Country Code": "SSF",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sub-Saharan Africa",
+    "countryCode": "SSF",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13664,10 +13664,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Small states",
-    "Country Code": "SST",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Small states",
+    "countryCode": "SST",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13727,10 +13727,10 @@
     "2013": "",
     "2014": 8.8,
     "2015": "",
-    "Country Name": "Sao Tome and Principe",
-    "Country Code": "STP",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sao Tome and Principe",
+    "countryCode": "STP",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13790,10 +13790,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Suriname",
-    "Country Code": "SUR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Suriname",
+    "countryCode": "SUR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13853,10 +13853,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Slovak Republic",
-    "Country Code": "SVK",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Slovak Republic",
+    "countryCode": "SVK",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13916,10 +13916,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Slovenia",
-    "Country Code": "SVN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Slovenia",
+    "countryCode": "SVN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -13979,10 +13979,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sweden",
-    "Country Code": "SWE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sweden",
+    "countryCode": "SWE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14042,10 +14042,10 @@
     "2013": "",
     "2014": 5.8,
     "2015": "",
-    "Country Name": "Swaziland",
-    "Country Code": "SWZ",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Swaziland",
+    "countryCode": "SWZ",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14105,10 +14105,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sint Maarten (Dutch part)",
-    "Country Code": "SXM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sint Maarten (Dutch part)",
+    "countryCode": "SXM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14168,10 +14168,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Seychelles",
-    "Country Code": "SYC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Seychelles",
+    "countryCode": "SYC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14231,10 +14231,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Syrian Arab Republic",
-    "Country Code": "SYR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Syrian Arab Republic",
+    "countryCode": "SYR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14294,10 +14294,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Turks and Caicos Islands",
-    "Country Code": "TCA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Turks and Caicos Islands",
+    "countryCode": "TCA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14357,10 +14357,10 @@
     "2013": "",
     "2014": "",
     "2015": 28.8,
-    "Country Name": "Chad",
-    "Country Code": "TCD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Chad",
+    "countryCode": "TCD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14420,10 +14420,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "East Asia & Pacific (IDA & IBRD countries)",
-    "Country Code": "TEA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "East Asia & Pacific (IDA & IBRD countries)",
+    "countryCode": "TEA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14483,10 +14483,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Europe & Central Asia (IDA & IBRD countries)",
-    "Country Code": "TEC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Europe & Central Asia (IDA & IBRD countries)",
+    "countryCode": "TEC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14546,10 +14546,10 @@
     "2013": "",
     "2014": 16.2,
     "2015": "",
-    "Country Name": "Togo",
-    "Country Code": "TGO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Togo",
+    "countryCode": "TGO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14609,10 +14609,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Thailand",
-    "Country Code": "THA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Thailand",
+    "countryCode": "THA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14672,10 +14672,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tajikistan",
-    "Country Code": "TJK",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Tajikistan",
+    "countryCode": "TJK",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14735,10 +14735,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Turkmenistan",
-    "Country Code": "TKM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Turkmenistan",
+    "countryCode": "TKM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14798,10 +14798,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Latin America & the Caribbean (IDA & IBRD countries)",
-    "Country Code": "TLA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Latin America & the Caribbean (IDA & IBRD countries)",
+    "countryCode": "TLA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14861,10 +14861,10 @@
     "2013": 37.7,
     "2014": "",
     "2015": "",
-    "Country Name": "Timor-Leste",
-    "Country Code": "TLS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Timor-Leste",
+    "countryCode": "TLS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14924,10 +14924,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Middle East & North Africa (IDA & IBRD countries)",
-    "Country Code": "TMN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Middle East & North Africa (IDA & IBRD countries)",
+    "countryCode": "TMN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -14987,10 +14987,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tonga",
-    "Country Code": "TON",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Tonga",
+    "countryCode": "TON",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15050,10 +15050,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "South Asia (IDA & IBRD)",
-    "Country Code": "TSA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "South Asia (IDA & IBRD)",
+    "countryCode": "TSA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15113,10 +15113,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sub-Saharan Africa (IDA & IBRD countries)",
-    "Country Code": "TSS",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Sub-Saharan Africa (IDA & IBRD countries)",
+    "countryCode": "TSS",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15176,10 +15176,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Trinidad and Tobago",
-    "Country Code": "TTO",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Trinidad and Tobago",
+    "countryCode": "TTO",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15239,10 +15239,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tunisia",
-    "Country Code": "TUN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Tunisia",
+    "countryCode": "TUN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15302,10 +15302,10 @@
     "2013": 1.9,
     "2014": "",
     "2015": "",
-    "Country Name": "Turkey",
-    "Country Code": "TUR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Turkey",
+    "countryCode": "TUR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15365,10 +15365,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tuvalu",
-    "Country Code": "TUV",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Tuvalu",
+    "countryCode": "TUV",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15428,10 +15428,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tanzania",
-    "Country Code": "TZA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Tanzania",
+    "countryCode": "TZA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15491,10 +15491,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Uganda",
-    "Country Code": "UGA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Uganda",
+    "countryCode": "UGA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15554,10 +15554,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Ukraine",
-    "Country Code": "UKR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Ukraine",
+    "countryCode": "UKR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15617,10 +15617,10 @@
     "2013": "",
     "2014": "",
     "2015": 2.4,
-    "Country Name": "Upper middle income",
-    "Country Code": "UMC",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Upper middle income",
+    "countryCode": "UMC",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15680,10 +15680,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Uruguay",
-    "Country Code": "URY",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Uruguay",
+    "countryCode": "URY",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15743,10 +15743,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "United States",
-    "Country Code": "USA",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "United States",
+    "countryCode": "USA",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15806,10 +15806,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Uzbekistan",
-    "Country Code": "UZB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Uzbekistan",
+    "countryCode": "UZB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15869,10 +15869,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Vincent and the Grenadines",
-    "Country Code": "VCT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "St. Vincent and the Grenadines",
+    "countryCode": "VCT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15932,10 +15932,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Venezuela, RB",
-    "Country Code": "VEN",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Venezuela, RB",
+    "countryCode": "VEN",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -15995,10 +15995,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "British Virgin Islands",
-    "Country Code": "VGB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "British Virgin Islands",
+    "countryCode": "VGB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16058,10 +16058,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Virgin Islands (U.S.)",
-    "Country Code": "VIR",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Virgin Islands (U.S.)",
+    "countryCode": "VIR",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16121,10 +16121,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Vietnam",
-    "Country Code": "VNM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Vietnam",
+    "countryCode": "VNM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16184,10 +16184,10 @@
     "2013": 10.7,
     "2014": "",
     "2015": "",
-    "Country Name": "Vanuatu",
-    "Country Code": "VUT",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Vanuatu",
+    "countryCode": "VUT",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16247,10 +16247,10 @@
     "2013": "",
     "2014": "",
     "2015": 14.4,
-    "Country Name": "World",
-    "Country Code": "WLD",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "World",
+    "countryCode": "WLD",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16310,10 +16310,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Samoa",
-    "Country Code": "WSM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Samoa",
+    "countryCode": "WSM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16373,10 +16373,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Kosovo",
-    "Country Code": "XKX",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Kosovo",
+    "countryCode": "XKX",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16436,10 +16436,10 @@
     "2013": 39.9,
     "2014": "",
     "2015": "",
-    "Country Name": "Yemen, Rep.",
-    "Country Code": "YEM",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Yemen, Rep.",
+    "countryCode": "YEM",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16499,10 +16499,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "South Africa",
-    "Country Code": "ZAF",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "South Africa",
+    "countryCode": "ZAF",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16562,10 +16562,10 @@
     "2013": 14.8,
     "2014": "",
     "2015": "",
-    "Country Name": "Zambia",
-    "Country Code": "ZMB",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Zambia",
+    "countryCode": "ZMB",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   },
   {
@@ -16625,10 +16625,10 @@
     "2013": "",
     "2014": 11.2,
     "2015": "",
-    "Country Name": "Zimbabwe",
-    "Country Code": "ZWE",
-    "Indicator Name": "Prevalence of underweight, weight for age (% of children under 5)",
-    "Indicator Code": "SH.STA.MALN.ZS",
+    "countryName": "Zimbabwe",
+    "countryCode": "ZWE",
+    "indicatorName": "Prevalence of underweight, weight for age (% of children under 5)",
+    "indicatorCode": "SH.STA.MALN.ZS",
     "": ""
   }
 ]

@@ -56,10 +56,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Aruba",
-    "Country Code": "ABW",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Aruba",
+    "countryCode": "ABW",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -119,10 +119,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Afghanistan",
-    "Country Code": "AFG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Afghanistan",
+    "countryCode": "AFG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -182,10 +182,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Angola",
-    "Country Code": "AGO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Angola",
+    "countryCode": "AGO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -245,10 +245,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Albania",
-    "Country Code": "ALB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Albania",
+    "countryCode": "ALB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -308,10 +308,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Andorra",
-    "Country Code": "AND",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Andorra",
+    "countryCode": "AND",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -371,10 +371,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Arab World",
-    "Country Code": "ARB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Arab World",
+    "countryCode": "ARB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -434,10 +434,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "United Arab Emirates",
-    "Country Code": "ARE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "United Arab Emirates",
+    "countryCode": "ARE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -497,10 +497,10 @@
     "2013": 1.8,
     "2014": 1.7,
     "2015": "",
-    "Country Name": "Argentina",
-    "Country Code": "ARG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Argentina",
+    "countryCode": "ARG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -560,10 +560,10 @@
     "2013": 2.4,
     "2014": 2.3,
     "2015": 1.9,
-    "Country Name": "Armenia",
-    "Country Code": "ARM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Armenia",
+    "countryCode": "ARM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -623,10 +623,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "American Samoa",
-    "Country Code": "ASM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "American Samoa",
+    "countryCode": "ASM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -686,10 +686,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Antigua and Barbuda",
-    "Country Code": "ATG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Antigua and Barbuda",
+    "countryCode": "ATG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -749,10 +749,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Australia",
-    "Country Code": "AUS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Australia",
+    "countryCode": "AUS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -812,10 +812,10 @@
     "2013": 0.3,
     "2014": 0.2,
     "2015": "",
-    "Country Name": "Austria",
-    "Country Code": "AUT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Austria",
+    "countryCode": "AUT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -875,10 +875,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Azerbaijan",
-    "Country Code": "AZE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Azerbaijan",
+    "countryCode": "AZE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -938,10 +938,10 @@
     "2013": 73.7,
     "2014": "",
     "2015": "",
-    "Country Name": "Burundi",
-    "Country Code": "BDI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Burundi",
+    "countryCode": "BDI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1001,10 +1001,10 @@
     "2013": 0.3,
     "2014": 0,
     "2015": "",
-    "Country Name": "Belgium",
-    "Country Code": "BEL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Belgium",
+    "countryCode": "BEL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1064,10 +1064,10 @@
     "2013": "",
     "2014": "",
     "2015": 49.5,
-    "Country Name": "Benin",
-    "Country Code": "BEN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Benin",
+    "countryCode": "BEN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1127,10 +1127,10 @@
     "2013": "",
     "2014": 43.7,
     "2015": "",
-    "Country Name": "Burkina Faso",
-    "Country Code": "BFA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Burkina Faso",
+    "countryCode": "BFA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1190,10 +1190,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bangladesh",
-    "Country Code": "BGD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bangladesh",
+    "countryCode": "BGD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1253,10 +1253,10 @@
     "2013": 1.7,
     "2014": 1.5,
     "2015": "",
-    "Country Name": "Bulgaria",
-    "Country Code": "BGR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bulgaria",
+    "countryCode": "BGR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1316,10 +1316,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bahrain",
-    "Country Code": "BHR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bahrain",
+    "countryCode": "BHR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1379,10 +1379,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bahamas, The",
-    "Country Code": "BHS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bahamas, The",
+    "countryCode": "BHS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1442,10 +1442,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bosnia and Herzegovina",
-    "Country Code": "BIH",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bosnia and Herzegovina",
+    "countryCode": "BIH",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1505,10 +1505,10 @@
     "2013": 0,
     "2014": 0,
     "2015": 0,
-    "Country Name": "Belarus",
-    "Country Code": "BLR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Belarus",
+    "countryCode": "BLR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1568,10 +1568,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Belize",
-    "Country Code": "BLZ",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Belize",
+    "countryCode": "BLZ",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1631,10 +1631,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bermuda",
-    "Country Code": "BMU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bermuda",
+    "countryCode": "BMU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1694,10 +1694,10 @@
     "2013": 7.7,
     "2014": 6.8,
     "2015": 7.1,
-    "Country Name": "Bolivia",
-    "Country Code": "BOL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bolivia",
+    "countryCode": "BOL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1757,10 +1757,10 @@
     "2013": 4.9,
     "2014": 3.7,
     "2015": 4.3,
-    "Country Name": "Brazil",
-    "Country Code": "BRA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1820,10 +1820,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Barbados",
-    "Country Code": "BRB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Barbados",
+    "countryCode": "BRB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1883,10 +1883,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Brunei Darussalam",
-    "Country Code": "BRN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Brunei Darussalam",
+    "countryCode": "BRN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -1946,10 +1946,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Bhutan",
-    "Country Code": "BTN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Bhutan",
+    "countryCode": "BTN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2009,10 +2009,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Botswana",
-    "Country Code": "BWA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Botswana",
+    "countryCode": "BWA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2072,10 +2072,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Central African Republic",
-    "Country Code": "CAF",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Central African Republic",
+    "countryCode": "CAF",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2135,10 +2135,10 @@
     "2013": 0.3,
     "2014": "",
     "2015": "",
-    "Country Name": "Canada",
-    "Country Code": "CAN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Canada",
+    "countryCode": "CAN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2198,10 +2198,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Central Europe and the Baltics",
-    "Country Code": "CEB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Central Europe and the Baltics",
+    "countryCode": "CEB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2261,10 +2261,10 @@
     "2013": 0,
     "2014": "",
     "2015": "",
-    "Country Name": "Switzerland",
-    "Country Code": "CHE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Switzerland",
+    "countryCode": "CHE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2324,10 +2324,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Channel Islands",
-    "Country Code": "CHI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Channel Islands",
+    "countryCode": "CHI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2387,10 +2387,10 @@
     "2013": 0.9,
     "2014": "",
     "2015": 1.3,
-    "Country Name": "Chile",
-    "Country Code": "CHL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Chile",
+    "countryCode": "CHL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2450,10 +2450,10 @@
     "2013": 1.9,
     "2014": "",
     "2015": "",
-    "Country Name": "China",
-    "Country Code": "CHN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "China",
+    "countryCode": "CHN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2513,10 +2513,10 @@
     "2013": "",
     "2014": "",
     "2015": 27.9,
-    "Country Name": "Cote d'Ivoire",
-    "Country Code": "CIV",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Cote d'Ivoire",
+    "countryCode": "CIV",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2576,10 +2576,10 @@
     "2013": "",
     "2014": 24,
     "2015": "",
-    "Country Name": "Cameroon",
-    "Country Code": "CMR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Cameroon",
+    "countryCode": "CMR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2639,10 +2639,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Congo, Dem. Rep.",
-    "Country Code": "COD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Congo, Dem. Rep.",
+    "countryCode": "COD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2702,10 +2702,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Congo, Rep.",
-    "Country Code": "COG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Congo, Rep.",
+    "countryCode": "COG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2765,10 +2765,10 @@
     "2013": 6.1,
     "2014": 5.7,
     "2015": 5.5,
-    "Country Name": "Colombia",
-    "Country Code": "COL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Colombia",
+    "countryCode": "COL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2828,10 +2828,10 @@
     "2013": 17.7,
     "2014": "",
     "2015": "",
-    "Country Name": "Comoros",
-    "Country Code": "COM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Comoros",
+    "countryCode": "COM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2891,10 +2891,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cabo Verde",
-    "Country Code": "CPV",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Cabo Verde",
+    "countryCode": "CPV",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -2954,10 +2954,10 @@
     "2013": 1.7,
     "2014": 1.6,
     "2015": 1.6,
-    "Country Name": "Costa Rica",
-    "Country Code": "CRI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Costa Rica",
+    "countryCode": "CRI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3017,10 +3017,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Caribbean small states",
-    "Country Code": "CSS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Caribbean small states",
+    "countryCode": "CSS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3080,10 +3080,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cuba",
-    "Country Code": "CUB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Cuba",
+    "countryCode": "CUB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3143,10 +3143,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Curacao",
-    "Country Code": "CUW",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Curacao",
+    "countryCode": "CUW",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3206,10 +3206,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cayman Islands",
-    "Country Code": "CYM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Cayman Islands",
+    "countryCode": "CYM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3269,10 +3269,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Cyprus",
-    "Country Code": "CYP",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Cyprus",
+    "countryCode": "CYP",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3332,10 +3332,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Czech Republic",
-    "Country Code": "CZE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Czech Republic",
+    "countryCode": "CZE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3395,10 +3395,10 @@
     "2013": 0,
     "2014": "",
     "2015": "",
-    "Country Name": "Germany",
-    "Country Code": "DEU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Germany",
+    "countryCode": "DEU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3458,10 +3458,10 @@
     "2013": 22.5,
     "2014": "",
     "2015": "",
-    "Country Name": "Djibouti",
-    "Country Code": "DJI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Djibouti",
+    "countryCode": "DJI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3521,10 +3521,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Dominica",
-    "Country Code": "DMA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Dominica",
+    "countryCode": "DMA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3584,10 +3584,10 @@
     "2013": 0.2,
     "2014": 0.2,
     "2015": "",
-    "Country Name": "Denmark",
-    "Country Code": "DNK",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Denmark",
+    "countryCode": "DNK",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3647,10 +3647,10 @@
     "2013": 2.3,
     "2014": 2.1,
     "2015": 1.9,
-    "Country Name": "Dominican Republic",
-    "Country Code": "DOM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Dominican Republic",
+    "countryCode": "DOM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3710,10 +3710,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Algeria",
-    "Country Code": "DZA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Algeria",
+    "countryCode": "DZA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3773,10 +3773,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "East Asia & Pacific (excluding high income)",
-    "Country Code": "EAP",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "East Asia & Pacific (excluding high income)",
+    "countryCode": "EAP",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3836,10 +3836,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Early-demographic dividend",
-    "Country Code": "EAR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Early-demographic dividend",
+    "countryCode": "EAR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3899,10 +3899,10 @@
     "2013": 3.7,
     "2014": "",
     "2015": "",
-    "Country Name": "East Asia & Pacific",
-    "Country Code": "EAS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "East Asia & Pacific",
+    "countryCode": "EAS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -3962,10 +3962,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Europe & Central Asia (excluding high income)",
-    "Country Code": "ECA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Europe & Central Asia (excluding high income)",
+    "countryCode": "ECA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4025,10 +4025,10 @@
     "2013": 2.2,
     "2014": "",
     "2015": "",
-    "Country Name": "Europe & Central Asia",
-    "Country Code": "ECS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Europe & Central Asia",
+    "countryCode": "ECS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4088,10 +4088,10 @@
     "2013": 4.4,
     "2014": 3.8,
     "2015": 4.8,
-    "Country Name": "Ecuador",
-    "Country Code": "ECU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Ecuador",
+    "countryCode": "ECU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4151,10 +4151,10 @@
     "2013": "",
     "2014": "",
     "2015": 1.4,
-    "Country Name": "Egypt, Arab Rep.",
-    "Country Code": "EGY",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Egypt, Arab Rep.",
+    "countryCode": "EGY",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4214,10 +4214,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Euro area",
-    "Country Code": "EMU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Euro area",
+    "countryCode": "EMU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4277,10 +4277,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Eritrea",
-    "Country Code": "ERI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Eritrea",
+    "countryCode": "ERI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4340,10 +4340,10 @@
     "2013": 1.2,
     "2014": 0.8,
     "2015": "",
-    "Country Name": "Spain",
-    "Country Code": "ESP",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Spain",
+    "countryCode": "ESP",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4403,10 +4403,10 @@
     "2013": 1,
     "2014": 0.7,
     "2015": "",
-    "Country Name": "Estonia",
-    "Country Code": "EST",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Estonia",
+    "countryCode": "EST",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4466,10 +4466,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Ethiopia",
-    "Country Code": "ETH",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Ethiopia",
+    "countryCode": "ETH",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4529,10 +4529,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "European Union",
-    "Country Code": "EUU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "European Union",
+    "countryCode": "EUU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4592,10 +4592,10 @@
     "2013": 34.7,
     "2014": "",
     "2015": "",
-    "Country Name": "Fragile and conflict affected situations",
-    "Country Code": "FCS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Fragile and conflict affected situations",
+    "countryCode": "FCS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4655,10 +4655,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Finland",
-    "Country Code": "FIN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Finland",
+    "countryCode": "FIN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4718,10 +4718,10 @@
     "2013": 1.5,
     "2014": "",
     "2015": "",
-    "Country Name": "Fiji",
-    "Country Code": "FJI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Fiji",
+    "countryCode": "FJI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4781,10 +4781,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "France",
-    "Country Code": "FRA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "France",
+    "countryCode": "FRA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4844,10 +4844,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Faroe Islands",
-    "Country Code": "FRO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Faroe Islands",
+    "countryCode": "FRO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4907,10 +4907,10 @@
     "2013": 15.3,
     "2014": "",
     "2015": "",
-    "Country Name": "Micronesia, Fed. Sts.",
-    "Country Code": "FSM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Micronesia, Fed. Sts.",
+    "countryCode": "FSM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -4970,10 +4970,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Gabon",
-    "Country Code": "GAB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Gabon",
+    "countryCode": "GAB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5033,10 +5033,10 @@
     "2013": 0.2,
     "2014": 0.2,
     "2015": "",
-    "Country Name": "United Kingdom",
-    "Country Code": "GBR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "United Kingdom",
+    "countryCode": "GBR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5096,10 +5096,10 @@
     "2013": 11.5,
     "2014": 9.8,
     "2015": 8.3,
-    "Country Name": "Georgia",
-    "Country Code": "GEO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Georgia",
+    "countryCode": "GEO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5159,10 +5159,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Ghana",
-    "Country Code": "GHA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Ghana",
+    "countryCode": "GHA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5222,10 +5222,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Gibraltar",
-    "Country Code": "GIB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Gibraltar",
+    "countryCode": "GIB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5285,10 +5285,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Guinea",
-    "Country Code": "GIN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Guinea",
+    "countryCode": "GIN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5348,10 +5348,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Gambia, The",
-    "Country Code": "GMB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Gambia, The",
+    "countryCode": "GMB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5411,10 +5411,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Guinea-Bissau",
-    "Country Code": "GNB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Guinea-Bissau",
+    "countryCode": "GNB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5474,10 +5474,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Equatorial Guinea",
-    "Country Code": "GNQ",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Equatorial Guinea",
+    "countryCode": "GNQ",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5537,10 +5537,10 @@
     "2013": 1,
     "2014": 1.5,
     "2015": "",
-    "Country Name": "Greece",
-    "Country Code": "GRC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Greece",
+    "countryCode": "GRC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5600,10 +5600,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Grenada",
-    "Country Code": "GRD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Grenada",
+    "countryCode": "GRD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5663,10 +5663,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Greenland",
-    "Country Code": "GRL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Greenland",
+    "countryCode": "GRL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5726,10 +5726,10 @@
     "2013": "",
     "2014": 9.5,
     "2015": "",
-    "Country Name": "Guatemala",
-    "Country Code": "GTM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Guatemala",
+    "countryCode": "GTM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5789,10 +5789,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Guam",
-    "Country Code": "GUM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Guam",
+    "countryCode": "GUM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5852,10 +5852,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Guyana",
-    "Country Code": "GUY",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Guyana",
+    "countryCode": "GUY",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5915,10 +5915,10 @@
     "2013": 0.6,
     "2014": "",
     "2015": "",
-    "Country Name": "High income",
-    "Country Code": "HIC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "High income",
+    "countryCode": "HIC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -5978,10 +5978,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Hong Kong SAR, China",
-    "Country Code": "HKG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Hong Kong SAR, China",
+    "countryCode": "HKG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6041,10 +6041,10 @@
     "2013": 18.9,
     "2014": 17.2,
     "2015": 17.8,
-    "Country Name": "Honduras",
-    "Country Code": "HND",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Honduras",
+    "countryCode": "HND",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6104,10 +6104,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Heavily indebted poor countries (HIPC)",
-    "Country Code": "HPC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Heavily indebted poor countries (HIPC)",
+    "countryCode": "HPC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6167,10 +6167,10 @@
     "2013": 0.8,
     "2014": 1,
     "2015": "",
-    "Country Name": "Croatia",
-    "Country Code": "HRV",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Croatia",
+    "countryCode": "HRV",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6230,10 +6230,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Haiti",
-    "Country Code": "HTI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Haiti",
+    "countryCode": "HTI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6293,10 +6293,10 @@
     "2013": 0.2,
     "2014": 0.7,
     "2015": "",
-    "Country Name": "Hungary",
-    "Country Code": "HUN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Hungary",
+    "countryCode": "HUN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6356,10 +6356,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IBRD only",
-    "Country Code": "IBD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "IBRD only",
+    "countryCode": "IBD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6419,10 +6419,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IDA & IBRD total",
-    "Country Code": "IBT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "IDA & IBRD total",
+    "countryCode": "IBT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6482,10 +6482,10 @@
     "2013": 28.2,
     "2014": "",
     "2015": "",
-    "Country Name": "IDA total",
-    "Country Code": "IDA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "IDA total",
+    "countryCode": "IDA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6545,10 +6545,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IDA blend",
-    "Country Code": "IDB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "IDA blend",
+    "countryCode": "IDB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6608,10 +6608,10 @@
     "2013": 9.8,
     "2014": 8.3,
     "2015": 7.5,
-    "Country Name": "Indonesia",
-    "Country Code": "IDN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Indonesia",
+    "countryCode": "IDN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": 6.8
   },
   {
@@ -6671,10 +6671,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "IDA only",
-    "Country Code": "IDX",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "IDA only",
+    "countryCode": "IDX",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6734,10 +6734,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Isle of Man",
-    "Country Code": "IMN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Isle of Man",
+    "countryCode": "IMN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6797,10 +6797,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "India",
-    "Country Code": "IND",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "India",
+    "countryCode": "IND",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6860,10 +6860,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Not classified",
-    "Country Code": "INX",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Not classified",
+    "countryCode": "INX",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6923,10 +6923,10 @@
     "2013": 0.8,
     "2014": 0.5,
     "2015": "",
-    "Country Name": "Ireland",
-    "Country Code": "IRL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Ireland",
+    "countryCode": "IRL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -6986,10 +6986,10 @@
     "2013": 0.1,
     "2014": 0.3,
     "2015": "",
-    "Country Name": "Iran, Islamic Rep.",
-    "Country Code": "IRN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Iran, Islamic Rep.",
+    "countryCode": "IRN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7049,10 +7049,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Iraq",
-    "Country Code": "IRQ",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Iraq",
+    "countryCode": "IRQ",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7112,10 +7112,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Iceland",
-    "Country Code": "ISL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Iceland",
+    "countryCode": "ISL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7175,10 +7175,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Israel",
-    "Country Code": "ISR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Israel",
+    "countryCode": "ISR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7238,10 +7238,10 @@
     "2013": 1.4,
     "2014": 1.2,
     "2015": "",
-    "Country Name": "Italy",
-    "Country Code": "ITA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Italy",
+    "countryCode": "ITA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7301,10 +7301,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Jamaica",
-    "Country Code": "JAM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Jamaica",
+    "countryCode": "JAM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7364,10 +7364,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Jordan",
-    "Country Code": "JOR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Jordan",
+    "countryCode": "JOR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7427,10 +7427,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Japan",
-    "Country Code": "JPN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Japan",
+    "countryCode": "JPN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7490,10 +7490,10 @@
     "2013": 0,
     "2014": 0,
     "2015": 0,
-    "Country Name": "Kazakhstan",
-    "Country Code": "KAZ",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Kazakhstan",
+    "countryCode": "KAZ",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7553,10 +7553,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Kenya",
-    "Country Code": "KEN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Kenya",
+    "countryCode": "KEN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7616,10 +7616,10 @@
     "2013": 3.3,
     "2014": 1.3,
     "2015": 2.5,
-    "Country Name": "Kyrgyz Republic",
-    "Country Code": "KGZ",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Kyrgyz Republic",
+    "countryCode": "KGZ",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7679,10 +7679,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Cambodia",
-    "Country Code": "KHM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Cambodia",
+    "countryCode": "KHM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7742,10 +7742,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Kiribati",
-    "Country Code": "KIR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Kiribati",
+    "countryCode": "KIR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7805,10 +7805,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Kitts and Nevis",
-    "Country Code": "KNA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "St. Kitts and Nevis",
+    "countryCode": "KNA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7868,10 +7868,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Korea, Rep.",
-    "Country Code": "KOR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Korea, Rep.",
+    "countryCode": "KOR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7931,10 +7931,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Kuwait",
-    "Country Code": "KWT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Kuwait",
+    "countryCode": "KWT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -7994,10 +7994,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Latin America & Caribbean (excluding high income)",
-    "Country Code": "LAC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Latin America & Caribbean (excluding high income)",
+    "countryCode": "LAC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8057,10 +8057,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Lao PDR",
-    "Country Code": "LAO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Lao PDR",
+    "countryCode": "LAO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8120,10 +8120,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Lebanon",
-    "Country Code": "LBN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Lebanon",
+    "countryCode": "LBN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8183,10 +8183,10 @@
     "2013": "",
     "2014": 38.6,
     "2015": "",
-    "Country Name": "Liberia",
-    "Country Code": "LBR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Liberia",
+    "countryCode": "LBR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8246,10 +8246,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Libya",
-    "Country Code": "LBY",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Libya",
+    "countryCode": "LBY",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8309,10 +8309,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Lucia",
-    "Country Code": "LCA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "St. Lucia",
+    "countryCode": "LCA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8372,10 +8372,10 @@
     "2013": 4.9,
     "2014": "",
     "2015": "",
-    "Country Name": "Latin America & Caribbean",
-    "Country Code": "LCN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Latin America & Caribbean",
+    "countryCode": "LCN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8435,10 +8435,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Least developed countries: UN classification",
-    "Country Code": "LDC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Least developed countries: UN classification",
+    "countryCode": "LDC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8498,10 +8498,10 @@
     "2013": 45.5,
     "2014": "",
     "2015": "",
-    "Country Name": "Low income",
-    "Country Code": "LIC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Low income",
+    "countryCode": "LIC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8561,10 +8561,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Liechtenstein",
-    "Country Code": "LIE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Liechtenstein",
+    "countryCode": "LIE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8624,10 +8624,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sri Lanka",
-    "Country Code": "LKA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sri Lanka",
+    "countryCode": "LKA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8687,10 +8687,10 @@
     "2013": 15.5,
     "2014": "",
     "2015": "",
-    "Country Name": "Lower middle income",
-    "Country Code": "LMC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Lower middle income",
+    "countryCode": "LMC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8750,10 +8750,10 @@
     "2013": 12.7,
     "2014": "",
     "2015": "",
-    "Country Name": "Low & middle income",
-    "Country Code": "LMY",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Low & middle income",
+    "countryCode": "LMY",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8813,10 +8813,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Lesotho",
-    "Country Code": "LSO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Lesotho",
+    "countryCode": "LSO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8876,10 +8876,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Late-demographic dividend",
-    "Country Code": "LTE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Late-demographic dividend",
+    "countryCode": "LTE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -8939,10 +8939,10 @@
     "2013": 0.7,
     "2014": 1.2,
     "2015": "",
-    "Country Name": "Lithuania",
-    "Country Code": "LTU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Lithuania",
+    "countryCode": "LTU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9002,10 +9002,10 @@
     "2013": 0.1,
     "2014": 0.2,
     "2015": "",
-    "Country Name": "Luxembourg",
-    "Country Code": "LUX",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Luxembourg",
+    "countryCode": "LUX",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9065,10 +9065,10 @@
     "2013": 0.7,
     "2014": 0.5,
     "2015": "",
-    "Country Name": "Latvia",
-    "Country Code": "LVA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Latvia",
+    "countryCode": "LVA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9128,10 +9128,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Macao SAR, China",
-    "Country Code": "MAC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Macao SAR, China",
+    "countryCode": "MAC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9191,10 +9191,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Martin (French part)",
-    "Country Code": "MAF",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "St. Martin (French part)",
+    "countryCode": "MAF",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9254,10 +9254,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Morocco",
-    "Country Code": "MAR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Morocco",
+    "countryCode": "MAR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9317,10 +9317,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Monaco",
-    "Country Code": "MCO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Monaco",
+    "countryCode": "MCO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9380,10 +9380,10 @@
     "2013": 0.1,
     "2014": 0,
     "2015": 0,
-    "Country Name": "Moldova",
-    "Country Code": "MDA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Moldova",
+    "countryCode": "MDA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9443,10 +9443,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Madagascar",
-    "Country Code": "MDG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Madagascar",
+    "countryCode": "MDG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9506,10 +9506,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Maldives",
-    "Country Code": "MDV",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Maldives",
+    "countryCode": "MDV",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9569,10 +9569,10 @@
     "2013": 2.3,
     "2014": "",
     "2015": "",
-    "Country Name": "Middle East & North Africa",
-    "Country Code": "MEA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Middle East & North Africa",
+    "countryCode": "MEA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9632,10 +9632,10 @@
     "2013": "",
     "2014": 3,
     "2015": "",
-    "Country Name": "Mexico",
-    "Country Code": "MEX",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Mexico",
+    "countryCode": "MEX",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9695,10 +9695,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Marshall Islands",
-    "Country Code": "MHL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Marshall Islands",
+    "countryCode": "MHL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9758,10 +9758,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Middle income",
-    "Country Code": "MIC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Middle income",
+    "countryCode": "MIC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9821,10 +9821,10 @@
     "2013": 7,
     "2014": 6,
     "2015": 5,
-    "Country Name": "Macedonia, FYR",
-    "Country Code": "MKD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Macedonia, FYR",
+    "countryCode": "MKD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9884,10 +9884,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mali",
-    "Country Code": "MLI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Mali",
+    "countryCode": "MLI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -9947,10 +9947,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Malta",
-    "Country Code": "MLT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Malta",
+    "countryCode": "MLT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10010,10 +10010,10 @@
     "2013": "",
     "2014": "",
     "2015": 6.5,
-    "Country Name": "Myanmar",
-    "Country Code": "MMR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Myanmar",
+    "countryCode": "MMR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10073,10 +10073,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Middle East & North Africa (excluding high income)",
-    "Country Code": "MNA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Middle East & North Africa (excluding high income)",
+    "countryCode": "MNA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10136,10 +10136,10 @@
     "2013": 1,
     "2014": 0,
     "2015": "",
-    "Country Name": "Montenegro",
-    "Country Code": "MNE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Montenegro",
+    "countryCode": "MNE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10199,10 +10199,10 @@
     "2013": "",
     "2014": 0.2,
     "2015": "",
-    "Country Name": "Mongolia",
-    "Country Code": "MNG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Mongolia",
+    "countryCode": "MNG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10262,10 +10262,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Northern Mariana Islands",
-    "Country Code": "MNP",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Northern Mariana Islands",
+    "countryCode": "MNP",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10325,10 +10325,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mozambique",
-    "Country Code": "MOZ",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Mozambique",
+    "countryCode": "MOZ",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10388,10 +10388,10 @@
     "2013": "",
     "2014": 5.9,
     "2015": "",
-    "Country Name": "Mauritania",
-    "Country Code": "MRT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Mauritania",
+    "countryCode": "MRT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10451,10 +10451,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Mauritius",
-    "Country Code": "MUS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Mauritius",
+    "countryCode": "MUS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10514,10 +10514,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Malawi",
-    "Country Code": "MWI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Malawi",
+    "countryCode": "MWI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10577,10 +10577,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Malaysia",
-    "Country Code": "MYS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Malaysia",
+    "countryCode": "MYS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10640,10 +10640,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "North America",
-    "Country Code": "NAC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "North America",
+    "countryCode": "NAC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10703,10 +10703,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Namibia",
-    "Country Code": "NAM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Namibia",
+    "countryCode": "NAM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10766,10 +10766,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "New Caledonia",
-    "Country Code": "NCL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "New Caledonia",
+    "countryCode": "NCL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10829,10 +10829,10 @@
     "2013": "",
     "2014": 45.5,
     "2015": "",
-    "Country Name": "Niger",
-    "Country Code": "NER",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Niger",
+    "countryCode": "NER",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10892,10 +10892,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Nigeria",
-    "Country Code": "NGA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Nigeria",
+    "countryCode": "NGA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -10955,10 +10955,10 @@
     "2013": "",
     "2014": 3.6,
     "2015": "",
-    "Country Name": "Nicaragua",
-    "Country Code": "NIC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Nicaragua",
+    "countryCode": "NIC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11018,10 +11018,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Netherlands",
-    "Country Code": "NLD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Netherlands",
+    "countryCode": "NLD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11081,10 +11081,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Norway",
-    "Country Code": "NOR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Norway",
+    "countryCode": "NOR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11144,10 +11144,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Nepal",
-    "Country Code": "NPL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Nepal",
+    "countryCode": "NPL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11207,10 +11207,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Nauru",
-    "Country Code": "NRU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Nauru",
+    "countryCode": "NRU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11270,10 +11270,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "New Zealand",
-    "Country Code": "NZL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "New Zealand",
+    "countryCode": "NZL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11333,10 +11333,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "OECD members",
-    "Country Code": "OED",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "OECD members",
+    "countryCode": "OED",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11396,10 +11396,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Oman",
-    "Country Code": "OMN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Oman",
+    "countryCode": "OMN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11459,10 +11459,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Other small states",
-    "Country Code": "OSS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Other small states",
+    "countryCode": "OSS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11522,10 +11522,10 @@
     "2013": 6.1,
     "2014": "",
     "2015": "",
-    "Country Name": "Pakistan",
-    "Country Code": "PAK",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Pakistan",
+    "countryCode": "PAK",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11585,10 +11585,10 @@
     "2013": 2.9,
     "2014": 3.8,
     "2015": 2.2,
-    "Country Name": "Panama",
-    "Country Code": "PAN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Panama",
+    "countryCode": "PAN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11648,10 +11648,10 @@
     "2013": 3.7,
     "2014": 3.1,
     "2015": 3,
-    "Country Name": "Peru",
-    "Country Code": "PER",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Peru",
+    "countryCode": "PER",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11711,10 +11711,10 @@
     "2013": "",
     "2014": "",
     "2015": 8.3,
-    "Country Name": "Philippines",
-    "Country Code": "PHL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Philippines",
+    "countryCode": "PHL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11774,10 +11774,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Palau",
-    "Country Code": "PLW",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Palau",
+    "countryCode": "PLW",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11837,10 +11837,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Papua New Guinea",
-    "Country Code": "PNG",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Papua New Guinea",
+    "countryCode": "PNG",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11900,10 +11900,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Poland",
-    "Country Code": "POL",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Poland",
+    "countryCode": "POL",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -11963,10 +11963,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Pre-demographic dividend",
-    "Country Code": "PRE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Pre-demographic dividend",
+    "countryCode": "PRE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12026,10 +12026,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Puerto Rico",
-    "Country Code": "PRI",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Puerto Rico",
+    "countryCode": "PRI",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12089,10 +12089,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Korea, Dem. People�s Rep.",
-    "Country Code": "PRK",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Korea, Dem. People�s Rep.",
+    "countryCode": "PRK",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12152,10 +12152,10 @@
     "2013": 0.8,
     "2014": 0.5,
     "2015": "",
-    "Country Name": "Portugal",
-    "Country Code": "PRT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Portugal",
+    "countryCode": "PRT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12215,10 +12215,10 @@
     "2013": 2.2,
     "2014": 2.8,
     "2015": 2.5,
-    "Country Name": "Paraguay",
-    "Country Code": "PRY",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Paraguay",
+    "countryCode": "PRY",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12278,10 +12278,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "West Bank and Gaza",
-    "Country Code": "PSE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "West Bank and Gaza",
+    "countryCode": "PSE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12341,10 +12341,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Pacific island small states",
-    "Country Code": "PSS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Pacific island small states",
+    "countryCode": "PSS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12404,10 +12404,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Post-demographic dividend",
-    "Country Code": "PST",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Post-demographic dividend",
+    "countryCode": "PST",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12467,10 +12467,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "French Polynesia",
-    "Country Code": "PYF",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "French Polynesia",
+    "countryCode": "PYF",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12530,10 +12530,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Qatar",
-    "Country Code": "QAT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Qatar",
+    "countryCode": "QAT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12593,10 +12593,10 @@
     "2013": 0,
     "2014": "",
     "2015": "",
-    "Country Name": "Romania",
-    "Country Code": "ROU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Romania",
+    "countryCode": "ROU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12656,10 +12656,10 @@
     "2013": 0,
     "2014": 0,
     "2015": 0,
-    "Country Name": "Russian Federation",
-    "Country Code": "RUS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Russian Federation",
+    "countryCode": "RUS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12719,10 +12719,10 @@
     "2013": 60.4,
     "2014": "",
     "2015": "",
-    "Country Name": "Rwanda",
-    "Country Code": "RWA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Rwanda",
+    "countryCode": "RWA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12782,10 +12782,10 @@
     "2013": 14.7,
     "2014": "",
     "2015": "",
-    "Country Name": "South Asia",
-    "Country Code": "SAS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "South Asia",
+    "countryCode": "SAS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12845,10 +12845,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Saudi Arabia",
-    "Country Code": "SAU",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Saudi Arabia",
+    "countryCode": "SAU",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12908,10 +12908,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sudan",
-    "Country Code": "SDN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sudan",
+    "countryCode": "SDN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -12971,10 +12971,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Senegal",
-    "Country Code": "SEN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Senegal",
+    "countryCode": "SEN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13034,10 +13034,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Singapore",
-    "Country Code": "SGP",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Singapore",
+    "countryCode": "SGP",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13097,10 +13097,10 @@
     "2013": 25.1,
     "2014": "",
     "2015": "",
-    "Country Name": "Solomon Islands",
-    "Country Code": "SLB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Solomon Islands",
+    "countryCode": "SLB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13160,10 +13160,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sierra Leone",
-    "Country Code": "SLE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sierra Leone",
+    "countryCode": "SLE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13223,10 +13223,10 @@
     "2013": 3.3,
     "2014": 3,
     "2015": 1.9,
-    "Country Name": "El Salvador",
-    "Country Code": "SLV",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "El Salvador",
+    "countryCode": "SLV",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13286,10 +13286,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "San Marino",
-    "Country Code": "SMR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "San Marino",
+    "countryCode": "SMR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13349,10 +13349,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Somalia",
-    "Country Code": "SOM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Somalia",
+    "countryCode": "SOM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13412,10 +13412,10 @@
     "2013": 0.2,
     "2014": "",
     "2015": "",
-    "Country Name": "Serbia",
-    "Country Code": "SRB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Serbia",
+    "countryCode": "SRB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13475,10 +13475,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sub-Saharan Africa (excluding high income)",
-    "Country Code": "SSA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sub-Saharan Africa (excluding high income)",
+    "countryCode": "SSA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13538,10 +13538,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "South Sudan",
-    "Country Code": "SSD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "South Sudan",
+    "countryCode": "SSD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13601,10 +13601,10 @@
     "2013": 41,
     "2014": "",
     "2015": "",
-    "Country Name": "Sub-Saharan Africa",
-    "Country Code": "SSF",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sub-Saharan Africa",
+    "countryCode": "SSF",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13664,10 +13664,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Small states",
-    "Country Code": "SST",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Small states",
+    "countryCode": "SST",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13727,10 +13727,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sao Tome and Principe",
-    "Country Code": "STP",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sao Tome and Principe",
+    "countryCode": "STP",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13790,10 +13790,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Suriname",
-    "Country Code": "SUR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Suriname",
+    "countryCode": "SUR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13853,10 +13853,10 @@
     "2013": 0.2,
     "2014": 0.8,
     "2015": "",
-    "Country Name": "Slovak Republic",
-    "Country Code": "SVK",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Slovak Republic",
+    "countryCode": "SVK",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13916,10 +13916,10 @@
     "2013": 0,
     "2014": 0,
     "2015": "",
-    "Country Name": "Slovenia",
-    "Country Code": "SVN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Slovenia",
+    "countryCode": "SVN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -13979,10 +13979,10 @@
     "2013": 0.5,
     "2014": 0.3,
     "2015": "",
-    "Country Name": "Sweden",
-    "Country Code": "SWE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sweden",
+    "countryCode": "SWE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14042,10 +14042,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Swaziland",
-    "Country Code": "SWZ",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Swaziland",
+    "countryCode": "SWZ",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14105,10 +14105,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sint Maarten (Dutch part)",
-    "Country Code": "SXM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sint Maarten (Dutch part)",
+    "countryCode": "SXM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14168,10 +14168,10 @@
     "2013": 1.1,
     "2014": "",
     "2015": "",
-    "Country Name": "Seychelles",
-    "Country Code": "SYC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Seychelles",
+    "countryCode": "SYC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14231,10 +14231,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Syrian Arab Republic",
-    "Country Code": "SYR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Syrian Arab Republic",
+    "countryCode": "SYR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14294,10 +14294,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Turks and Caicos Islands",
-    "Country Code": "TCA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Turks and Caicos Islands",
+    "countryCode": "TCA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14357,10 +14357,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Chad",
-    "Country Code": "TCD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Chad",
+    "countryCode": "TCD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14420,10 +14420,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "East Asia & Pacific (IDA & IBRD countries)",
-    "Country Code": "TEA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "East Asia & Pacific (IDA & IBRD countries)",
+    "countryCode": "TEA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14483,10 +14483,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Europe & Central Asia (IDA & IBRD countries)",
-    "Country Code": "TEC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Europe & Central Asia (IDA & IBRD countries)",
+    "countryCode": "TEC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14546,10 +14546,10 @@
     "2013": "",
     "2014": "",
     "2015": 49.1,
-    "Country Name": "Togo",
-    "Country Code": "TGO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Togo",
+    "countryCode": "TGO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14609,10 +14609,10 @@
     "2013": 0,
     "2014": "",
     "2015": "",
-    "Country Name": "Thailand",
-    "Country Code": "THA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Thailand",
+    "countryCode": "THA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14672,10 +14672,10 @@
     "2013": 22.6,
     "2014": 19.5,
     "2015": 4.7,
-    "Country Name": "Tajikistan",
-    "Country Code": "TJK",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Tajikistan",
+    "countryCode": "TJK",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14735,10 +14735,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Turkmenistan",
-    "Country Code": "TKM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Turkmenistan",
+    "countryCode": "TKM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14798,10 +14798,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Latin America & the Caribbean (IDA & IBRD countries)",
-    "Country Code": "TLA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Latin America & the Caribbean (IDA & IBRD countries)",
+    "countryCode": "TLA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14861,10 +14861,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Timor-Leste",
-    "Country Code": "TLS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Timor-Leste",
+    "countryCode": "TLS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14924,10 +14924,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Middle East & North Africa (IDA & IBRD countries)",
-    "Country Code": "TMN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Middle East & North Africa (IDA & IBRD countries)",
+    "countryCode": "TMN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -14987,10 +14987,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tonga",
-    "Country Code": "TON",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Tonga",
+    "countryCode": "TON",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15050,10 +15050,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "South Asia (IDA & IBRD)",
-    "Country Code": "TSA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "South Asia (IDA & IBRD)",
+    "countryCode": "TSA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15113,10 +15113,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Sub-Saharan Africa (IDA & IBRD countries)",
-    "Country Code": "TSS",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Sub-Saharan Africa (IDA & IBRD countries)",
+    "countryCode": "TSS",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15176,10 +15176,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Trinidad and Tobago",
-    "Country Code": "TTO",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Trinidad and Tobago",
+    "countryCode": "TTO",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15239,10 +15239,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tunisia",
-    "Country Code": "TUN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Tunisia",
+    "countryCode": "TUN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15302,10 +15302,10 @@
     "2013": 0.3,
     "2014": 0.3,
     "2015": "",
-    "Country Name": "Turkey",
-    "Country Code": "TUR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Turkey",
+    "countryCode": "TUR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15365,10 +15365,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tuvalu",
-    "Country Code": "TUV",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Tuvalu",
+    "countryCode": "TUV",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15428,10 +15428,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Tanzania",
-    "Country Code": "TZA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Tanzania",
+    "countryCode": "TZA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15491,10 +15491,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Uganda",
-    "Country Code": "UGA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Uganda",
+    "countryCode": "UGA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15554,10 +15554,10 @@
     "2013": 0,
     "2014": 0,
     "2015": 0.1,
-    "Country Name": "Ukraine",
-    "Country Code": "UKR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Ukraine",
+    "countryCode": "UKR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15617,10 +15617,10 @@
     "2013": 2.3,
     "2014": "",
     "2015": "",
-    "Country Name": "Upper middle income",
-    "Country Code": "UMC",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Upper middle income",
+    "countryCode": "UMC",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15680,10 +15680,10 @@
     "2013": 0.3,
     "2014": 0.3,
     "2015": 0.3,
-    "Country Name": "Uruguay",
-    "Country Code": "URY",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Uruguay",
+    "countryCode": "URY",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15743,10 +15743,10 @@
     "2013": 1,
     "2014": "",
     "2015": "",
-    "Country Name": "United States",
-    "Country Code": "USA",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "United States",
+    "countryCode": "USA",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15806,10 +15806,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Uzbekistan",
-    "Country Code": "UZB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Uzbekistan",
+    "countryCode": "UZB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15869,10 +15869,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "St. Vincent and the Grenadines",
-    "Country Code": "VCT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "St. Vincent and the Grenadines",
+    "countryCode": "VCT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15932,10 +15932,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Venezuela, RB",
-    "Country Code": "VEN",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Venezuela, RB",
+    "countryCode": "VEN",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -15995,10 +15995,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "British Virgin Islands",
-    "Country Code": "VGB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "British Virgin Islands",
+    "countryCode": "VGB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16058,10 +16058,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Virgin Islands (U.S.)",
-    "Country Code": "VIR",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Virgin Islands (U.S.)",
+    "countryCode": "VIR",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16121,10 +16121,10 @@
     "2013": "",
     "2014": 2.8,
     "2015": "",
-    "Country Name": "Vietnam",
-    "Country Code": "VNM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Vietnam",
+    "countryCode": "VNM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16184,10 +16184,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Vanuatu",
-    "Country Code": "VUT",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Vanuatu",
+    "countryCode": "VUT",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16247,10 +16247,10 @@
     "2013": 10.7,
     "2014": "",
     "2015": "",
-    "Country Name": "World",
-    "Country Code": "WLD",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "World",
+    "countryCode": "WLD",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16310,10 +16310,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Samoa",
-    "Country Code": "WSM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Samoa",
+    "countryCode": "WSM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16373,10 +16373,10 @@
     "2013": 0.8,
     "2014": "",
     "2015": "",
-    "Country Name": "Kosovo",
-    "Country Code": "XKX",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Kosovo",
+    "countryCode": "XKX",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16436,10 +16436,10 @@
     "2013": "",
     "2014": 18.8,
     "2015": "",
-    "Country Name": "Yemen, Rep.",
-    "Country Code": "YEM",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Yemen, Rep.",
+    "countryCode": "YEM",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16499,10 +16499,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "South Africa",
-    "Country Code": "ZAF",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "South Africa",
+    "countryCode": "ZAF",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16562,10 +16562,10 @@
     "2013": "",
     "2014": "",
     "2015": 57.5,
-    "Country Name": "Zambia",
-    "Country Code": "ZMB",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Zambia",
+    "countryCode": "ZMB",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   },
   {
@@ -16625,10 +16625,10 @@
     "2013": "",
     "2014": "",
     "2015": "",
-    "Country Name": "Zimbabwe",
-    "Country Code": "ZWE",
-    "Indicator Name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
-    "Indicator Code": "SI.POV.DDAY",
+    "countryName": "Zimbabwe",
+    "countryCode": "ZWE",
+    "indicatorName": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)",
+    "indicatorCode": "SI.POV.DDAY",
     "": ""
   }
 ]
