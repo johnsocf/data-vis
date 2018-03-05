@@ -10,18 +10,66 @@ import {ApiService} from "./shared/api.service";
 export class AppComponent {
   title = 'Data Vis CSCI 4830';
   constructor(private apiService: ApiService) {
-    const newData = apiService.httpGet()
+
+    let highIncomeCountries;
+    let upperMiddleIncomeCountries;
+    let lowerMiddleIncomeCountries;
+    let lowIncomeCountries
+
+    const newDataFromEndpoint = apiService.httpGet()
       .subscribe(data => {
-        console.log('data', data);
+        //console.log('data from api', data);
       });
-    console.log('new data', newData);
-    const savedData = apiService.httpGetFile('assets/json/renewable-energy/renewable-energy-consumption.json')
+
+    const countryMetaData = apiService.httpGetFile('assets/json/api-info/country-categories.json')
       .subscribe(data => {
-        console.log('saved data', data);
         const usObj = _.find(data, {countryCode : 'USA'});
-        buildDataAverages(data);
-        console.log('usObj', usObj);
+        highIncomeCountries = _.map(_.filter(data, {incomeGroup: "High income"}), 'countryCode');
+        upperMiddleIncomeCountries = _.map(_.filter(data, {incomeGroup: "Upper middle income"}), 'countryCode');
+        lowerMiddleIncomeCountries = _.map(_.filter(data, {incomeGroup: "Lower middle income"}), 'countryCode');
+        lowIncomeCountries = _.map(_.filter(data, {incomeGroup: "Low income"}), 'countryCode');
+        console.log('average set high income', highIncomeCountries);
       });
+
+    const savedDataRenewableEnergyConsumption = apiService.httpGetFile('assets/json/renewable-energy/renewable-energy-consumption.json')
+      .subscribe(data => {
+        getDataAverages(data);
+      });
+
+    function getDataAverages(data) {
+      const averageSet = buildDataAverages(data);
+      const highIncomeAverages = getHighIncomeSet(data);
+      const upperMiddleIncomeAverages = getUpperMiddleIncomeSet(data);
+      const lowerMiddleIncomeAverages = getLowerMiddleIncomeSet(data);
+      const lowIncomeAverages = getLowIncomeSet(data);
+      console.log('avg', averageSet)
+      console.log('avg high', highIncomeAverages)
+      console.log('avg upper middle', upperMiddleIncomeAverages)
+      console.log('avg lower middle', lowerMiddleIncomeAverages)
+      console.log('avg lower income', lowIncomeAverages)
+    }
+
+    function getHighIncomeSet(data) {
+      const highIncomeSet = _.filter(data, function(o){ return highIncomeCountries.includes(o['countryCode'])});
+      return buildDataAverages(highIncomeSet);
+    }
+
+    function getUpperMiddleIncomeSet(data) {
+      const upperMiddleIncomeSet = _.filter(data, function(o){ return upperMiddleIncomeCountries.includes(o['countryCode'])});
+      return buildDataAverages(upperMiddleIncomeSet);
+    }
+
+    function getLowerMiddleIncomeSet(data) {
+      const lowerMiddleIncomeSet = _.filter(data, function(o){ return lowerMiddleIncomeCountries.includes(o['countryCode'])});
+      console.log('lower middle income set', lowerMiddleIncomeSet);
+      return buildDataAverages(lowerMiddleIncomeSet);
+    }
+
+    function getLowIncomeSet(data) {
+      const lowIncomeSet = _.filter(data, function(o){ return lowIncomeCountries.includes(o['countryCode'])});
+      return buildDataAverages(lowIncomeSet);
+    }
+
 
     function buildDataAverages(set) {
       const totalRow = {};
@@ -30,43 +78,34 @@ export class AppComponent {
       let countIndexes = 0;
       _.forEach(set, function(countryObj, index) {
 
-        console.log('country obj', countryObj['countryName'])
+        //console.log('country obj', countryObj['countryName'])
        _.forEach(countryObj, function(value, key) {
           if (!isNaN(parseInt(key))) {
 
             let newValue = parseInt(value);
             let valueSum;
-            countIndexes = !isNaN(parseInt(countObjForAvg[key])) ? parseInt(countObjForAvg[key]) : 0;
-            console.log('count obj current', parseInt(countObjForAvg[key]))
-            if (countIndexes === 0) {
-              valueSum = 0;
-            } else {
-              valueSum = isNaN(parseInt(totalRow[key])) ? parseInt(totalRow[key]) : 0;
 
-            }
-
-
-
+            // if data entry has a value
             if (!isNaN(newValue) && (newValue !== 0)) {
-             // countIndexes = countIndexes + 1;
-
-
-              if (key == '1990.00') {
-                console.log('value sum', valueSum);
-                console.log('new value', newValue);
-                console.log('index', countIndexes);
+              // set index to 1 on counter or get value of count if one exists
+              countIndexes = !isNaN(parseInt(countObjForAvg[key])) ? parseInt(countObjForAvg[key]) : 0;
+              if (countIndexes === 0) {
+                valueSum = 0;
+              } else {
+                valueSum = !isNaN(parseInt(totalRow[key])) ? parseInt(totalRow[key]) : 0;
               }
 
+              console.log('country', countryObj.countryName);
+              console.log('value sum', valueSum);
+              console.log('value', value)
 
-              let total = (newValue + valueSum);
-              let countIndex = countIndexes + 1;
-              console.log('index2', countIndex);
-              let calculatedAverage = (newValue + valueSum) / countIndexes;
-              //console.log('calculatedAverage', calculatedAverage);
+
+              const total = (newValue + valueSum);
+              const countIndex = countIndexes + 1;
               _.assign(totalRow, {[key]: precisionRound(total, 2)});
               _.assign(countObjForAvg, {[key]: precisionRound(countIndex, 2)});
-              console.log('count obj', countObjForAvg);
-              //_.assign(averageSet, {[key]: precisionRound(calculatedAverage, 2)});
+              const avgNow =  totalRow[key] / countObjForAvg[key];
+              _.assign(averageSet, {[key]: precisionRound(avgNow, 2)});
             }
 
 
@@ -74,12 +113,13 @@ export class AppComponent {
         });
       });
       function precisionRound(number, precision) {
-        var factor = Math.pow(10, precision);
+        const factor = Math.pow(10, precision);
         return Math.round(number * factor) / factor;
       }
-      console.log('NEW ROW!!!', totalRow);
-      console.log('NEW ROW!!!', countObjForAvg);
-      console.log('NEW ROW!!!', averageSet);
+      // console.log('NEW ROW!!!', totalRow);
+      // console.log('NEW ROW!!!', countObjForAvg);
+      // console.log('NEW ROW!!!', averageSet);
+      return averageSet;
     }
 
 
