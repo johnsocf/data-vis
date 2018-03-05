@@ -14,71 +14,197 @@ export class AppComponent {
     let highIncomeCountries;
     let upperMiddleIncomeCountries;
     let lowerMiddleIncomeCountries;
-    let lowIncomeCountries
+    let lowIncomeCountries;
+    let dataModel = {
+      education: {
+        primaryCompletionRate: {},
+        primarySecondaryEnrollment: {}
+      },
+      electricityProduction: {
+        percentageBased: {
+          coal: {},
+          hydroElectric: {},
+          naturalGas: {},
+          nuclear: {},
+          oil: {},
+          renewable: {},
+          renewableOutput: {}
+        },
+        metricBased: {
+          fromRenewableExcludingHyrdo: {}
+        }
+      },
+      emissions: {
+        percentageBased: {},
+        metricBased: {}
+      },
+      energyUse: {
+        perCapita: {},
+        perGDP: {}
+      },
+      health: {
+        prevalenceUnderweightAge: {}
+      },
+      population: {
+        percentageBased: {},
+        metricBased: {}
+      },
+      renewableEnergy: {
+        renewableEnergyConsumption: {}
+      },
+      socioEconomic: {
+        povertyHeadcountRatio: {}
+      },
+      weather: {
+        averagePrecipitationDepth: {}
+      }
+    };
+
+    init();
 
     const newDataFromEndpoint = apiService.httpGet()
       .subscribe(data => {
         //console.log('data from api', data);
       });
 
+    function init() {
+      populateFromFile('education/primary-completion-rate.json', 'education', 'primaryCompletionRate', 'none');
+      populateFromFile('education/primary-secondary-enrollment.json', 'education', 'primarySecondaryEnrollment', 'none');
+      populateFromFile('energy-use/energy-use-per-capita.json', 'energyUse', 'perCapita', 'none');
+      populateFromFile('energy-use/energy-use-per-gdp.json', 'energyUse', 'perGDP', 'none');
+      populateFromFile('health/prevalence-underweight-age.json', 'health', 'prevalenceUnderweightAge', 'none');
+      populateFromFile('renewable-energy/renewable-energy-consumption.json', 'renewableEnergy', 'renewableEnergyConsumption', 'none');
+      populateFromFile('socio-economic/poverty-headcount-ratio.json', 'socioEconomic', 'povertyHeadcountRatio', 'none');
+      populateFromFile('weather/av-precip-depth.json', 'weather', 'averagePrecipitationDepth', 'none');
+
+      populateFromFile(
+        'electricity-production/percentage-based/electrical-production-from-coal-percentage.json',
+        'electricityProduction',
+        'percentageBased',
+        'fromRenewableExcludingHyrdo'
+      );
+
+      populateFromFile(
+        'electricity-production/percentage-based/electricity-production-from-hydroelectric-percentage.json',
+        'electricityProduction',
+        'percentageBased',
+        'hydroElectric'
+      );
+
+      populateFromFile(
+        'electricity-production/percentage-based/electricity-production-from-natural-gas-percentage.json',
+        'electricityProduction',
+        'percentageBased',
+        'naturalGas'
+      );
+
+      populateFromFile(
+        'electricity-production/percentage-based/electricity-production-from-nuclear-percentage.json',
+        'electricityProduction',
+        'percentageBased',
+        'nuclear'
+      );
+
+      populateFromFile(
+        'electricity-production/percentage-based/electricity-production-from-oil-percentage.json',
+        'electricityProduction',
+        'percentageBased',
+        'oil'
+      );
+
+      populateFromFile(
+        'electricity-production/percentage-based/electricity-production-from-renewable-percentage.json',
+        'electricityProduction',
+        'percentageBased',
+        'renewable'
+      );
+
+      populateFromFile(
+        'electricity-production/percentage-based/renewable-electricity-output-percentage.json',
+        'electricityProduction',
+        'percentageBased',
+        'renewableOutput'
+      );
+
+      populateFromFile(
+        'electricity-production/metric/electricity-production-from-renewable-excluding-hydro-percentage-kwh.json',
+        'electricityProduction',
+        'metricBased',
+        'fromRenewableExcludingHyrdo'
+      );
+
+
+      console.log('data model', dataModel);
+    }
+
+
+
+    function populateFromFile(filePath, modelStructure1, modelStructure2, modelStructure3) {
+      const jsonUrl = 'assets/json/' + filePath;
+      return apiService.httpGetFile(jsonUrl)
+        .subscribe(data => {
+          const derivedAverageSets = getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
+          if (modelStructure3 !== 'none') {dataModel[modelStructure1][modelStructure2][modelStructure3] = derivedAverageSets;}
+          else {dataModel[modelStructure1][modelStructure2] = derivedAverageSets;}
+          return derivedAverageSets;
+        });
+    }
+
     const countryMetaData = apiService.httpGetFile('assets/json/api-info/country-categories.json')
       .subscribe(data => {
-        const usObj = _.find(data, {countryCode : 'USA'});
         highIncomeCountries = _.map(_.filter(data, {incomeGroup: "High income"}), 'countryCode');
         upperMiddleIncomeCountries = _.map(_.filter(data, {incomeGroup: "Upper middle income"}), 'countryCode');
         lowerMiddleIncomeCountries = _.map(_.filter(data, {incomeGroup: "Lower middle income"}), 'countryCode');
         lowIncomeCountries = _.map(_.filter(data, {incomeGroup: "Low income"}), 'countryCode');
-        console.log('average set high income', highIncomeCountries);
       });
 
     const savedDataRenewableEnergyConsumption = apiService.httpGetFile('assets/json/renewable-energy/renewable-energy-consumption.json')
       .subscribe(data => {
-        getDataAverages(data);
+        const derivedAverageSets = getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
       });
 
-    function getDataAverages(data) {
-      const averageSet = buildDataAverages(data);
+    function getDataAverages(data, indicatorName, indicatorCode) {
+      const averageSet = buildDataAverages(data, 'general', indicatorName, indicatorCode);
       const highIncomeAverages = getHighIncomeSet(data);
       const upperMiddleIncomeAverages = getUpperMiddleIncomeSet(data);
       const lowerMiddleIncomeAverages = getLowerMiddleIncomeSet(data);
       const lowIncomeAverages = getLowIncomeSet(data);
-      console.log('avg', averageSet)
-      console.log('avg high', highIncomeAverages)
-      console.log('avg upper middle', upperMiddleIncomeAverages)
-      console.log('avg lower middle', lowerMiddleIncomeAverages)
-      console.log('avg lower income', lowIncomeAverages)
+      const averageSetConglomerated = [averageSet, highIncomeAverages, upperMiddleIncomeAverages, lowerMiddleIncomeAverages, lowIncomeAverages]
+      return {
+        countryData: data,
+        averages: averageSetConglomerated
+      };
     }
 
     function getHighIncomeSet(data) {
       const highIncomeSet = _.filter(data, function(o){ return highIncomeCountries.includes(o['countryCode'])});
-      return buildDataAverages(highIncomeSet);
+      return buildDataAverages(highIncomeSet, 'high income', data[0].indicatorName, data[0].indicatorCode);
     }
 
     function getUpperMiddleIncomeSet(data) {
       const upperMiddleIncomeSet = _.filter(data, function(o){ return upperMiddleIncomeCountries.includes(o['countryCode'])});
-      return buildDataAverages(upperMiddleIncomeSet);
+      return buildDataAverages(upperMiddleIncomeSet, 'upper middle income', data[0].indicatorName, data[0].indicatorCode);
     }
 
     function getLowerMiddleIncomeSet(data) {
       const lowerMiddleIncomeSet = _.filter(data, function(o){ return lowerMiddleIncomeCountries.includes(o['countryCode'])});
-      console.log('lower middle income set', lowerMiddleIncomeSet);
-      return buildDataAverages(lowerMiddleIncomeSet);
+      //console.log('lower middle income set', lowerMiddleIncomeSet);
+      return buildDataAverages(lowerMiddleIncomeSet, 'lower middle income', data[0].indicatorName, data[0].indicatorCode);
     }
 
     function getLowIncomeSet(data) {
       const lowIncomeSet = _.filter(data, function(o){ return lowIncomeCountries.includes(o['countryCode'])});
-      return buildDataAverages(lowIncomeSet);
+      return buildDataAverages(lowIncomeSet, 'low income', data[0].indicatorName, data[0].indicatorCode);
     }
 
 
-    function buildDataAverages(set) {
+    function buildDataAverages(set, setName, indicatorName, indicatorCode) {
       const totalRow = {};
       const countObjForAvg = {};
       const averageSet = {};
       let countIndexes = 0;
-      _.forEach(set, function(countryObj, index) {
+      _.forEach(set, function(countryObj) {
 
-        //console.log('country obj', countryObj['countryName'])
        _.forEach(countryObj, function(value, key) {
           if (!isNaN(parseInt(key))) {
 
@@ -94,11 +220,6 @@ export class AppComponent {
               } else {
                 valueSum = !isNaN(parseInt(totalRow[key])) ? parseInt(totalRow[key]) : 0;
               }
-
-              console.log('country', countryObj.countryName);
-              console.log('value sum', valueSum);
-              console.log('value', value)
-
 
               const total = (newValue + valueSum);
               const countIndex = countIndexes + 1;
@@ -116,9 +237,12 @@ export class AppComponent {
         const factor = Math.pow(10, precision);
         return Math.round(number * factor) / factor;
       }
-      // console.log('NEW ROW!!!', totalRow);
-      // console.log('NEW ROW!!!', countObjForAvg);
-      // console.log('NEW ROW!!!', averageSet);
+      _.assign(averageSet, {
+        countryName: setName + ' averages',
+        countryCode: "AVG",
+        indicatorName: indicatorName,
+        indicatorCode: indicatorCode,
+      });
       return averageSet;
     }
 
