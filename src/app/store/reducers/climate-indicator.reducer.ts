@@ -11,10 +11,10 @@ export function ClimateIndicatorReducer(state = initialClimateState, action: Cus
     case SOME_CASE_CLIMATE_DATA: {
       const newState = _.cloneDeep(state);
       console.log('here', newState);
-      newState.climateIndicatorData.data.dataData = action.payload;
+      newState.climateIndicatorData.data.education.primaryCompletionRate = action.payload;
+      console.log('here', newState);
       return newState;
     }
-
     default:
       return state;
 

@@ -7,6 +7,10 @@ import {SOME_CASE_CLIMATE_DATA} from "./store/actions/climate.actions";
 import {Observable} from "rxjs/Observable";
 import {Subscription} from "rxjs/Subscription";
 import {ClimateModel} from "./shared/models/climate.model";
+import {
+  IndicatorAttributesModel,
+  initialIndicatorAttributes
+} from "./shared/models/climate/data/items/indicator-attributes-model";
 
 @Component({
   selector: 'app-root',
@@ -65,21 +69,21 @@ export class AppComponent implements OnInit, OnDestroy {
   };
 
   private climateModelState$: Observable<ClimateModel>;
-  private testClimateData$: Observable<string>;
+  private testClimateData$: Observable<IndicatorAttributesModel[]>;
   private climateStateSub: Subscription;
 
   constructor(
     private apiService: ApiService,
     private store: Store<ApplicationState>
   ) {
-    this.testClimateData$ = this.store.select(state => state.climateData.climateIndicatorData.data.dataData);
+    this.testClimateData$ = this.store.select(state => state.climateData.climateIndicatorData.data.education.primaryCompletionRate);
   }
 
   //init();
 
 
   ngOnInit() {
-    this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: 'test post check one two'});
+    this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: [initialIndicatorAttributes]});
     this.populateFileData()
     console.log('data model', this.dataModel);
     this.tempTestFunction();
@@ -161,10 +165,15 @@ export class AppComponent implements OnInit, OnDestroy {
     return this.apiService.httpGetFile(jsonUrl)
       .subscribe(data => {
         const derivedAverageSets = this.getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
-        if (modelStructure3 !== 'none') {this.dataModel[modelStructure1][modelStructure2][modelStructure3] = derivedAverageSets;}
-        else {this.dataModel[modelStructure1][modelStructure2] = derivedAverageSets;}
+        this.updateLocalModel(derivedAverageSets, modelStructure1, modelStructure2, modelStructure3);
+
         return derivedAverageSets;
       });
+  }
+
+  updateLocalModel(derivedAverageSets, modelStructure1, modelStructure2, modelStructure3) {
+    if (modelStructure3 !== 'none') {this.dataModel[modelStructure1][modelStructure2][modelStructure3] = derivedAverageSets;}
+    else {this.dataModel[modelStructure1][modelStructure2] = derivedAverageSets;}
   }
 
   private countryMetaData = this.apiService.httpGetFile('assets/json/api-info/country-categories.json')
