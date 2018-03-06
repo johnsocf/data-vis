@@ -3,7 +3,36 @@ import * as _ from 'lodash';
 import {ApiService} from "./shared/api.service";
 import {Store} from "@ngrx/store";
 import {ApplicationState} from "./store/application-state";
-import {SOME_CASE_CLIMATE_DATA} from "./store/actions/climate.actions";
+import {
+  ADD_EDUCATION_DATA_PRIMARY_COMPLETION,
+  ADD_EDUCATION_DATA_SECONDARY,
+  ADD_ELECTRICITY_PRODUCTION_DATA_METRIC_FROM_RENEWABLE_EXCLUDING_HYDRO,
+  ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_COAL,
+  ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_HYDROELECTRIC,
+  ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_NATURAL_GAS,
+  ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_NUCLEAR, ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_OIL,
+  ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_RENEWABLE,
+  ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_RENEWABLE_OUTPUT, ADD_EMISSIONS_DATA_METRIC_CO2,
+  ADD_EMISSIONS_DATA_METRIC_HFC, ADD_EMISSIONS_DATA_METRIC_METHANE, ADD_EMISSIONS_DATA_METRIC_NITROUS_OXIDE,
+  ADD_EMISSIONS_DATA_METRIC_OTHER_GREENHOUSE,
+  ADD_EMISSIONS_DATA_METRIC_PVC,
+  ADD_EMISSIONS_DATA_METRIC_SF6,
+  ADD_EMISSIONS_DATA_METRIC_TOTAL, ADD_EMISSIONS_DATA_PERCENTAGE_CO2_GAS, ADD_EMISSIONS_DATA_PERCENTAGE_CO2_SOLID,
+  ADD_EMISSIONS_DATA_PERCENTAGE_METHANE, ADD_EMISSIONS_DATA_PERCENTAGE_NITROUS_OXIDE,
+  ADD_EMISSIONS_DATA_PERCENTAGE_OTHER_GREENHOUSE,
+  ADD_EMISSIONS_DATA_PERCENTAGE_TOTAL_GREENHOUSE,
+  ADD_ENERGY_USE_DATA_PER_CAPITA,
+  ADD_ENERGY_USE_DATA_PER_GDP,
+  ADD_HEALTH_DATA_PREVALENCE_UNDERWEIGHT, ADD_POPULATION_DATA_METRIC_TOTAL, ADD_POPULATION_DATA_METRIC_URBAN,
+  ADD_POPULATION_DATA_METRIC_URBAN_GROWTH,
+  ADD_POPULATION_DATA_PERCENTAGE_URBAN_AGGLOMERATIONS,
+  ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION,
+  ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION_GROWTH,
+  ADD_RENEWABLE_ENERGY_DATA_RENEWABLE_ENERGY_CONSUMPTION,
+  ADD_SOCIO_ECONOMIC_DATA_POVERTY_HEADCOUNT,
+  ADD_WEATHER_DATA_TEMPERATURE,
+  SOME_CASE_CLIMATE_DATA
+} from "./store/actions/climate.actions";
 import {Observable} from "rxjs/Observable";
 import {Subscription} from "rxjs/Subscription";
 import {ClimateModel} from "./shared/models/climate.model";
@@ -39,7 +68,7 @@ export class AppComponent implements OnInit, OnDestroy {
         renewableOutput: {}
       },
       metricBased: {
-        fromRenewableExcludingHyrdo: {}
+        fromRenewableExcludingHydro: {}
       }
     },
     emissions: {
@@ -68,7 +97,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   };
 
-  private climateModelState$: Observable<ClimateModel>;
+  climateModelState$: Observable<ApplicationState>;
   private testClimateData$: Observable<IndicatorAttributesModel[]>;
   private climateStateSub: Subscription;
 
@@ -76,10 +105,12 @@ export class AppComponent implements OnInit, OnDestroy {
     private apiService: ApiService,
     private store: Store<ApplicationState>
   ) {
+    this.climateModelState$ = this.store.select(state => state);
     this.testClimateData$ = this.store.select(state => state.climateData.climateIndicatorData.data.education.primaryCompletionRate);
+    this.climateStateSub = this.climateModelState$.subscribe(state => {
+      console.log('state', state);
+    })
   }
-
-  //init();
 
 
   ngOnInit() {
@@ -87,7 +118,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.populateFileData()
     console.log('data model', this.dataModel);
     this.tempTestFunction();
-
+    this.climateStateSub = this.climateModelState$.subscribe(state => {
+      console.log('state', state);
+    })
   }
 
   ngOnDestroy() {}
@@ -99,75 +132,142 @@ export class AppComponent implements OnInit, OnDestroy {
       });
   }
   populateFileData() {
-    this.populateFromFile('education/primary-completion-rate.json', 'education', 'primaryCompletionRate', 'none');
-    this.populateFromFile('education/primary-secondary-enrollment.json', 'education', 'primarySecondaryEnrollment', 'none');
-    this.populateFromFile('energy-use/energy-use-per-capita.json', 'energyUse', 'perCapita', 'none');
-    this.populateFromFile('energy-use/energy-use-per-gdp.json', 'energyUse', 'perGDP', 'none');
-    this.populateFromFile('health/prevalence-underweight-age.json', 'health', 'prevalenceUnderweightAge', 'none');
-    this.populateFromFile('renewable-energy/renewable-energy-consumption.json', 'renewableEnergy', 'renewableEnergyConsumption', 'none');
-    this.populateFromFile('socio-economic/poverty-headcount-ratio.json', 'socioEconomic', 'povertyHeadcountRatio', 'none');
-    this.populateFromFile('weather/av-precip-depth.json', 'weather', 'averagePrecipitationDepth', 'none');
+    this.populateFromFile('education/primary-completion-rate.json', ADD_EDUCATION_DATA_PRIMARY_COMPLETION);
+    this.populateFromFile('education/primary-secondary-enrollment.json', ADD_EDUCATION_DATA_SECONDARY);
+    this.populateFromFile('energy-use/energy-use-per-capita.json', ADD_ENERGY_USE_DATA_PER_CAPITA);
+    this.populateFromFile('energy-use/energy-use-per-gdp.json', ADD_ENERGY_USE_DATA_PER_GDP);
+    this.populateFromFile('health/prevalence-underweight-age.json', ADD_HEALTH_DATA_PREVALENCE_UNDERWEIGHT );
+    this.populateFromFile('renewable-energy/renewable-energy-consumption.json', ADD_RENEWABLE_ENERGY_DATA_RENEWABLE_ENERGY_CONSUMPTION);
+    this.populateFromFile('socio-economic/poverty-headcount-ratio.json', ADD_SOCIO_ECONOMIC_DATA_POVERTY_HEADCOUNT);
+    this.populateFromFile('weather/av-precip-depth.json', ADD_WEATHER_DATA_TEMPERATURE);
     this.populateFromFile(
       'electricity-production/percentage-based/electrical-production-from-coal-percentage.json',
-      'electricityProduction',
-      'percentageBased',
-      'fromRenewableExcludingHyrdo'
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_COAL
     );
     this.populateFromFile(
       'electricity-production/percentage-based/electricity-production-from-hydroelectric-percentage.json',
-      'electricityProduction',
-      'percentageBased',
-      'hydroElectric'
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_HYDROELECTRIC
     );
     this.populateFromFile(
       'electricity-production/percentage-based/electricity-production-from-natural-gas-percentage.json',
-      'electricityProduction',
-      'percentageBased',
-      'naturalGas'
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_NATURAL_GAS
     );
     this.populateFromFile(
       'electricity-production/percentage-based/electricity-production-from-nuclear-percentage.json',
-      'electricityProduction',
-      'percentageBased',
-      'nuclear'
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_NUCLEAR
     );
     this.populateFromFile(
       'electricity-production/percentage-based/electricity-production-from-oil-percentage.json',
-      'electricityProduction',
-      'percentageBased',
-      'oil'
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_OIL
     );
     this.populateFromFile(
       'electricity-production/percentage-based/electricity-production-from-renewable-percentage.json',
-      'electricityProduction',
-      'percentageBased',
-      'renewable'
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_RENEWABLE
     );
     this.populateFromFile(
       'electricity-production/percentage-based/renewable-electricity-output-percentage.json',
-      'electricityProduction',
-      'percentageBased',
-      'renewableOutput'
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_RENEWABLE_OUTPUT
     );
     this.populateFromFile(
       'electricity-production/metric/electricity-production-from-renewable-excluding-hydro-percentage-kwh.json',
-      'electricityProduction',
-      'metricBased',
-      'fromRenewableExcludingHyrdo'
+      ADD_ELECTRICITY_PRODUCTION_DATA_METRIC_FROM_RENEWABLE_EXCLUDING_HYDRO
     );
+
+    this.populateFromFile(
+      'emissions/metric/co2-emissions-kt.json',
+      ADD_EMISSIONS_DATA_METRIC_CO2
+    );
+    this.populateFromFile(
+      'emissions/metric/hfc-gas-emissions.json',
+      ADD_EMISSIONS_DATA_METRIC_HFC
+    );
+    this.populateFromFile(
+      'emissions/metric/methane-emissions-kt.json',
+      ADD_EMISSIONS_DATA_METRIC_METHANE
+    );
+    this.populateFromFile(
+      'emissions/metric/nitrous-oxide-emissions-c02-equiv.json',
+      ADD_EMISSIONS_DATA_METRIC_NITROUS_OXIDE
+    );
+    this.populateFromFile(
+      'emissions/metric/other-greenhouse-gas-emissions-metrics.json',
+      ADD_EMISSIONS_DATA_METRIC_OTHER_GREENHOUSE
+    );
+    this.populateFromFile(
+      'emissions/metric/pvc-gas-emissions-metric.json',
+      ADD_EMISSIONS_DATA_METRIC_PVC
+    );
+    this.populateFromFile(
+      'emissions/metric/sf6-gas-emissions.json',
+      ADD_EMISSIONS_DATA_METRIC_SF6
+    );
+    this.populateFromFile(
+      'emissions/metric/total-greenhouse-gas.json',
+      ADD_EMISSIONS_DATA_METRIC_TOTAL
+    );
+
+    this.populateFromFile(
+      'emissions/percentage-based/co2-emissions-from-gaseous-fuel-consumption.json',
+      ADD_EMISSIONS_DATA_PERCENTAGE_CO2_GAS
+    );
+    this.populateFromFile(
+      'emissions/percentage-based/co2-emissions-from-solid-fuel-consumption.json',
+      ADD_EMISSIONS_DATA_PERCENTAGE_CO2_SOLID
+    );
+    this.populateFromFile(
+      'emissions/percentage-based/methane-emissions-percent-change.json',
+      ADD_EMISSIONS_DATA_PERCENTAGE_METHANE
+    );
+    this.populateFromFile(
+      'emissions/percentage-based/nitrous-oxide-emissions-percent-change.json',
+      ADD_EMISSIONS_DATA_PERCENTAGE_NITROUS_OXIDE
+    );
+    this.populateFromFile(
+      'emissions/percentage-based/other-greenhouse-gas-percent-change.json',
+      ADD_EMISSIONS_DATA_PERCENTAGE_OTHER_GREENHOUSE
+    );
+    this.populateFromFile(
+      'emissions/percentage-based/total-greenhouse-gas-percent-of-total.json',
+      ADD_EMISSIONS_DATA_PERCENTAGE_TOTAL_GREENHOUSE
+    );
+
+    this.populateFromFile(
+      'population/metric/population-total.json',
+      ADD_POPULATION_DATA_METRIC_TOTAL
+    );
+    this.populateFromFile(
+      'population/metric/urban-population.json',
+      ADD_POPULATION_DATA_METRIC_URBAN
+    );
+    this.populateFromFile(
+      'population/metric/urban-population-growth.json',
+      ADD_POPULATION_DATA_METRIC_URBAN_GROWTH
+    );
+
+    this.populateFromFile(
+      'population/percentage-based/population-in-urban-agglomerations.json',
+      ADD_POPULATION_DATA_PERCENTAGE_URBAN_AGGLOMERATIONS
+    );
+    this.populateFromFile(
+      'population/percentage-based/urban-population-growth.json',
+      ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION_GROWTH
+    );
+    this.populateFromFile(
+      'population/percentage-based/urban-population-percent-of-total.json',
+      ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION
+    );
+
 
 }
 
-
-
-  populateFromFile(filePath, modelStructure1, modelStructure2, modelStructure3) {
+  populateFromFile(filePath, actionType) {
     const jsonUrl = 'assets/json/' + filePath;
-    return this.apiService.httpGetFile(jsonUrl)
+    this.apiService.httpGetFile(jsonUrl)
       .subscribe(data => {
-        const derivedAverageSets = this.getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
-        this.updateLocalModel(derivedAverageSets, modelStructure1, modelStructure2, modelStructure3);
-
-        return derivedAverageSets;
+        if (data) {
+          const derivedAverageSets = this.getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
+          this.store.dispatch({ type: actionType, payload: derivedAverageSets});
+        }
       });
   }
 
@@ -269,6 +369,7 @@ export class AppComponent implements OnInit, OnDestroy {
     });
     return averageSet;
   }
+
   precisionRound(number, precision) {
     const factor = Math.pow(10, precision);
     return Math.round(number * factor) / factor;

@@ -12,7 +12,7 @@ import {initialSocioEconomicDataModel, SocioEconomicDataModel} from "./socio-eco
 import {initialWeatherDataModel, WeatherDataModel} from "./weather/temperature-model";
 export interface IClimateIndicatorDataState {
   education: EducationDataModel;
-  //electricityProduction: ElectricityProductionDataModel;
+  electricityProduction: ElectricityProductionDataModel;
   emissions: EmissionsDataModel;
   energyUse: EnergyUseDataModel;
   health: HealthDataModel;
@@ -23,7 +23,7 @@ export interface IClimateIndicatorDataState {
 }
 export const initialClimateIndicatorDataState: IClimateIndicatorDataState = {
   education: initialEducationDataModel,
-  //electricityProduction: initialElectricityProductionDataModel,
+  electricityProduction: initialElectricityProductionDataModel,
   emissions: initialEmissionsDataModel,
   energyUse: initialEnergyUseDataModel,
   health: initialHealthDataModel,

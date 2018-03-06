@@ -5,8 +5,8 @@ export interface PercentageBasedEmissionsDataModel {
   co2_solid: IndicatorAttributesModel[];
   methaneChange: IndicatorAttributesModel[];
   nitrousOxideChange: IndicatorAttributesModel[];
-  OtherGreenhouseGasChange: IndicatorAttributesModel[];
-  TotalGreenhouseGasChange: IndicatorAttributesModel[];
+  otherGreenhouseGasChange: IndicatorAttributesModel[];
+  totalGreenhouseGasChange: IndicatorAttributesModel[];
 }
 
 export const initialPercentageBasedEmissionsDataModel = {
@@ -14,6 +14,6 @@ export const initialPercentageBasedEmissionsDataModel = {
   co2_solid: [initialIndicatorAttributes],
   methaneChange: [initialIndicatorAttributes],
   nitrousOxideChange: [initialIndicatorAttributes],
-  OtherGreenhouseGasChange: [initialIndicatorAttributes],
-  TotalGreenhouseGasChange: [initialIndicatorAttributes]
+  otherGreenhouseGasChange: [initialIndicatorAttributes],
+  totalGreenhouseGasChange: [initialIndicatorAttributes]
 };

@@ -13,6 +13,6 @@ export interface ElectricityProductionDataModel {
 }
 
 export const initialElectricityProductionDataModel = {
-  metric: [initialMetricBasedElectricityProductionDataModel],
-  percentage: [initialPercentageBasedElectricityProductionDataModel]
+  metric: initialMetricBasedElectricityProductionDataModel,
+  percentage: initialPercentageBasedElectricityProductionDataModel
 };

@@ -1,9 +1,9 @@
 
 import {IndicatorAttributesModel, initialIndicatorAttributes} from "../items/indicator-attributes-model";
 export interface MetricBasedElectricityProductionDataModel {
-  fromRenewableExcludingHyrdo: IndicatorAttributesModel[];
+  fromRenewableExcludingHydro: IndicatorAttributesModel[];
 }
 
 export const initialMetricBasedElectricityProductionDataModel = {
-  fromRenewableExcludingHyrdo: [initialIndicatorAttributes]
+  fromRenewableExcludingHydro: [initialIndicatorAttributes]
 };
