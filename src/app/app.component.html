@@ -3,6 +3,14 @@
   <h1>
     {{ title }}!
   </h1>
-  <p>test data: {{testClimateData$ | async}}</p>
+  <p>test data.  Begin design</p>
+  <select>
+    <option *ngFor="let list of lists | keysPipe">
+      {{list}}
+    </option>
+  </select>
+</div>
+<div>
+  <app-world-map></app-world-map>
 </div>
 

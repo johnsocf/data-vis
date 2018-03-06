@@ -100,6 +100,7 @@ export class AppComponent implements OnInit, OnDestroy {
   climateModelState$: Observable<ApplicationState>;
   private testClimateData$: Observable<IndicatorAttributesModel[]>;
   private climateStateSub: Subscription;
+  lists<Any>;
 
   constructor(
     private apiService: ApiService,
@@ -119,7 +120,8 @@ export class AppComponent implements OnInit, OnDestroy {
     console.log('data model', this.dataModel);
     this.tempTestFunction();
     this.climateStateSub = this.climateModelState$.subscribe(state => {
-      console.log('state', state);
+      console.log('state', state.climateData.climateIndicatorData.data);
+      this.lists = state.climateData.climateIndicatorData.data;
     })
   }
 
