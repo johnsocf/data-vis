@@ -218,13 +218,13 @@ export function ClimateIndicatorReducer(state = initialClimateState, action: Cus
     case ADD_WEATHER_DATA_TEMPERATURE: {
       const newState = _.cloneDeep(state);
       debugger;
-      let newMap = _.map(action.payload, function(tempSet, value) {
-        return {country: value, tempOverYears: tempSet}
-      });
+      // let newMap = _.map(action.payload, function(tempSet, value) {
+      //   return {country: value, tempOverYears: tempSet}
+      // });
       console.log('new', newState.climateIndicatorData.data.weather.averageTemperature);
-      console.log(newMap[0]);
+      console.log(action.payload);
       //_.assign(newState.climateIndicatorData.data.weather.averageTemperature, newMap);
-      //newState.climateIndicatorData.data.weather.averageTemperature = newMap;
+      newState.climateIndicatorData.data.weather.averageTemperature = action.payload;
       return newState;
     }
 

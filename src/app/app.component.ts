@@ -349,6 +349,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   buildTempDataSet(initialJson) {
     const allCountrySet = {};
+    let allCountryArray = []
     const thisController = this;
     _.forEach(initialJson, function(tempSet){
       const foundInCountrySet = _.find(allCountrySet, {'Country': tempSet.Country})
@@ -376,14 +377,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
         });
 
-       _.assign(allCountrySet, {[countryDates[0].Country]: countrySet});
+       _.assign(allCountrySet, {countrySet});
+       allCountryArray.push(countrySet);
       }
 
       //console.log('all country set', allCountrySet);
 
       //countrySet = _.filter(initialJson)
     });
-    return allCountrySet;
+
+    return allCountryArray;
     //console.log('all country set', allCountrySet);
   }
 
