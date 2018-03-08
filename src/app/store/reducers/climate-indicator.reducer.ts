@@ -21,6 +21,7 @@ import {
   ADD_POPULATION_DATA_PERCENTAGE_URBAN_AGGLOMERATIONS,
   ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION, ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION_GROWTH,
   ADD_RENEWABLE_ENERGY_DATA_RENEWABLE_ENERGY_CONSUMPTION, ADD_SOCIO_ECONOMIC_DATA_POVERTY_HEADCOUNT,
+  ADD_WEATHER_DATA_PRECIPITATION,
   ADD_WEATHER_DATA_TEMPERATURE,
   SOME_CASE_CLIMATE_DATA
 } from "../actions/climate.actions";
@@ -209,9 +210,21 @@ export function ClimateIndicatorReducer(state = initialClimateState, action: Cus
       newState.climateIndicatorData.data.socioEconomic.povertyHeadcountRatio = action.payload;
       return newState;
     }
-    case ADD_WEATHER_DATA_TEMPERATURE: {
+    case ADD_WEATHER_DATA_PRECIPITATION: {
       const newState = _.cloneDeep(state);
       newState.climateIndicatorData.data.weather.averagePrecipitationDepth = action.payload;
+      return newState;
+    }
+    case ADD_WEATHER_DATA_TEMPERATURE: {
+      const newState = _.cloneDeep(state);
+      debugger;
+      let newMap = _.map(action.payload, function(tempSet, value) {
+        return {country: value, tempOverYears: tempSet}
+      });
+      console.log('new', newState.climateIndicatorData.data.weather.averageTemperature);
+      console.log(newMap[0]);
+      //_.assign(newState.climateIndicatorData.data.weather.averageTemperature, newMap);
+      //newState.climateIndicatorData.data.weather.averageTemperature = newMap;
       return newState;
     }
 

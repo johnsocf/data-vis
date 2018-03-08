@@ -29,7 +29,7 @@ import {
   ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION,
   ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION_GROWTH,
   ADD_RENEWABLE_ENERGY_DATA_RENEWABLE_ENERGY_CONSUMPTION,
-  ADD_SOCIO_ECONOMIC_DATA_POVERTY_HEADCOUNT,
+  ADD_SOCIO_ECONOMIC_DATA_POVERTY_HEADCOUNT, ADD_WEATHER_DATA_PRECIPITATION,
   ADD_WEATHER_DATA_TEMPERATURE,
   SOME_CASE_CLIMATE_DATA
 } from "./store/actions/climate.actions";
@@ -142,7 +142,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.populateFromFile('health/prevalence-underweight-age.json', ADD_HEALTH_DATA_PREVALENCE_UNDERWEIGHT );
     this.populateFromFile('renewable-energy/renewable-energy-consumption.json', ADD_RENEWABLE_ENERGY_DATA_RENEWABLE_ENERGY_CONSUMPTION);
     this.populateFromFile('socio-economic/poverty-headcount-ratio.json', ADD_SOCIO_ECONOMIC_DATA_POVERTY_HEADCOUNT);
-    this.populateFromFile('weather/av-precip-depth.json', ADD_WEATHER_DATA_TEMPERATURE);
+    this.populateFromFile('weather/av-precip-depth.json', ADD_WEATHER_DATA_PRECIPITATION);
     this.populateFromFile(
       'electricity-production/percentage-based/electrical-production-from-coal-percentage.json',
       ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_COAL
@@ -280,8 +280,8 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe(data => {
         if (data) {
           console.log('initialData')
-          const derivedAverageSets = this.buildTempDataSet(data);
-          //this.store.dispatch({ type: actionType, payload: derivedAverageSets});
+          const tempSets = this.buildTempDataSet(data);
+          this.store.dispatch({ type: ADD_WEATHER_DATA_TEMPERATURE, payload: tempSets});
         }
       });
   }
@@ -374,10 +374,8 @@ export class AppComponent implements OnInit, OnDestroy {
           let years = _.assign(yearHolder, {[currentYear]: monthHolder});
           let subset = _.assign(countrySet, yearHolder);
 
-          //_.assign(countrySet, {[tempMetric.Year][month]: tempMetric.tas)};
         });
 
-        //console.log('country Set', countrySet);
        _.assign(allCountrySet, {[countryDates[0].Country]: countrySet});
       }
 
@@ -385,7 +383,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
       //countrySet = _.filter(initialJson)
     });
-    console.log('all country set', allCountrySet);
+    return allCountrySet;
+    //console.log('all country set', allCountrySet);
   }
 
 
