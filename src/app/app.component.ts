@@ -100,7 +100,7 @@ export class AppComponent implements OnInit, OnDestroy {
   climateModelState$: Observable<ApplicationState>;
   private testClimateData$: Observable<IndicatorAttributesModel[]>;
   private climateStateSub: Subscription;
-  lists<Any>;
+  lists;
 
   constructor(
     private apiService: ApiService,
@@ -109,18 +109,19 @@ export class AppComponent implements OnInit, OnDestroy {
     this.climateModelState$ = this.store.select(state => state);
     this.testClimateData$ = this.store.select(state => state.climateData.climateIndicatorData.data.education.primaryCompletionRate);
     this.climateStateSub = this.climateModelState$.subscribe(state => {
-      console.log('state', state);
+      //console.log('state', state);
     })
   }
 
 
   ngOnInit() {
     this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: [initialIndicatorAttributes]});
-    this.populateFileData()
+    this.populateFileData();
+    this.populateTemperatureFromFile('weather/av-temperature.json');
     console.log('data model', this.dataModel);
     this.tempTestFunction();
     this.climateStateSub = this.climateModelState$.subscribe(state => {
-      console.log('state', state.climateData.climateIndicatorData.data);
+      //console.log('state', state.climateData.climateIndicatorData.data);
       this.lists = state.climateData.climateIndicatorData.data;
     })
   }
@@ -273,6 +274,18 @@ export class AppComponent implements OnInit, OnDestroy {
       });
   }
 
+  populateTemperatureFromFile(filePath) {
+    const jsonUrl = 'assets/json/' + filePath;
+    this.apiService.httpGetFile(jsonUrl)
+      .subscribe(data => {
+        if (data) {
+          console.log('initialData')
+          const derivedAverageSets = this.buildTempDataSet(data);
+          //this.store.dispatch({ type: actionType, payload: derivedAverageSets});
+        }
+      });
+  }
+
   updateLocalModel(derivedAverageSets, modelStructure1, modelStructure2, modelStructure3) {
     if (modelStructure3 !== 'none') {this.dataModel[modelStructure1][modelStructure2][modelStructure3] = derivedAverageSets;}
     else {this.dataModel[modelStructure1][modelStructure2] = derivedAverageSets;}
@@ -327,6 +340,52 @@ export class AppComponent implements OnInit, OnDestroy {
     const thisController = this;
     const lowIncomeSet = _.filter(data, function(o){ return thisController.lowIncomeCountries.includes(o['countryCode'])});
     return this.buildDataAverages(lowIncomeSet, 'low income', data[0].indicatorName, data[0].indicatorCode);
+  }
+
+  mapMonth(number) {
+    const months = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August', 'Sept', 'Oct', 'Nov', 'Dec'];
+    return months[number - 1];
+  }
+
+  buildTempDataSet(initialJson) {
+    const allCountrySet = {};
+    const thisController = this;
+    _.forEach(initialJson, function(tempSet){
+      const foundInCountrySet = _.find(allCountrySet, {'Country': tempSet.Country})
+      if (!foundInCountrySet) {
+        // push to country set
+        let countryDates = _.filter(initialJson, {'Country': tempSet.Country})
+        let countrySet = {};
+        let yearHolder = {};
+        let monthHolder = {};
+        let year = 0;
+        countrySet['Country'] = countryDates[0].Country;
+        _.forEach(countryDates, function(tempMetric) {
+          if (year !== tempMetric.Year) {
+            monthHolder = {};
+            yearHolder = {};
+            year = tempMetric.Year;
+          }
+          let month = thisController.mapMonth(tempMetric.Month);
+          let currentYear = tempMetric.Year;
+          let tasMetric = tempMetric.tas;
+          let monthAttr = _.assign({}, {[month]: tasMetric});
+          let months = _.assign(monthHolder, monthAttr);
+          let years = _.assign(yearHolder, {[currentYear]: monthHolder});
+          let subset = _.assign(countrySet, yearHolder);
+
+          //_.assign(countrySet, {[tempMetric.Year][month]: tempMetric.tas)};
+        });
+
+        //console.log('country Set', countrySet);
+       _.assign(allCountrySet, {[countryDates[0].Country]: countrySet});
+      }
+
+      //console.log('all country set', allCountrySet);
+
+      //countrySet = _.filter(initialJson)
+    });
+    console.log('all country set', allCountrySet);
   }
 
 
