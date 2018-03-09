@@ -282,6 +282,7 @@ export class AppComponent implements OnInit, OnDestroy {
           console.log('initialData')
           const tempSets = this.buildTempDataSet(data);
           const derivedAverageSets = this.getDataAverages(tempSets, 'Av Temperature', 'temp');
+          console.log('derived average sets', derivedAverageSets);
           this.store.dispatch({ type: ADD_WEATHER_DATA_TEMPERATURE, payload: tempSets});
         }
       });
@@ -305,17 +306,27 @@ export class AppComponent implements OnInit, OnDestroy {
     const derivedAverageSets = this.getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
   });
 
+
+
   getDataAverages(data, indicatorName, indicatorCode) {
   let averageSet;
+    let highIncomeAverages;
+    let upperMiddleIncomeAverages;
+    let lowerMiddleIncomeAverages;
+    let lowIncomeAverages;
   if (indicatorCode.toLowerCase() === 'temp')  {
     averageSet = this.buildTempDataAverages(data, 'general');
+    highIncomeAverages = this.getHighIncomeSetTemp(data);
+    upperMiddleIncomeAverages = this.getUpperMiddleIncomeSetTemp(data);
+    lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSetTemp(data);
+    lowIncomeAverages = this.getLowIncomeSetTemp(data);
   } else {
     averageSet = this.buildDataAverages(data, 'general', indicatorName, indicatorCode);
+    highIncomeAverages = this.getHighIncomeSet(data);
+    upperMiddleIncomeAverages = this.getUpperMiddleIncomeSet(data);
+    lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSet(data);
+    lowIncomeAverages = this.getLowIncomeSet(data);
   }
-  const highIncomeAverages = this.getHighIncomeSet(data);
-  const upperMiddleIncomeAverages = this.getUpperMiddleIncomeSet(data);
-  const lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSet(data);
-  const lowIncomeAverages = this.getLowIncomeSet(data);
   const averageSetConglomerated = [averageSet, highIncomeAverages, upperMiddleIncomeAverages, lowerMiddleIncomeAverages, lowIncomeAverages]
   return {
     countryData: data,
@@ -345,7 +356,32 @@ export class AppComponent implements OnInit, OnDestroy {
   getLowIncomeSet(data) {
     const thisController = this;
     const lowIncomeSet = _.filter(data, function(o){ return thisController.lowIncomeCountries.includes(o['countryCode'])});
-    return this.buildDataAverages(lowIncomeSet, 'low income', data[0].indicatorName, data[0].indicatorCode);
+    return this.buildTempDataAverages(lowIncomeSet, 'low income');
+  }
+
+  getHighIncomeSetTemp(data) {
+    const thisController = this;
+    const highIncomeSet = _.filter(data, function(o){ return thisController.highIncomeCountries.includes(o['Country'])});
+    return this.buildTempDataAverages(highIncomeSet, 'high income');
+  }
+
+  getUpperMiddleIncomeSetTemp(data) {
+    const thisController = this;
+    const upperMiddleIncomeSet = _.filter(data, function(o){ return thisController.upperMiddleIncomeCountries.includes(o['Country'])});
+    return this.buildTempDataAverages(upperMiddleIncomeSet, 'upper middle income');
+  }
+
+  getLowerMiddleIncomeSetTemp(data) {
+    const thisController = this;
+    const lowerMiddleIncomeSet = _.filter(data, function(o){ return thisController.lowerMiddleIncomeCountries.includes(o['Country'])});
+    //console.log('lower middle income set', lowerMiddleIncomeSet);
+    return this.buildTempDataAverages(lowerMiddleIncomeSet, 'lower middle income');
+  }
+
+  getLowIncomeSetTemp(data) {
+    const thisController = this;
+    const lowIncomeSet = _.filter(data, function(o){ return thisController.lowIncomeCountries.includes(o['Country'])});
+    return this.buildTempDataAverages(lowIncomeSet, 'low income');
   }
 
   mapMonth(number) {
@@ -438,7 +474,6 @@ export class AppComponent implements OnInit, OnDestroy {
         })
       });
     });
-    console.log('average set', averageSet);
     _.assign(averageSet, {
       countryName: setName + ' averages',
       countryCode: 'temp',
