@@ -281,6 +281,7 @@ export class AppComponent implements OnInit, OnDestroy {
         if (data) {
           console.log('initialData')
           const tempSets = this.buildTempDataSet(data);
+          const derivedAverageSets = this.getDataAverages(tempSets, 'Av Temperature', 'temp');
           this.store.dispatch({ type: ADD_WEATHER_DATA_TEMPERATURE, payload: tempSets});
         }
       });
@@ -305,7 +306,12 @@ export class AppComponent implements OnInit, OnDestroy {
   });
 
   getDataAverages(data, indicatorName, indicatorCode) {
-  const averageSet = this.buildDataAverages(data, 'general', indicatorName, indicatorCode);
+  let averageSet;
+  if (indicatorCode.toLowerCase() === 'temp')  {
+    averageSet = this.buildTempDataAverages(data, 'general');
+  } else {
+    averageSet = this.buildDataAverages(data, 'general', indicatorName, indicatorCode);
+  }
   const highIncomeAverages = this.getHighIncomeSet(data);
   const upperMiddleIncomeAverages = this.getUpperMiddleIncomeSet(data);
   const lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSet(data);
@@ -381,13 +387,63 @@ export class AppComponent implements OnInit, OnDestroy {
        allCountryArray.push(countrySet);
       }
 
-      //console.log('all country set', allCountrySet);
-
-      //countrySet = _.filter(initialJson)
     });
 
     return allCountryArray;
-    //console.log('all country set', allCountrySet);
+  }
+
+  buildTempDataAverages(set, setName) {
+    const totalRow = {};
+    const countObjForAvg = {};
+    const averageSet = {};
+    let countMonthIndexes = {};
+    let monthAverageSet = {};
+    let lastCountry;
+    const controller = this;
+    _.forEach(set, function(countryObj) {
+      // per country set
+      let countYearIndexes = 0;
+        if (lastCountry !== countryObj.Country) {
+          lastCountry = countryObj.Country;
+        }
+      _.forEach(countryObj, function(value, key) {
+        countYearIndexes ++;
+        if (!totalRow[key]) {
+          _.assign(totalRow, {[key]: {}});
+          _.assign(countObjForAvg, {[key]: {}});
+          _.assign(averageSet, {[key]: {}});
+          countMonthIndexes[key] = {};
+        }
+
+        // per year
+        _.forEach(value, function(valueTemp, keyMonth) {
+          // for months
+          let newValue = controller.precisionRound(valueTemp, 2);
+          let valueSum;
+          countMonthIndexes[key][keyMonth] = !isNaN(controller.precisionRound(countObjForAvg[key][keyMonth], 2)) ? controller.precisionRound(countObjForAvg[key][keyMonth], 2) : 0;
+          let isNanNum = !isNaN(controller.precisionRound(totalRow[key][keyMonth], 2));
+          let isNanNum2 = isNaN(controller.precisionRound(totalRow[key][keyMonth], 2));
+          let isNanNum3 = controller.precisionRound(totalRow[key][keyMonth], 2);
+          if (!countMonthIndexes[key][keyMonth]) {
+            valueSum = 0;
+          } else {
+            valueSum = (controller.precisionRound(totalRow[key][keyMonth], 2)) ? controller.precisionRound(totalRow[key][keyMonth], 2) : 0;
+          }
+          countMonthIndexes[key][keyMonth] ++ ;
+          const total = (newValue + valueSum);
+          _.assign(totalRow[key], {[keyMonth]: controller.precisionRound(total, 2)});
+          _.assign(countObjForAvg[key], {[keyMonth]: controller.precisionRound(countMonthIndexes[key][keyMonth], 2)});
+          const avgNow =  totalRow[key][keyMonth] / countObjForAvg[key][keyMonth];
+          _.assign(averageSet[key], {[keyMonth]: controller.precisionRound(avgNow, 2)});
+        })
+      });
+    });
+    console.log('average set', averageSet);
+    _.assign(averageSet, {
+      countryName: setName + ' averages',
+      countryCode: 'temp',
+    });
+    return averageSet;
   }
 
 
@@ -400,7 +456,6 @@ export class AppComponent implements OnInit, OnDestroy {
     _.forEach(set, function(countryObj) {
       _.forEach(countryObj, function(value, key) {
         if (!isNaN(parseInt(key))) {
-
           let newValue = parseInt(value);
           let valueSum;
 
