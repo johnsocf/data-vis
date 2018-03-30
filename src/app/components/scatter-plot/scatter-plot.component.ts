@@ -119,7 +119,6 @@ export class ScatterPlotComponent implements OnInit {
       this.d3.interval(d => {
         //this.newData = this.rectData;
         this.newData = this.flag ? this.rectData : this.rectData.slice(1);
-        console.log('this.rect data', this.newData)
         this.update();
         this.flag = !this.flag;
       }, 1000);

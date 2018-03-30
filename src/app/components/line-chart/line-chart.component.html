@@ -1,3 +1,21 @@
-<p>
-  line-chart works!
-</p>
+<p>{{time}}</p>
+<mat-slider
+  class="example-margin"
+  [max]="maxSlider"
+  [min]="minSlider"
+  [step]="1"
+  [thumb-label]="false"
+  [tick-interval]="1"
+  (input)="onInputChange($event)">
+</mat-slider>
+<div>
+  <button id="play-button" (click)="playVis()">{{buttonText}}</button>
+  <button id="reset-button" (click)="resetVis()">reset</button>
+</div>
+<select #t (change)="setAttribute(t.value)">
+  <option selected value="all">all</option>
+</select>
+
+
+
+<div id="canvas" width="400" height="60"></div>

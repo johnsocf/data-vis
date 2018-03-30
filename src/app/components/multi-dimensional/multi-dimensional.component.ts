@@ -247,7 +247,7 @@ export class MultiDimensionalComponent implements OnInit {
     const element = this;
     this.filteredData = _.clone(this.newData)
     let filterSet = _.find(this.filteredData, {year: this.time});
-    console.log('filter set', filterSet);
+    //console.log('filter set', filterSet);
     this.filteredData = filterSet['countries'].filter(d => {
       if (element.selectedAttribute === 'all') {return true;}
       else {

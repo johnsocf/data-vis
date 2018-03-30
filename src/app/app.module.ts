@@ -17,8 +17,8 @@ import {MultiDimensionalComponent} from "./components/multi-dimensional/multi-di
 import {ScatterPlotComponent} from "./components/scatter-plot/scatter-plot.component";
 import {RevBarGraphComponent} from "./components/rev-bar-graph/rev-bar-graph.component";
 import {D3graphComponent} from "./components/d3graph/d3graph.component";
-
-import {MatSliderModule} from '@angular/material/slider';
+import {MatSliderModule, MatSelectModule, MatFormFieldModule, MatMenuModule, MatButtonModule} from '@angular/material';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -28,6 +28,7 @@ import {MatSliderModule} from '@angular/material/slider';
     RevBarGraphComponent,
     ScatterPlotComponent,
     MultiDimensionalComponent,
+    LineChartComponent,
     LineChartComponent,
     KeysPipePipe,
     WorldMapComponent
@@ -44,7 +45,12 @@ import {MatSliderModule} from '@angular/material/slider';
     EffectsModule.forRoot([
       WBDataAPIService
     ]),
-    MatSliderModule
+    MatSliderModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [ApiService, D3Service],
   bootstrap: [AppComponent]

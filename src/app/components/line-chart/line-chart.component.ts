@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, NgZone } from '@angular/core';
+import {Component, OnInit, ElementRef, NgZone, Input} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {
   D3Service,
@@ -13,11 +13,29 @@ import * as _ from 'lodash';
   styleUrls: ['./line-chart.component.css']
 })
 export class LineChartComponent implements OnInit {
+  private _dataSet = {};
+  private _selectedInitial = {};
+  private _selectedCountry = 'USA'
+
+  @Input()
+  set dataSet(data: any) {
+    this._dataSet = data;
+    console.log('data on inside', data);
+  }
+
+  @Input()
+  set selectedInitial(data: any) {
+    this._selectedInitial = data;
+    console.log('data on inside', data);
+  }
+
+  get selectedInitial(): any { return this._selectedInitial; }
 
   private d3: D3;
   private parentNativeElement: any;
   private d3Svg: Selection<SVGSVGElement, any, null, undefined>;
   rectData: any;
+  lineData: any;
   svg: any;
   g: any;
   xAxisCall: any;
@@ -51,6 +69,8 @@ export class LineChartComponent implements OnInit {
   selectedAttribute: string = 'all';
   minSlider: any;
   maxSlider: any;
+  parseTime: any;
+  bisectDate: any;
 
   constructor(
     element: ElementRef,
@@ -67,6 +87,7 @@ export class LineChartComponent implements OnInit {
     if (this.parentNativeElement !== null) {
       this.setSVG();
       this.setOrdinalScale();
+      this.getCoins();
       this.getRevenuesBuildRectangles();
     }
 
@@ -117,26 +138,63 @@ export class LineChartComponent implements OnInit {
 
 
   getRevenuesBuildRectangles() {
-    this.http.get<any[]>('../assets/data/data.json').subscribe(res =>{
-      this.rectData = res;
-      this.newData = this.formatData();
+    this.http.get<any[]>('../assets/data/coins.json').subscribe(res =>{
+      this.lineData = res;
+      //this.newData = this.formatData();
       this.buildScales();
       this.scaleBand();
       this.areaLinear();
       this.generateAxises();
-      this.addLegend();
+      this.parseTimeFormat();
+      //this.formatTime();
+      this.bisectDateFormat();
+      //this.addLegend();
 
-      this.addSlider();
-      this.d3.interval(d => {
-
-        this.flag = !this.flag;
-      }, 100);
+      //this.addSlider();
+      // this.d3.interval(d => {
+      //   this.flag = !this.flag;
+      // }, 100);
 
       this.generateLabels();
       this.resetVis();
       this.resetVis();
 
     },error =>{console.log('Error')});
+  }
+
+  getCoins() {
+    this.http.get<any[]>('../assets/data/coins.json').subscribe(res =>{
+      // Prepare and clean data
+      let data = res;
+      let filteredData = {};
+      for (var coin in data) {
+        if (!data.hasOwnProperty(coin)) {
+          continue;
+        }
+        filteredData[coin] = data[coin].filter(function(d){
+          return !(d["price_usd"] == null)
+        })
+        filteredData[coin].forEach(function(d){
+          d["price_usd"] = +d["price_usd"];
+          d["24h_vol"] = +d["24h_vol"];
+          d["market_cap"] = +d["market_cap"];
+          d["date"] = Date.parse(d["date"])
+        });
+      }
+
+    },error =>{console.log('Error')});
+  }
+
+  // formatTime():string {
+  //   this.formatTime = this.d3.timeFormat("%d/%m/%Y");
+  // }
+
+  parseTimeFormat() {
+    this.parseTime = this.d3.timeParse("%d/%m/%Y");
+  }
+
+  bisectDateFormat() {
+    this.bisectDate = this.d3.bisector(d => {return d['date'];}).left;
   }
 
   addSlider() {
@@ -245,7 +303,7 @@ export class LineChartComponent implements OnInit {
     const element = this;
     this.filteredData = _.clone(this.newData)
     let filterSet = _.find(this.filteredData, {year: this.time});
-    console.log('filter set', filterSet);
+    //console.log('filter set', filterSet);
     this.filteredData = filterSet['countries'].filter(d => {
       if (element.selectedAttribute === 'all') {return true;}
       else {
@@ -271,7 +329,7 @@ export class LineChartComponent implements OnInit {
       .attr('y', this.height + 140)
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
-      .text('Per Capita GDP');
+      .text('Time');
 
     this.yLabel = this.g.append('text')
       .attr('class', 'y axis-label')
@@ -280,14 +338,14 @@ export class LineChartComponent implements OnInit {
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
       .attr('transform', 'rotate(-90)')
-      .text('life expectancy years');
+      .text('test');
 
     this.timeLabel = this.g.append('text')
       .attr('x', this.height - 10)
       .attr('y', this.width - 40)
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
-      .text('1800');
+      .text('1960');
   }
 
   generateAxises() {
@@ -299,7 +357,9 @@ export class LineChartComponent implements OnInit {
       .attr('class', 'x-axis')
       .attr('transform', 'translate(0,' + this.height + ')')
 
-    this.yAxisCall = this.d3.axisLeft(this.y);
+    this.yAxisCall = this.d3.axisLeft(this.y)
+      .ticks(6);
+
     this.yAxisGroup = this.g.append('g')
       .attr('class', 'y-axis');
   }

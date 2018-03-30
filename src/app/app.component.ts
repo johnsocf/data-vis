@@ -121,12 +121,15 @@ export class AppComponent implements OnInit, OnDestroy {
     console.log('data model', this.dataModel);
     this.tempTestFunction();
     this.climateStateSub = this.climateModelState$.subscribe(state => {
-      //console.log('state', state.climateData.climateIndicatorData.data);
       this.lists = state.climateData.climateIndicatorData.data;
     })
   }
 
   ngOnDestroy() {}
+
+  initialSelection(selectedValue) {
+    console.log('selected value', selectedValue)
+  }
 
   tempTestFunction() {
     const newDataFromEndpoint = this.apiService.httpGet()

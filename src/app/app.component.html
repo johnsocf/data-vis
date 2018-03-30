@@ -4,17 +4,126 @@
     {{ title }}!
   </h1>
   <p>test data.  Begin design</p>
-  <select>
-    <option *ngFor="let list of lists | keysPipe">
-      {{list}}
-    </option>
-  </select>
+  <!--<mat-form-field>-->
+    <!--<mat-select placeholder="Climate Indicator" #t (change)="initialSelection(t.value)">-->
+      <!--<mat-option *ngFor="let list of lists | keysPipe" [value]="list">-->
+        <!--{{ list }}-->
+      <!--</mat-option>-->
+    <!--</mat-select>-->
+    <button mat-button [matMenuTriggerFor]="climateIndicator">Climate Indicator</button>
+    <mat-menu #climateIndicator="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="education">Education</button>
+      <button mat-menu-item [matMenuTriggerFor]="electricityProduction">Electricity Production</button>
+      <button mat-menu-item [matMenuTriggerFor]="emissions">Emissions</button>
+      <button mat-menu-item [matMenuTriggerFor]="energyUse">Energy Use</button>
+      <button mat-menu-item [matMenuTriggerFor]="health">Health</button>
+      <button mat-menu-item [matMenuTriggerFor]="population">Population</button>
+      <button mat-menu-item [matMenuTriggerFor]="renewableEnergy">Renewable Energy</button>
+      <button mat-menu-item [matMenuTriggerFor]="socioEconomic">socioEconomic</button>
+      <button mat-menu-item [matMenuTriggerFor]="weather">weather</button>
+    </mat-menu>
+
+    <mat-menu #education="matMenu">
+      <button mat-menu-item>primaryCompletionRate</button>
+      <button mat-menu-item>primarySecondaryEnrollment</button>
+    </mat-menu>
+
+    <mat-menu #electricityProduction="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="percentageBasedElectricity">percentageBased</button>
+      <button mat-menu-item [matMenuTriggerFor]="metricBasedElectricity">metricBased</button>
+    </mat-menu>
+
+    <mat-menu #percentageBasedElectricity="matMenu">
+      <button mat-menu-item>coal</button>
+      <button mat-menu-item>hydroElectric</button>
+      <button mat-menu-item>naturalGas</button>
+      <button mat-menu-item>nuclear</button>
+      <button mat-menu-item>oil</button>
+      <button mat-menu-item>renewable</button>
+      <button mat-menu-item>renewableOutput</button>
+    </mat-menu>
+
+    <mat-menu #metricBasedElectricity="matMenu">
+      <button mat-menu-item>fromRenewableExcludingHydro</button>
+    </mat-menu>
+
+    <mat-menu #emissions="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="percentageBasedEmissions">percentageBased</button>
+      <button mat-menu-item [matMenuTriggerFor]="metricBasedEmissions">metricBased</button>
+    </mat-menu>
+
+    <mat-menu #percentageBasedEmissions="matMenu">
+      <button mat-menu-item>co2_gas</button>
+      <button mat-menu-item>co2_solid</button>
+      <button mat-menu-item>methaneChange</button>
+      <button mat-menu-item>nitrousOxideChange</button>
+      <button mat-menu-item>otherGreenhouseGasChange</button>
+      <button mat-menu-item>totalGreenhouseGasChange</button>
+    </mat-menu>
+
+    <mat-menu #metricBasedEmissions="matMenu">
+      <button mat-menu-item>co2</button>
+      <button mat-menu-item>methane</button>
+      <button mat-menu-item>hfc</button>
+      <button mat-menu-item>nitrousOxide</button>
+      <button mat-menu-item>otherGreenhouse</button>;
+      <button mat-menu-item>pvc</button>
+      <button mat-menu-item>sf6</button>
+      <button mat-menu-item>total</button>
+    </mat-menu>
+
+    <mat-menu #energyUse="matMenu">
+      <button mat-menu-item>perCapita</button>
+      <button mat-menu-item>perGDP</button>
+    </mat-menu>
+
+    <mat-menu #health="matMenu">
+      <button mat-menu-item>prevalenceUnderweightAge</button>
+    </mat-menu>
+
+    <mat-menu #population="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="percentageBasedPopulation">percentageBased</button>
+      <button mat-menu-item [matMenuTriggerFor]="metricBasedPopulation">metricBased</button>
+    </mat-menu>
+
+    <mat-menu #percentageBasedPopulation="matMenu">
+      <button mat-menu-item>co2_gas</button>
+      <button mat-menu-item>co2_solid</button>
+      <button mat-menu-item>methaneChange</button>
+      <button mat-menu-item>nitrousOxideChange</button>
+      <button mat-menu-item>otherGreenhouseGasChange</button>
+      <button mat-menu-item>totalGreenhouseGasChange</button>
+    </mat-menu>
+
+    <mat-menu #metricBasedPopulation="matMenu">
+      <button mat-menu-item>totalPopulation</button>
+      <button mat-menu-item>urbanPopulation</button>
+      <button mat-menu-item>urbanPopulationGrowth</button>
+    </mat-menu>
+
+    <mat-menu #renewableEnergy="matMenu">
+      <button mat-menu-item>populationInUrbanAgglomerations</button>
+      <button mat-menu-item>urbanPopulation</button>
+      <button mat-menu-item>urbanPopulationGrowth</button>
+    </mat-menu>
+
+    <mat-menu #socioEconomic="matMenu">
+      <button mat-menu-item>povertyHeadcountRatio</button>
+    </mat-menu>
+
+    <mat-menu #weather="matMenu">
+      <button mat-menu-item>averagePrecipitationDepth</button>
+    </mat-menu>
+
+
+  <!--</mat-form-field>-->
 </div>
 <div>
   <app-world-map></app-world-map>
   <!--<app-d3graph></app-d3graph>-->
   <!--<app-rev-bar-graph></app-rev-bar-graph>-->
   <!--<app-scatter-plot></app-scatter-plot>-->
-  <app-multi-dimensional></app-multi-dimensional>
+  <!--<app-multi-dimensional></app-multi-dimensional>-->
+  <app-line-chart [selectedInitial]="" [dataSet]="lists"></app-line-chart>
 </div>
 
