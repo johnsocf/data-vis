@@ -123,55 +123,55 @@ export class AppComponent implements OnInit, OnDestroy {
     this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: [initialIndicatorAttributes]});
     this.populateFileData();
     this.populateTemperatureFromFile('weather/av-temperature.json');
-    console.log('data model', this.dataModel);
     this.tempTestFunction();
     this.climateStateSub = this.climateModelState$.subscribe(state => {
+
       this.lists = state.climateData.climateIndicatorData.data;
     })
   }
 
   ngOnDestroy() {}
 
+  unCamel(string) {
+    return string.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, " $1")
+  }
+
   selectModel(selectedValue) {
     let valueArray = selectedValue.trim().split(',');
-    console.log('selected value', valueArray);
+
     let one = valueArray[1];
     let two;
     let three;
 
+
     switch(valueArray[0]) {
       case 'one':
         this.attrSelection = this.lists[one];
-        this.selectionSetTitle = one.toUpperCase();
+        this.selectionSetTitle = this.unCamel(one).toUpperCase();
         break;
       case 'two':
         two = valueArray[2];
         this.attrSelection = this.lists[one][two];
-        this.selectionSetTitle = one.toUpperCase() + ' : ' + two.toUpperCase();
+        this.selectionSetTitle = this.unCamel(one).toUpperCase() + ' : ' + this.unCamel(two).toUpperCase();
         break;
       case 'three':
         two = valueArray[2];
         three = valueArray[3];
         this.attrSelection = this.lists[one][two][three];
-        this.selectionSetTitle = one.toUpperCase() + ' : ' + two.toUpperCase() + ' : ' + three.toUpperCase();
+        this.selectionSetTitle = this.unCamel(one).toUpperCase() + ' : ' + this.unCamel(two).toUpperCase() + ' : ' + this.unCamel(three).toUpperCase();
         break;
       default:
         this.attrSelection = this.lists[one];
-        this.selectionSetTitle = one.toUpperCase();
+        this.selectionSetTitle = this.unCamel(one).toUpperCase();
     }
-
-    console.log('this attr selection', this.attrSelection)
 
     let generalAverages = _.find(this.attrSelection.averages, {countryName: "general averages"})
     let countrySelection = _.find(this.attrSelection.countryData, {countryCode: "USA"})
 
     this.selectionSet = {
-      generalAverages,
-      countrySelection
+      generalAverages: generalAverages,
+      countrySelection: countrySelection
     }
-    console.log('this lists', this.lists);
-    console.log('selected value', this.attrSelection);
-    console.log('selected value', this.selectionSet);
   }
 
   formatOverallSelection() {
@@ -329,10 +329,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.apiService.httpGetFile(jsonUrl)
       .subscribe(data => {
         if (data) {
-          console.log('initialData')
           const tempSets = this.buildTempDataSet(data);
           const derivedAverageSets = this.getDataAverages(tempSets, 'Av Temperature', 'temp');
-          console.log('derived average sets', derivedAverageSets);
           this.store.dispatch({ type: ADD_WEATHER_DATA_TEMPERATURE, payload: tempSets});
         }
       });
@@ -377,7 +375,6 @@ export class AppComponent implements OnInit, OnDestroy {
         averages: averageSetConglomerated
       };
     } else {
-      debugger
       averageSet = this.buildDataAverages(data, 'general', indicatorName, indicatorCode);
       highIncomeAverages = this.getHighIncomeSet(data);
       upperMiddleIncomeAverages = this.getUpperMiddleIncomeSet(data);
@@ -394,7 +391,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   resetCountryData(data) {
-
     let totalSet = _.map(data, (key, value) => {
       let thisCountry = key;
 
@@ -613,6 +609,7 @@ export class AppComponent implements OnInit, OnDestroy {
         }
       });
     });
+
    return _.assign({}, {
       countryName: setName + ' averages',
       countryCode: "AVG",

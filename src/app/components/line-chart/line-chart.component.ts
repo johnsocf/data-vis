@@ -15,6 +15,7 @@ import * as _ from 'lodash';
 export class LineChartComponent implements OnInit {
   private _dataSet = {};
   private _selectedInitial = {};
+  private _indicatorName = 'test';
   private _selectedCountry = 'USA'
 
   @Input()
@@ -24,11 +25,15 @@ export class LineChartComponent implements OnInit {
 
   @Input()
   set selectedInitial(data: any) {
-    this._selectedInitial = data;
+    if (data) {
+      this._selectedInitial = _.clone(data.countrySelection.data);
+      this._indicatorName = data['countrySelection']['indicatorName'];
+      this.update();
+    }
     console.log('data on inside', data);
   }
 
-  get selectedInitial(): any { return this._selectedInitial; }
+  //get selectedInitial(): any { return this._selectedInitial; }
 
   private d3: D3;
   private parentNativeElement: any;
@@ -70,6 +75,7 @@ export class LineChartComponent implements OnInit {
   maxSlider: any;
   parseTime: any;
   bisectDate: any;
+  dataTimeFiltered: any;
 
   constructor(
     element: ElementRef,
@@ -112,13 +118,11 @@ export class LineChartComponent implements OnInit {
   }
 
   scaleBand() {
-    this.x = this.d3.scaleLog()
-      .range([0, this.width])
-      .base(10);
+    this.x = this.d3.scaleTime().range([0, this.width]);
   }
 
   buildScaleBandDomain() {
-    this.x.domain([142, 150000]);
+    this.x.domain([0, 2019]);
   }
 
   setOrdinalScale() {
@@ -155,8 +159,8 @@ export class LineChartComponent implements OnInit {
       // }, 100);
 
       this.generateLabels();
-      this.resetVis();
-      this.resetVis();
+      //this.resetVis();
+      //this.resetVis();
 
     },error =>{console.log('Error')});
   }
@@ -289,13 +293,59 @@ export class LineChartComponent implements OnInit {
     console.log('update');
 
     this.buildScaleBandDomain();
-    this.generateAxisesCalls();
+
     this.addTransition();
+
+    this.dataTimeFilter();
+    //this.buildTooltips();
     //this.filterBasedOnSelection();
     this.buildRectangles();
+
+    this.generateAxisesCalls();
+
     this.buildScaleDomain();
     this.updateLabelText();
   }
+
+  dataTimeFilter() {
+    // this.dataTimeFiltered = this._selectedInitial.filter(function(d){
+    //   return ((d.date >= sliderValues[0]) && (d.date <= sliderValues[1]))
+    // });
+  }
+
+  buildTooltips() {
+    // Clear old tooltips
+    this.d3.select(".focus").remove();
+    this.d3.select(".overlay").remove();
+
+    // Tooltip code
+    var focus = this.g.append("g")
+      .attr("class", "focus")
+      .style("display", "none");
+    focus.append("line")
+      .attr("class", "x-hover-line hover-line")
+      .attr("y1", 0)
+      .attr("y2", this.height);
+    focus.append("line")
+      .attr("class", "y-hover-line hover-line")
+      .attr("x1", 0)
+      .attr("x2", this.width);
+    focus.append("circle")
+      .attr("r", 5);
+    focus.append("text")
+      .attr("x", 15)
+      .attr("dy", ".31em");
+    this.svg.append("rect")
+      .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")")
+      .attr("class", "overlay")
+      .attr("width", this.width)
+      .attr("height", this.height)
+      .on("mouseover", function() { focus.style("display", null); })
+      .on("mouseout", function() { focus.style("display", "none"); })
+      .on("mousemove", this.mousemove);
+  }
+
+  mousemove() {}
 
   filterBasedOnSelection() {
     const element = this;
@@ -312,7 +362,7 @@ export class LineChartComponent implements OnInit {
   }
 
   updateLabelText() {
-    this.yLabel.text(this.valueType);
+    //this.yLabel.text(this.valueType);
   }
 
   addTransition() {
@@ -336,7 +386,7 @@ export class LineChartComponent implements OnInit {
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
       .attr('transform', 'rotate(-90)')
-      .text('test');
+      .text(this._indicatorName);
 
     this.timeLabel = this.g.append('text')
       .attr('x', this.height - 10)
@@ -347,24 +397,26 @@ export class LineChartComponent implements OnInit {
   }
 
   generateAxises() {
-    this.xAxisCall = this.d3.axisBottom(this.x)
-      .tickValues([400, 4000, 40000])
-      .tickFormat(this.d3.format('$'));
 
-    this.xAxisGroup = this.g.append('g')
-      .attr('class', 'x-axis')
-      .attr('transform', 'translate(0,' + this.height + ')')
+    this.xAxisCall = this.d3.axisBottom();
+    this.yAxisCall = this.d3.axisLeft()
+      .ticks(6)
+      .tickFormat(function(d) { return parseInt(d / 1000) + "k"; });
 
-    this.yAxisCall = this.d3.axisLeft(this.y)
-      .ticks(6);
 
-    this.yAxisGroup = this.g.append('g')
-      .attr('class', 'y-axis');
+// Axis groups
+    this.xAxisGroup = this.g.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + this.height + ")");
+    this.yAxisGroup = this.g.append("g")
+      .attr("class", "y axis")
+
   }
 
   generateAxisesCalls() {
-    this.yAxisGroup.transition(this.t).call(this.yAxisCall);
-    this.xAxisGroup.transition(this.t).call(this.xAxisCall)
+    // Generate axes once scales have been set
+    this.yAxisGroup.transition(this.t).call(this.yAxisCall.scale(this.x));
+    this.xAxisGroup.transition(this.t).call(this.xAxisCall.scale(this.y))
       .selectAll("text")
       .attr("y", '10')
       .attr("x", '-5')
@@ -383,32 +435,40 @@ export class LineChartComponent implements OnInit {
 
   buildRectangles() {
 
+    let element = this;
     // data join
-    var circles = this.g.selectAll('circle')
-      .data(this.filteredData, d => {
-        return  d.country;
+    var line = this.d3.line()
+      .x(function(d) {
+        return element.x(d.year);
+      })
+      .y(function(d) {
+        return element.y(d.value);
       });
 
+    this._selectedInitial.forEach(function(d) {
+      d.year = +d.year;
+      d.value = +d.value;
+    });
+
+    this.x.domain(this.d3.extent(this._selectedInitial, function(d) { return d.year; }));
+    this.y.domain([this.d3.min(this._selectedInitial, function(d) { return d.value; }) / 1.005,
+      this.d3.max(this._selectedInitial, function(d) { return d.year; }) * 1.005]);
+
+    this.xAxisGroup.call(this.xAxisCall.scale(this.x));
+    this.yAxisGroup.call(this.yAxisCall.scale(this.y));
+
+
+    // Add line to chart
+    this.g.append("path")
+      .attr("class", "line")
+      .attr("fill", "none")
+      .attr("stroke", "grey")
+      .attr("stroke-with", "3px")
+      .attr("d", line(this._selectedInitial));
 
     //  //exit old elements
-    circles.exit()
-      .attr('fill', 'red')
-      .transition(this.t)
-      .attr('cy', this.y(0))
-      .remove();
 
-    // enter
-    circles.enter()
-      .append('circle')
-      .attr('class', 'enter')
-      .attr('fill', d => {return this.color(d.continent)})
-      .merge(circles)
-      .transition(this.t)
-      .attr('cy', d => {return this.y(d.life_exp)})
-      .attr('cx', d => {return this.x(d.income)})
-      .attr('r', d => {return Math.sqrt(this.area(d.population)/ Math.PI)})
-
-    this.timeLabel.text(+(this.time));
+    //this.timeLabel.text(+(this.time));
   }
 
 
