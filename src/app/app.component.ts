@@ -166,7 +166,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     let generalAverages = _.find(this.attrSelection.averages, {countryName: "general averages"})
-    let countrySelection = _.find(this.attrSelection.countryData, {countryCode: "USA"})
+    let countrySelection = _.find(this.attrSelection.countryData, {countryCode: "BWA"})
 
     this.selectionSet = {
       generalAverages: generalAverages,

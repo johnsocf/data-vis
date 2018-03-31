@@ -16,6 +16,7 @@ export class LineChartComponent implements OnInit {
   private _dataSet = {};
   private _selectedInitial = {};
   private _indicatorName = 'test';
+  private _countryNames = ['USA'];
   private _selectedCountry = 'USA'
   private _selectedAverage = {}
 
@@ -30,9 +31,11 @@ export class LineChartComponent implements OnInit {
       this._selectedInitial = _.clone(data.countrySelection.data);
       this._selectedAverage = _.clone(data.generalAverages.data);
       this._indicatorName = data['countrySelection']['indicatorName'];
+      this._countryNames = [data['countrySelection']['countryName']];
       // for each set it will be, in teh update.
       // iterate through selected Initial list.
       console.log('selected average', this._selectedAverage);
+      console.log('this country names', this._countryNames);
       this.update();
     }
     console.log('data on inside', data);
@@ -159,7 +162,7 @@ export class LineChartComponent implements OnInit {
       this.parseTimeFormat();
       //this.formatTime();
       this.bisectDateFormat();
-      this.addLegend();
+      // this.addLegend();
 
       //this.addSlider();
       // this.d3.interval(d => {
@@ -250,14 +253,15 @@ export class LineChartComponent implements OnInit {
 
     let countries = ['USA'];
 
-    countries.forEach((country, i) => {
+    this._countryNames.forEach((country, i) => {
       let legendRow = this.legend.append('g')
         .attr('transform', 'translate(0, ' + (i * 20) + ')');
 
       legendRow.append('rect')
         .attr('width', 10)
         .attr('height', 10)
-        .attr('fill', this.color(countries.concat('average')));
+        .attr('fill', this.color(this._countryNames[i]));
+      console.log('i', this.color(this._countryNames[i]))
 
       legendRow.append('text')
         .attr('x', -10)
@@ -334,6 +338,7 @@ export class LineChartComponent implements OnInit {
 
     this.buildScaleDomain();
     this.updateLabelText();
+    this.addLegend();
   }
 
   dataTimeFilter() {
@@ -403,7 +408,7 @@ export class LineChartComponent implements OnInit {
     this.xLabel = this.g.append("text")
       .attr('class', 'x axis-label')
       .attr('x', this.width/ 2)
-      .attr('y', this.height + 40)
+      .attr('y', this.height + 45)
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
       .text('Time');
@@ -509,14 +514,16 @@ export class LineChartComponent implements OnInit {
     this.g.append("path")
       .attr("class", "chart-line")
       .attr("fill", "none")
-      .attr("stroke", "red")
+      .attr("stroke", this.color(this._countryNames[0]))
       .attr("stroke-with", "5px")
       .attr("d", line(this._selectedInitial));
+
+    console.log('another color', this.color(this._countryNames[0]))
 
     this.g.append("path")
       .attr("class", "line")
       .attr("fill", "none")
-      .attr("stroke", "blue")
+      .attr("stroke", "red")
       .attr("stroke-with", "4px")
       .attr("d", line(this._selectedAverage));
 
