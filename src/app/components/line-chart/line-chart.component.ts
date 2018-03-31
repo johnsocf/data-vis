@@ -17,6 +17,7 @@ export class LineChartComponent implements OnInit {
   private _selectedInitial = {};
   private _indicatorName = 'test';
   private _selectedCountry = 'USA'
+  private _selectedAverage = {}
 
   @Input()
   set dataSet(data: any) {
@@ -27,7 +28,11 @@ export class LineChartComponent implements OnInit {
   set selectedInitial(data: any) {
     if (data) {
       this._selectedInitial = _.clone(data.countrySelection.data);
+      this._selectedAverage = _.clone(data.generalAverages.data);
       this._indicatorName = data['countrySelection']['indicatorName'];
+      // for each set it will be, in teh update.
+      // iterate through selected Initial list.
+      console.log('selected average', this._selectedAverage);
       this.update();
     }
     console.log('data on inside', data);
@@ -303,6 +308,7 @@ export class LineChartComponent implements OnInit {
     //this.filterBasedOnSelection();
     this.buildRectangles();
 
+
     this.generateAxisesCalls();
 
     this.buildScaleDomain();
@@ -439,6 +445,7 @@ export class LineChartComponent implements OnInit {
 
     let element = this;
     // data join
+    this.svg.selectAll("path").remove();
     var line = this.d3.line()
       .x(function(d) {
         return element.x(d.year);
@@ -451,22 +458,38 @@ export class LineChartComponent implements OnInit {
       d.year = +d.year;
       d.value = +d.value;
     });
-    console.log('extent', this.d3.extent(this._selectedInitial, function(d) { return d.year; })
-    this.x.domain(this.d3.extent(this._selectedInitial, function(d) { return d.year; }));
-    this.y.domain([this.d3.min(this._selectedInitial, function(d) { return d.value; }),
-      this.d3.max(this._selectedInitial, function(d) { return d.value; }) * 1.005]);
+    console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; })
+    var averageRange = this.d3.extent(this._selectedAverage, function(d) { return d.year; })
+    var averageDomain = this.d3.extent(this._selectedAverage, function(d) { return d.value; })
+    var selectedRange = this.d3.extent(this._selectedInitial, function(d) { return d.year; })
+    var selectedDomain = this.d3.extent(this._selectedInitial, function(d) { return d.value; })
+    var setRangeMin = averageRange[0] < selectedRange[0] ? averageRange[0] : selectedRange[0];
+    var setRangeMax = averageRange[1] > selectedRange[1] ? averageRange[1] : selectedRange[1];
+    var averageDomainMin = averageDomain[0] < selectedDomain[0] ? averageDomain[0] : selectedDomain[0];
+    var averageDomainMax = averageDomain[1] > selectedDomain[1] ? averageDomain[1] : selectedDomain[1];
+    debugger;
+    this.x.domain([setRangeMin, setRangeMax]);
+    this.y.domain([averageDomainMin, averageDomainMax]);
 
     this.xAxisGroup.call(this.xAxisCall.scale(this.x));
     this.yAxisGroup.call(this.yAxisCall.scale(this.y));
+    this.yLabel.text(this._indicatorName);
 
 
     // Add line to chart
     this.g.append("path")
       .attr("class", "line")
       .attr("fill", "none")
-      .attr("stroke", "grey")
-      .attr("stroke-with", "3px")
+      .attr("stroke", "red")
+      .attr("stroke-with", "5px")
       .attr("d", line(this._selectedInitial));
+
+    this.g.append("path")
+      .attr("class", "line")
+      .attr("fill", "none")
+      .attr("stroke", "blue")
+      .attr("stroke-with", "4px")
+      .attr("d", line(this._selectedAverage));
 
     //  //exit old elements
 
