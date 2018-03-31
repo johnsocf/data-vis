@@ -27,7 +27,6 @@ import {
 } from "../actions/climate.actions";
 
 export function ClimateIndicatorReducer(state = initialClimateState, action: CustomAction): ClimateModel {
-  console.log('action type', action.type);
   switch (action.type) {
     case SOME_CASE_CLIMATE_DATA: {
       const newState = _.cloneDeep(state);

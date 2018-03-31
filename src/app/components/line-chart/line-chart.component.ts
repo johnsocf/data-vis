@@ -118,7 +118,9 @@ export class LineChartComponent implements OnInit {
   }
 
   scaleBand() {
-    this.x = this.d3.scaleTime().range([0, this.width]);
+    this.x = this.x = this.d3.scaleLog()
+      .range([0, this.width])
+      .base(10);
   }
 
   buildScaleBandDomain() {
@@ -401,7 +403,7 @@ export class LineChartComponent implements OnInit {
     this.xAxisCall = this.d3.axisBottom();
     this.yAxisCall = this.d3.axisLeft()
       .ticks(6)
-      .tickFormat(function(d) { return parseInt(d / 1000) + "k"; });
+      .tickFormat(function(d) { return d; });
 
 
 // Axis groups
@@ -415,8 +417,8 @@ export class LineChartComponent implements OnInit {
 
   generateAxisesCalls() {
     // Generate axes once scales have been set
-    this.yAxisGroup.transition(this.t).call(this.yAxisCall.scale(this.x));
-    this.xAxisGroup.transition(this.t).call(this.xAxisCall.scale(this.y))
+    this.yAxisGroup.transition(this.t).call(this.yAxisCall.scale(this.y));
+    this.xAxisGroup.transition(this.t).call(this.xAxisCall.scale(this.x))
       .selectAll("text")
       .attr("y", '10')
       .attr("x", '-5')
@@ -449,10 +451,10 @@ export class LineChartComponent implements OnInit {
       d.year = +d.year;
       d.value = +d.value;
     });
-
+    console.log('extent', this.d3.extent(this._selectedInitial, function(d) { return d.year; })
     this.x.domain(this.d3.extent(this._selectedInitial, function(d) { return d.year; }));
-    this.y.domain([this.d3.min(this._selectedInitial, function(d) { return d.value; }) / 1.005,
-      this.d3.max(this._selectedInitial, function(d) { return d.year; }) * 1.005]);
+    this.y.domain([this.d3.min(this._selectedInitial, function(d) { return d.value; }),
+      this.d3.max(this._selectedInitial, function(d) { return d.value; }) * 1.005]);
 
     this.xAxisGroup.call(this.xAxisCall.scale(this.x));
     this.yAxisGroup.call(this.yAxisCall.scale(this.y));
