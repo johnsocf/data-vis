@@ -20,7 +20,6 @@ export class LineChartComponent implements OnInit {
   @Input()
   set dataSet(data: any) {
     this._dataSet = data;
-    console.log('data on inside', data);
   }
 
   @Input()
@@ -101,15 +100,15 @@ export class LineChartComponent implements OnInit {
   }
 
   setMinAndMax() {
-    this.min = this.d3.min(this.newData, d => {
-      return d['height'];
-    });
-    this.max = this.d3.max(this.newData, d => {
-      return d['height'];
-    })
-    this.extent = this.d3.extent(this.newData, d => {
-      return d['height'];
-    })
+    // this.min = this.d3.min(this._selectedInitial, d => {
+    //   return d['height'];
+    // });
+    // this.max = this.d3.max(this._selectedInitial, d => {
+    //   return d['height'];
+    // })
+    // this.extent = this.d3.extent(this._selectedInitial, d => {
+    //   return d['height'];
+    // })
   }
 
   scaleBand() {
@@ -290,10 +289,9 @@ export class LineChartComponent implements OnInit {
     console.log('update');
 
     this.buildScaleBandDomain();
-
     this.generateAxisesCalls();
     this.addTransition();
-    this.filterBasedOnSelection();
+    //this.filterBasedOnSelection();
     this.buildRectangles();
     this.buildScaleDomain();
     this.updateLabelText();

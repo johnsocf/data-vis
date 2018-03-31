@@ -40,6 +40,7 @@ import {
   IndicatorAttributesModel,
   initialIndicatorAttributes
 } from "./shared/models/climate/data/items/indicator-attributes-model";
+import {isNumber} from "util";
 
 @Component({
   selector: 'app-root',
@@ -47,7 +48,7 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'Data Vis CSCI 4830';
+  title = 'Climate Change Indicators: Vis';
   private highIncomeCountries;
   private upperMiddleIncomeCountries;
   private lowerMiddleIncomeCountries;
@@ -99,8 +100,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
   climateModelState$: Observable<ApplicationState>;
   private testClimateData$: Observable<IndicatorAttributesModel[]>;
-  private climateStateSub: Subscription;
+  //private climateStateSub: Subscription;
+  private climateStateSub: any;
   lists;
+  attrSelection: any;
+  selectionSet: any;
+  selectionSetTitle: any = 'Select Climate Change Indicator';
 
   constructor(
     private apiService: ApiService,
@@ -127,8 +132,50 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {}
 
-  initialSelection(selectedValue) {
-    console.log('selected value', selectedValue)
+  selectModel(selectedValue) {
+    let valueArray = selectedValue.trim().split(',');
+    console.log('selected value', valueArray);
+    let one = valueArray[1];
+    let two;
+    let three;
+
+    switch(valueArray[0]) {
+      case 'one':
+        this.attrSelection = this.lists[one];
+        this.selectionSetTitle = one.toUpperCase();
+        break;
+      case 'two':
+        two = valueArray[2];
+        this.attrSelection = this.lists[one][two];
+        this.selectionSetTitle = one.toUpperCase() + ' : ' + two.toUpperCase();
+        break;
+      case 'three':
+        two = valueArray[2];
+        three = valueArray[3];
+        this.attrSelection = this.lists[one][two][three];
+        this.selectionSetTitle = one.toUpperCase() + ' : ' + two.toUpperCase() + ' : ' + three.toUpperCase();
+        break;
+      default:
+        this.attrSelection = this.lists[one];
+        this.selectionSetTitle = one.toUpperCase();
+    }
+
+    console.log('this attr selection', this.attrSelection)
+
+    let generalAverages = _.find(this.attrSelection.averages, {countryName: "general averages"})
+    let countrySelection = _.find(this.attrSelection.countryData, {countryCode: "USA"})
+
+    this.selectionSet = {
+      generalAverages,
+      countrySelection
+    }
+    console.log('this lists', this.lists);
+    console.log('selected value', this.attrSelection);
+    console.log('selected value', this.selectionSet);
+  }
+
+  formatOverallSelection() {
+
   }
 
   tempTestFunction() {
@@ -312,54 +359,104 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   getDataAverages(data, indicatorName, indicatorCode) {
-  let averageSet;
-    let highIncomeAverages;
-    let upperMiddleIncomeAverages;
-    let lowerMiddleIncomeAverages;
-    let lowIncomeAverages;
-  if (indicatorCode.toLowerCase() === 'temp')  {
-    averageSet = this.buildTempDataAverages(data, 'general');
-    highIncomeAverages = this.getHighIncomeSetTemp(data);
-    upperMiddleIncomeAverages = this.getUpperMiddleIncomeSetTemp(data);
-    lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSetTemp(data);
-    lowIncomeAverages = this.getLowIncomeSetTemp(data);
-  } else {
-    averageSet = this.buildDataAverages(data, 'general', indicatorName, indicatorCode);
-    highIncomeAverages = this.getHighIncomeSet(data);
-    upperMiddleIncomeAverages = this.getUpperMiddleIncomeSet(data);
-    lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSet(data);
-    lowIncomeAverages = this.getLowIncomeSet(data);
+    let averageSet;
+      let highIncomeAverages;
+      let upperMiddleIncomeAverages;
+      let lowerMiddleIncomeAverages;
+      let lowIncomeAverages;
+      let averageSetConglomerated = [];
+    if (indicatorCode.toLowerCase() === 'temp')  {
+      averageSet = this.buildTempDataAverages(data, 'general');
+      highIncomeAverages = this.getHighIncomeSetTemp(data);
+      upperMiddleIncomeAverages = this.getUpperMiddleIncomeSetTemp(data);
+      lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSetTemp(data);
+      lowIncomeAverages = this.getLowIncomeSetTemp(data);
+      averageSetConglomerated = [averageSet, highIncomeAverages, upperMiddleIncomeAverages, lowerMiddleIncomeAverages, lowIncomeAverages];
+      return {
+        countryData: data,
+        averages: averageSetConglomerated
+      };
+    } else {
+      debugger
+      averageSet = this.buildDataAverages(data, 'general', indicatorName, indicatorCode);
+      highIncomeAverages = this.getHighIncomeSet(data);
+      upperMiddleIncomeAverages = this.getUpperMiddleIncomeSet(data);
+      lowerMiddleIncomeAverages = this.getLowerMiddleIncomeSet(data);
+      lowIncomeAverages = this.getLowIncomeSet(data);
+      averageSetConglomerated = [averageSet, highIncomeAverages, upperMiddleIncomeAverages, lowerMiddleIncomeAverages, lowIncomeAverages];
+      return {
+        countryData: this.resetCountryData(data),
+        averages: averageSetConglomerated
+      };
+    }
+
   }
-  const averageSetConglomerated = [averageSet, highIncomeAverages, upperMiddleIncomeAverages, lowerMiddleIncomeAverages, lowIncomeAverages]
-  return {
-    countryData: data,
-    averages: averageSetConglomerated
-  };
-}
+
+
+  resetCountryData(data) {
+
+    let totalSet = _.map(data, (key, value) => {
+      let thisCountry = key;
+
+      let filteredSet = [];
+      _.forEach(thisCountry, (value, key) => {
+        let thisValue = value;
+        if (typeof thisValue === 'number') {
+          filteredSet.push({year: key, value: value});
+        }
+      });
+      const thisTotalSet = _.assign({}, {
+        countryName: thisCountry['countryName'],
+        countryCode: thisCountry['countryCode'],
+        indicatorName: thisCountry['indicatorName'],
+        indicatorCode: thisCountry['indicatorCode'],
+        data: filteredSet
+      });
+      return thisTotalSet;
+    });
+
+    return totalSet;
+
+
+  }
+
+  shortenedSet(totalAverages) {
+    return {
+      indicatorName: totalAverages.indicatorName,
+      indicatorCode: totalAverages.indicatorCode,
+      countryName: totalAverages.countryName,
+      countryCode: totalAverages.countryCode,
+      data: totalAverages.data
+    };
+  }
 
   getHighIncomeSet(data) {
     const thisController = this;
     const highIncomeSet = _.filter(data, function(o){ return thisController.highIncomeCountries.includes(o['countryCode'])});
-    return this.buildDataAverages(highIncomeSet, 'high income', data[0].indicatorName, data[0].indicatorCode);
+    const totalAverages = this.buildDataAverages(highIncomeSet, 'high income', data[0].indicatorName, data[0].indicatorCode);
+    return this.shortenedSet(totalAverages);
   }
 
   getUpperMiddleIncomeSet(data) {
     const thisController = this;
     const upperMiddleIncomeSet = _.filter(data, function(o){ return thisController.upperMiddleIncomeCountries.includes(o['countryCode'])});
-    return this.buildDataAverages(upperMiddleIncomeSet, 'upper middle income', data[0].indicatorName, data[0].indicatorCode);
+    const totalAverages = this.buildDataAverages(upperMiddleIncomeSet, 'upper middle income', data[0].indicatorName, data[0].indicatorCode);
+    return this.shortenedSet(totalAverages);
   }
 
   getLowerMiddleIncomeSet(data) {
     const thisController = this;
     const lowerMiddleIncomeSet = _.filter(data, function(o){ return thisController.lowerMiddleIncomeCountries.includes(o['countryCode'])});
     //console.log('lower middle income set', lowerMiddleIncomeSet);
-    return this.buildDataAverages(lowerMiddleIncomeSet, 'lower middle income', data[0].indicatorName, data[0].indicatorCode);
+    const totalAverages = this.buildDataAverages(lowerMiddleIncomeSet, 'lower middle income', data[0].indicatorName, data[0].indicatorCode);
+    return this.shortenedSet(totalAverages);
   }
 
   getLowIncomeSet(data) {
     const thisController = this;
     const lowIncomeSet = _.filter(data, function(o){ return thisController.lowIncomeCountries.includes(o['countryCode'])});
-    return this.buildTempDataAverages(lowIncomeSet, 'low income');
+    const totalAverages =  this.buildDataAverages(lowIncomeSet, 'low income', data[0].indicatorName, data[0].indicatorCode);
+    return this.shortenedSet(totalAverages);
   }
 
   getHighIncomeSetTemp(data) {
@@ -419,7 +516,6 @@ export class AppComponent implements OnInit, OnDestroy {
           let months = _.assign(monthHolder, monthAttr);
           let years = _.assign(yearHolder, {[currentYear]: monthHolder});
           let subset = _.assign(countrySet, yearHolder);
-
         });
 
        _.assign(allCountrySet, {countrySet});
@@ -517,13 +613,21 @@ export class AppComponent implements OnInit, OnDestroy {
         }
       });
     });
-    _.assign(averageSet, {
+   return _.assign({}, {
       countryName: setName + ' averages',
       countryCode: "AVG",
       indicatorName: indicatorName,
       indicatorCode: indicatorCode,
+      data: this.setFormat(averageSet)
     });
-    return averageSet;
+    //return averageSet;
+  }
+
+  setFormat(averageSet) {
+    let newSet = _.map(averageSet, (value, key) => {
+      return {year: key, value: value};
+    });
+    return newSet;
   }
 
   precisionRound(number, precision) {
