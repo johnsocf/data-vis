@@ -81,6 +81,7 @@ export class LineChartComponent implements OnInit {
   parseTime: any;
   bisectDate: any;
   dataTimeFiltered: any;
+  xrange: any;
 
   constructor(
     element: ElementRef,
@@ -154,11 +155,11 @@ export class LineChartComponent implements OnInit {
       this.buildScales();
       this.scaleBand();
       this.areaLinear();
-      this.generateAxises();
+      // this.generateAxises();
       this.parseTimeFormat();
       //this.formatTime();
       this.bisectDateFormat();
-      //this.addLegend();
+      this.addLegend();
 
       //this.addSlider();
       // this.d3.interval(d => {
@@ -245,27 +246,42 @@ export class LineChartComponent implements OnInit {
 
   addLegend() {
     this.legend = this.g.append('g')
-      .attr('transform', 'translate(' + (this.width - 10) + ',' + (this.height - 125) + ')');
+      .attr('transform', 'translate(' + (this.width - 10) + ',' + (this.height + 40) + ')');
 
-    let continents = ['europe', 'asia', 'americas', 'africa'];
+    let countries = ['USA'];
 
-    continents.forEach((continent, i) => {
+    countries.forEach((country, i) => {
       let legendRow = this.legend.append('g')
         .attr('transform', 'translate(0, ' + (i * 20) + ')');
 
       legendRow.append('rect')
         .attr('width', 10)
         .attr('height', 10)
-        .attr('fill', this.color(continent));
+        .attr('fill', this.color(countries.concat('average')));
 
       legendRow.append('text')
         .attr('x', -10)
         .attr('y', 10)
         .attr('text-anchor', 'end')
         .style('text-transform', 'capitalize')
-        .text(continent);
+        .text(country);
 
     });
+
+    let legendRow = this.legend.append('g')
+      .attr('transform', 'translate(0, ' + (countries.length * 20) + ')');
+
+    legendRow.append('rect')
+      .attr('width', 10)
+      .attr('height', 10)
+      .attr('fill', 'red');
+
+    legendRow.append('text')
+      .attr('x', -10)
+      .attr('y', 10)
+      .attr('text-anchor', 'end')
+      .style('text-transform', 'capitalize')
+      .text('average');
   }
 
   areaLinear() {
@@ -294,6 +310,10 @@ export class LineChartComponent implements OnInit {
   }
 
   update() {
+    this.svg.selectAll('path.line').remove();
+    this.svg.selectAll(".chart-line").remove();
+    this.svg.selectAll(".x-axis").remove();
+    this.svg.selectAll(".y-axis").remove();
     //this.valueType = this.flag ? 'revenue' : 'profit';
     this.valueType = 'revenue';
     //this.setMinAndMax();
@@ -306,10 +326,11 @@ export class LineChartComponent implements OnInit {
     this.dataTimeFilter();
     //this.buildTooltips();
     //this.filterBasedOnSelection();
-    this.buildRectangles();
 
 
+    this.generateAxises();
     this.generateAxisesCalls();
+    this.buildRectangles();
 
     this.buildScaleDomain();
     this.updateLabelText();
@@ -382,7 +403,7 @@ export class LineChartComponent implements OnInit {
     this.xLabel = this.g.append("text")
       .attr('class', 'x axis-label')
       .attr('x', this.width/ 2)
-      .attr('y', this.height + 140)
+      .attr('y', this.height + 40)
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
       .text('Time');
@@ -396,17 +417,34 @@ export class LineChartComponent implements OnInit {
       .attr('transform', 'rotate(-90)')
       .text(this._indicatorName);
 
-    this.timeLabel = this.g.append('text')
-      .attr('x', this.height - 10)
-      .attr('y', this.width - 40)
-      .attr('font-size', '20px')
-      .attr('text-anchor', 'middle')
-      .text('1960');
+    // this.timeLabel = this.g.append('text')
+    //   .attr('x', this.height - 10)
+    //   .attr('y', this.width - 40)
+    //   .attr('font-size', '20px')
+    //   .attr('text-anchor', 'middle')
+    //   .text('1960');
   }
 
   generateAxises() {
+    console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; })
+    var averageRange = this.d3.extent(this._selectedAverage, function(d) { return d.year; })
+    var averageDomain = this.d3.extent(this._selectedAverage, function(d) { return d.value; })
+    var selectedRange = this.d3.extent(this._selectedInitial, function(d) { return d.year; })
+    var selectedDomain = this.d3.extent(this._selectedInitial, function(d) { return d.value; })
+    var setRangeMin = averageRange[0] < selectedRange[0] ? averageRange[0] : selectedRange[0];
+    var setRangeMax = averageRange[1] > selectedRange[1] ? averageRange[1] : selectedRange[1];
+    var averageDomainMin = averageDomain[0] < selectedDomain[0] ? averageDomain[0] : selectedDomain[0];
+    var averageDomainMax = averageDomain[1] > selectedDomain[1] ? averageDomain[1] : selectedDomain[1];
+    this.x.domain([setRangeMin, setRangeMax]);
+    this.y.domain([averageDomainMin, averageDomainMax]);
+    this.xrange = [setRangeMin, setRangeMax];
 
-    this.xAxisCall = this.d3.axisBottom();
+
+    this.xAxisCall = this.d3.axisBottom()
+      .ticks(10)
+      .tickPadding(10)
+      .tickValues( this.d3.range(this.xrange[0], this.xrange[1], 5))
+      .tickFormat(function(d) { return d; });
     this.yAxisCall = this.d3.axisLeft()
       .ticks(6)
       .tickFormat(function(d) { return d; });
@@ -414,10 +452,15 @@ export class LineChartComponent implements OnInit {
 
 // Axis groups
     this.xAxisGroup = this.g.append("g")
-      .attr("class", "x axis")
+      .attr("class", "x-axis")
       .attr("transform", "translate(0," + this.height + ")");
     this.yAxisGroup = this.g.append("g")
-      .attr("class", "y axis")
+      .attr("class", "y-axis")
+
+
+    this.xAxisGroup.call(this.xAxisCall.scale(this.x));
+    this.yAxisGroup.call(this.yAxisCall.scale(this.y));
+    this.yLabel.text(this._indicatorName);
 
   }
 
@@ -445,40 +488,26 @@ export class LineChartComponent implements OnInit {
 
     let element = this;
     // data join
-    this.svg.selectAll("path").remove();
+
     var line = this.d3.line()
       .x(function(d) {
         return element.x(d.year);
       })
       .y(function(d) {
         return element.y(d.value);
-      });
+      })
+      .curve(this.d3.curveBasis);;
 
     this._selectedInitial.forEach(function(d) {
       d.year = +d.year;
       d.value = +d.value;
     });
-    console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; })
-    var averageRange = this.d3.extent(this._selectedAverage, function(d) { return d.year; })
-    var averageDomain = this.d3.extent(this._selectedAverage, function(d) { return d.value; })
-    var selectedRange = this.d3.extent(this._selectedInitial, function(d) { return d.year; })
-    var selectedDomain = this.d3.extent(this._selectedInitial, function(d) { return d.value; })
-    var setRangeMin = averageRange[0] < selectedRange[0] ? averageRange[0] : selectedRange[0];
-    var setRangeMax = averageRange[1] > selectedRange[1] ? averageRange[1] : selectedRange[1];
-    var averageDomainMin = averageDomain[0] < selectedDomain[0] ? averageDomain[0] : selectedDomain[0];
-    var averageDomainMax = averageDomain[1] > selectedDomain[1] ? averageDomain[1] : selectedDomain[1];
-    debugger;
-    this.x.domain([setRangeMin, setRangeMax]);
-    this.y.domain([averageDomainMin, averageDomainMax]);
 
-    this.xAxisGroup.call(this.xAxisCall.scale(this.x));
-    this.yAxisGroup.call(this.yAxisCall.scale(this.y));
-    this.yLabel.text(this._indicatorName);
 
 
     // Add line to chart
     this.g.append("path")
-      .attr("class", "line")
+      .attr("class", "chart-line")
       .attr("fill", "none")
       .attr("stroke", "red")
       .attr("stroke-with", "5px")
