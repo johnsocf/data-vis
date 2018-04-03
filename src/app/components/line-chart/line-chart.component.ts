@@ -408,7 +408,7 @@ export class LineChartComponent implements OnInit {
     this.xLabel = this.g.append("text")
       .attr('class', 'x axis-label')
       .attr('x', this.width/ 2)
-      .attr('y', this.height + 45)
+      .attr('y', this.height + 50)
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
       .text('Time');
@@ -431,8 +431,8 @@ export class LineChartComponent implements OnInit {
   }
 
   generateAxises() {
-    console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; })
-    var averageRange = this.d3.extent(this._selectedAverage, function(d) { return d.year; })
+    console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; }));
+    var averageRange: any = this.d3.extent(this._selectedAverage, function(d) { return d.year; })
     var averageDomain = this.d3.extent(this._selectedAverage, function(d) { return d.value; })
     var selectedRange = this.d3.extent(this._selectedInitial, function(d) { return d.year; })
     var selectedDomain = this.d3.extent(this._selectedInitial, function(d) { return d.value; })
