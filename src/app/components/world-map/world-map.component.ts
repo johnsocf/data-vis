@@ -6,7 +6,7 @@ import {
   Selection
 } from 'd3-ng2-service';
 import * as topojson from "topojson-client";
-import {worldTopo} from '../../../assets/topojson/world-mini';
+import {topo as worldTopo} from '../../../assets/topojson/world-topo';
 
 @Component({
   selector: 'app-world-map',
@@ -56,31 +56,56 @@ export class WorldMapComponent implements OnInit {
   }
 
   setSVG() {
+    let d3 = this.d3
     this.svg = this.d3.select(this.parentNativeElement)
       .append('svg')
       .attr('width', this.width)
-      .attr('height', this.height);
+      .attr('height', this.height)
+        .on('mousedown', d => {
+          d3.event.preventDefault();
+          console.log('clicked 1!');
+      })
   }
 
   setJSON() {
     this.svg.append('path', '.graticule')
       .datum(topojson.feature(worldTopo, worldTopo.objects.land))
       .attr('class', 'land')
-      .attr('d', this.path);
+      .attr('id', function(d) {
+        console.log('TOPO-JSON', worldTopo);
+        console.log('d', d)
+        return d.country_code;
+      })
+      .attr('d', this.path)
+      .on('click', d => {
+        console.log('clicked 2!', d);
+        console.log('this',  this);
+      })
 
     this.svg.append('path')
       .datum(topojson.mesh(worldTopo, worldTopo.objects.countries, (a, b)  => {
-        console.log('a', a !== b);
         return a !== b;
         }
       ))
       .attr('class', 'boundary')
+      .attr('d', this.path)
+
+
+    this.svg.append('g')
+      .attr('class', 'boundary')
+      .selectAll('boundary')
+      .data(topojson.feature(worldTopo, worldTopo.objects.countries))
+      .enter().append('path')
+      .on('click', d => {
+        console.log('clicked 2!', d);
+        console.log('this',  this);
+      })
       .attr('d', this.path);
 
-    console.log('topojson', topojson);
-    console.log('topo', worldTopo)
-    console.log('topo', topojson.feature(worldTopo, worldTopo.objects.countries))
-    console.log('this grat', this.graticule);
+    // this.svg.selectAll('boundary')
+    //   .on('mousedown', d => {
+    //     console.log('clicked 2!')
+    //   })
 
     // this.svg.append('path')
     //   .datum(this.graticule)

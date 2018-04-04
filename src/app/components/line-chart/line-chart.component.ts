@@ -431,8 +431,12 @@ export class LineChartComponent implements OnInit {
   }
 
   generateAxises() {
-    console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; }));
-    var averageRange: any = this.d3.extent(this._selectedAverage, function(d) { return d.year; })
+    //console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; }));
+    // console.log('selected average', this._selectedAverage)
+
+    var averageRange: any = this.d3.extent(this._selectedAverage, function(d) {
+      return d.year;
+    })
     var averageDomain = this.d3.extent(this._selectedAverage, function(d) { return d.value; })
     var selectedRange = this.d3.extent(this._selectedInitial, function(d) { return d.year; })
     var selectedDomain = this.d3.extent(this._selectedInitial, function(d) { return d.value; })
