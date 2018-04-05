@@ -85,7 +85,6 @@ export class WorldMapComponent implements OnInit {
     const features = topoWorld.objects.countries.geometries
       .map(
         function(g) {
-          console.log('g', g);
           return topojson.feature(topoWorld, g);
         }
       );
@@ -95,15 +94,20 @@ export class WorldMapComponent implements OnInit {
     //       return topojson.feature(worldTopo, g);
     //     }
     //   );
+    const d3 = this.d3;
     this.svg.selectAll('.countries')
       .data(features)
       .enter()
       .append('path')
       .attr('class', 'state')
       .attr('d', this.path)
-      .style('fill', 'red')
+      .style('fill', '#FFC1FF')
       .on('click', function (d) {
-          console.log('big d', d);
+          let selected = d3.select(this).classed('selected')
+          d3.select(this).classed('selected', selected ? false : true);
+          let fillStyle = !selected ? '#90EEBF' : '#FFC1FF';
+          d3.select(this).style('fill', fillStyle);
+          console.log('selected', d3.select(this).classed('selected'))
           console.log('big d', d.properties);
         });
 
