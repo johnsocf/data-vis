@@ -82,12 +82,19 @@ export class WorldMapComponent implements OnInit {
     //     console.log('clicked 2!', d);
     //     console.log('this',  this);
     //   });
-    const features = worldTopo.objects.countries.geometries
+    const features = topoWorld.objects.countries.geometries
       .map(
         function(g) {
-          return topojson.feature(worldTopo, g);
+          console.log('g', g);
+          return topojson.feature(topoWorld, g);
         }
       );
+    // const properties = worldTopo.objects.countries.properties
+    //   .map(
+    //     function(g) {
+    //       return topojson.feature(worldTopo, g);
+    //     }
+    //   );
     this.svg.selectAll('.countries')
       .data(features)
       .enter()
@@ -97,6 +104,7 @@ export class WorldMapComponent implements OnInit {
       .style('fill', 'red')
       .on('click', function (d) {
           console.log('big d', d);
+          console.log('big d', d.properties);
         });
 
     this.svg.selectAll('path')
