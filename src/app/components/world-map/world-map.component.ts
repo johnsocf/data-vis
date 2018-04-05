@@ -69,36 +69,50 @@ export class WorldMapComponent implements OnInit {
   }
 
   setJSON() {
-    this.svg.append('g', '.graticule')
-      .attr('class', 'countries')
-      .selectAll('path')
-        .data(topojson.feature(topoWorld, topoWorld.objects.countries))
-      .enter().append('path')
-      .attr('id', function(d) {
-        console.log('TOPO-JSON', worldTopo);
-        console.log('d', d)
-        return d.country_code;
-      })
-      .attr('d', this.path)
-      .on('click', d => {
-        console.log('clicked 2!', d);
-        console.log('this',  this);
-      });
-
-    // this.svg.selectAll('.land')
-    //   .data(topojson.feature(topoWorld, topoWorld.objects.countries))
-    //   .enter().append('path')
-    //   .attr('class', 'state-boundary')
+    // this.svg.append('path', '.graticule')
+    //   .datum(topojson.feature(topoWorld, topoWorld.objects.countries))
+    //   .attr('class', 'land')
     //   .attr('id', function(d) {
-    //     console.log('TOPO-JSON d', worldTopo);
-    //     console.log('d ddd', d)
+    //     console.log('TOPO-JSON', worldTopo);
+    //     console.log('d', d)
     //     return d.country_code;
     //   })
     //   .attr('d', this.path)
-    //   .style('fill', 'red')
-    //   .on('click', function (d) {
-    //     console.log('big d', d);
+    //   .on('click', d => {
+    //     console.log('clicked 2!', d);
+    //     console.log('this',  this);
     //   });
+    const features = worldTopo.objects.countries.geometries
+      .map(
+        function(g) {
+          return topojson.feature(worldTopo, g);
+        }
+      );
+    this.svg.selectAll('.countries')
+      .data(features)
+      .enter()
+      .append('path')
+      .attr('class', 'state')
+      .attr('d', this.path)
+      .style('fill', 'red')
+      .on('click', function (d) {
+          console.log('big d', d);
+        });
+
+    this.svg.selectAll('path')
+      .data(topojson.feature(topoWorld, topoWorld.objects.countries))
+      .enter().append('path')
+      .attr('class', 'state-boundary')
+      .attr('id', function(d) {
+        console.log('TOPO-JSON d', worldTopo);
+        console.log('d ddd', d)
+        return d.country_code;
+      })
+      .attr('d', this.path)
+      .style('fill', 'red')
+      .on('click', function (d) {
+        console.log('big d', d);
+      });
 
 
     this.svg.append('path')
