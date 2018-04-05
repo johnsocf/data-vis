@@ -8,6 +8,10 @@ import {
 import * as topojson from "topojson-client";
 import {topo as worldTopo} from '../../../assets/topojson/world-topo';
 import { worldCode as topoWorld } from '../../../assets/topojson/world-code';
+import * as _ from 'lodash';
+import {ApplicationState} from "../../store/application-state";
+import {Store} from "@ngrx/store";
+import {UPDATE_COUNTRIES_SELECTION} from "../../store/actions/ui.actions";
 
 @Component({
   selector: 'app-world-map',
@@ -26,12 +30,14 @@ export class WorldMapComponent implements OnInit {
   path: any;
   graticule: any;
   land: any;
+  countryCodes: any = [];
 
   constructor(
     element: ElementRef,
     private ngZone: NgZone,
     d3Service: D3Service,
     private http: HttpClient,
+    private store: Store<ApplicationState>
   ) {
     this.d3 = d3Service.getD3();
     this.parentNativeElement = element.nativeElement;
@@ -95,6 +101,8 @@ export class WorldMapComponent implements OnInit {
     //     }
     //   );
     const d3 = this.d3;
+    const countryCodes = this.countryCodes;
+    const store = this.store;
     this.svg.selectAll('.countries')
       .data(features)
       .enter()
@@ -107,6 +115,9 @@ export class WorldMapComponent implements OnInit {
           d3.select(this).classed('selected', selected ? false : true);
           let fillStyle = !selected ? '#90EEBF' : '#FFC1FF';
           d3.select(this).style('fill', fillStyle);
+          let countryCode = d.properties.countryCode;
+          store.dispatch({ type: 'UPDATE_COUNTRIES_SELECTION', payload: countryCode});
+
           console.log('selected', d3.select(this).classed('selected'))
           console.log('big d', d.properties);
         });

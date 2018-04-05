@@ -106,6 +106,7 @@ export class AppComponent implements OnInit, OnDestroy {
   attrSelection: any;
   selectionSet: any;
   selectionSetTitle: any = 'Select Climate Change Indicator';
+  countrySelections: any  [];
 
   constructor(
     private apiService: ApiService,
@@ -125,7 +126,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.populateTemperatureFromFile('weather/av-temperature.json');
     this.tempTestFunction();
     this.climateStateSub = this.climateModelState$.subscribe(state => {
-
+      //console.log('state', state);
+      this.attrSelection = state.uiModel.selectedAttribute;
+      this.countrySelections = state.uiModel.selectedCountries;
       this.lists = state.climateData.climateIndicatorData.data;
     })
   }
@@ -168,10 +171,12 @@ export class AppComponent implements OnInit, OnDestroy {
     let generalAverages = _.find(this.attrSelection.averages, {countryName: "general averages"})
     let countrySelection = _.find(this.attrSelection.countryData, {countryCode: "BWA"})
 
-    this.selectionSet = {
-      generalAverages: generalAverages,
-      countrySelection: countrySelection
-    }
+    this.selectionSet = this.attrSelection;
+
+    // this.selectionSet = {
+    //   generalAverages: generalAverages,
+    //   countrySelection: countrySelection
+    // }
   }
 
   formatOverallSelection() {

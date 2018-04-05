@@ -14,11 +14,13 @@ import * as _ from 'lodash';
 })
 export class LineChartComponent implements OnInit {
   private _dataSet = {};
-  private _selectedInitial = {};
-  private _indicatorName = 'test';
+  private _selectedInitial: any = {};
+  private _indicatorName = '';
   private _countryNames = ['USA'];
-  private _selectedCountry = 'USA'
-  private _selectedAverage = {}
+  private _selectedCountry = 'USA';
+  private _selectedAverage: any = {};
+  private _countryDataSetComplete: any = [];
+  private _aggregatedDataCountrySelections: any = []
 
   @Input()
   set dataSet(data: any) {
@@ -26,19 +28,52 @@ export class LineChartComponent implements OnInit {
   }
 
   @Input()
+  set countryNames(data: any) {
+    this._countryNames = data;
+
+    this._aggregatedDataCountrySelections = _.filter(this._countryDataSetComplete, d => {
+      //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
+      return _.indexOf(this._countryNames, d.countryCode) !== -1;
+    })
+
+
+    if (!!this._indicatorName) {this.update()}
+
+  }
+
+  @Input()
   set selectedInitial(data: any) {
     if (data) {
-      this._selectedInitial = _.clone(data.countrySelection.data);
-      this._selectedAverage = _.clone(data.generalAverages.data);
-      this._indicatorName = data['countrySelection']['indicatorName'];
-      this._countryNames = [data['countrySelection']['countryName']];
+     //this._countryNames = [data['countrySelection']['countryName']];
       // for each set it will be, in teh update.
       // iterate through selected Initial list.
-      console.log('selected average', this._selectedAverage);
-      console.log('this country names', this._countryNames);
+      this.aggregateDataSelections(data);
       this.update();
     }
     console.log('data on inside', data);
+  }
+
+  aggregateDataSelections(data) {
+
+   if (data) {
+     const generalAverages = _.find(data.averages, {countryName: "general averages"})
+     const countrySelection = _.find(data.countryData, {countryCode: "BWA"})
+     this._countryDataSetComplete = data.countryData;
+     this._aggregatedDataCountrySelections = _.filter(this._countryDataSetComplete, d => {
+       return _.indexOf(this._countryNames, d.countryCode) !== -1;
+     })
+
+     console.log('country set', this._aggregatedDataCountrySelections);
+
+     this._selectedInitial = _.clone(countrySelection.data);
+     this._selectedAverage = _.clone(generalAverages.data);
+     this._indicatorName = countrySelection['indicatorName'];
+
+
+
+     console.log('selected average', this._selectedAverage);
+     console.log('this country names', this._countryNames);
+   }
   }
 
   //get selectedInitial(): any { return this._selectedInitial; }
@@ -127,7 +162,7 @@ export class LineChartComponent implements OnInit {
   }
 
   scaleBand() {
-    this.x = this.x = this.d3.scaleLog()
+    this.x = this.d3.scaleLog()
       .range([0, this.width])
       .base(10);
   }
@@ -314,31 +349,30 @@ export class LineChartComponent implements OnInit {
   }
 
   update() {
-    this.svg.selectAll('path.line').remove();
-    this.svg.selectAll(".chart-line").remove();
-    this.svg.selectAll(".x-axis").remove();
-    this.svg.selectAll(".y-axis").remove();
-    //this.valueType = this.flag ? 'revenue' : 'profit';
-    this.valueType = 'revenue';
-    //this.setMinAndMax();
-    console.log('update');
+    if (this.svg) {
+      this.svg.selectAll('path.line').remove();
+      this.svg.selectAll(".chart-line").remove();
+      this.svg.selectAll(".x-axis").remove();
+      this.svg.selectAll(".y-axis").remove();
 
-    this.buildScaleBandDomain();
+      console.log('update');
 
-    this.addTransition();
+      this.buildScaleBandDomain();
 
-    this.dataTimeFilter();
-    //this.buildTooltips();
-    //this.filterBasedOnSelection();
+      this.addTransition();
+
+      //this.dataTimeFilter();
 
 
-    this.generateAxises();
-    this.generateAxisesCalls();
-    this.buildRectangles();
 
-    this.buildScaleDomain();
-    this.updateLabelText();
-    this.addLegend();
+      this.generateAxises();
+      this.generateAxisesCalls();
+      this.buildRectangles();
+
+      //this.buildScaleDomain();
+      //this.updateLabelText();
+      //this.addLegend();
+    }
   }
 
   dataTimeFilter() {
@@ -434,29 +468,31 @@ export class LineChartComponent implements OnInit {
     //console.log('extent', this.d3.extent(this._selectedAverage, function(d) { return d.year; }));
     // console.log('selected average', this._selectedAverage)
 
-    var averageRange: any = this.d3.extent(this._selectedAverage, function(d) {
-      return d.year;
+    const averageRange = this.d3.extent(this._selectedAverage, d => {
+      return d['year'];
+    });
+    const averageDomain = this.d3.extent(this._selectedAverage, d => d['value']);
+    const selectedRange = this.d3.extent(this._aggregatedDataCountrySelections, d => {
+      return d['year'];
     })
-    var averageDomain = this.d3.extent(this._selectedAverage, function(d) { return d.value; })
-    var selectedRange = this.d3.extent(this._selectedInitial, function(d) { return d.year; })
-    var selectedDomain = this.d3.extent(this._selectedInitial, function(d) { return d.value; })
-    var setRangeMin = averageRange[0] < selectedRange[0] ? averageRange[0] : selectedRange[0];
-    var setRangeMax = averageRange[1] > selectedRange[1] ? averageRange[1] : selectedRange[1];
-    var averageDomainMin = averageDomain[0] < selectedDomain[0] ? averageDomain[0] : selectedDomain[0];
-    var averageDomainMax = averageDomain[1] > selectedDomain[1] ? averageDomain[1] : selectedDomain[1];
+    const selectedDomain = this.d3.extent(this._aggregatedDataCountrySelections, d => d['value'])
+    const setRangeMin = averageRange[0] < selectedRange[0] ? averageRange[0] : selectedRange[0];
+    const setRangeMax = averageRange[1] > selectedRange[1] ? averageRange[1] : selectedRange[1];
+    const averageDomainMin = averageDomain[0] < selectedDomain[0] ? averageDomain[0] : selectedDomain[0];
+    const averageDomainMax = averageDomain[1] > selectedDomain[1] ? averageDomain[1] : selectedDomain[1];
     this.x.domain([setRangeMin, setRangeMax]);
     this.y.domain([averageDomainMin, averageDomainMax]);
     this.xrange = [setRangeMin, setRangeMax];
 
 
-    this.xAxisCall = this.d3.axisBottom()
+    this.xAxisCall = this.d3.axisBottom(this.x)
       .ticks(10)
       .tickPadding(10)
       .tickValues( this.d3.range(this.xrange[0], this.xrange[1], 5))
-      .tickFormat(function(d) { return d; });
-    this.yAxisCall = this.d3.axisLeft()
+      .tickFormat( d => { return d; });
+    this.yAxisCall = this.d3.axisLeft(this.y)
       .ticks(6)
-      .tickFormat(function(d) { return d; });
+      .tickFormat( d => { return d; });
 
 
 // Axis groups
@@ -500,40 +536,58 @@ export class LineChartComponent implements OnInit {
 
     var line = this.d3.line()
       .x(function(d) {
-        return element.x(d.year);
+        return element.x(d['year']);
       })
       .y(function(d) {
-        return element.y(d.value);
+        return element.y(d['value']);
       })
-      .curve(this.d3.curveBasis);;
+      .curve(this.d3.curveBasis);
 
-    this._selectedInitial.forEach(function(d) {
-      d.year = +d.year;
-      d.value = +d.value;
+    this._aggregatedDataCountrySelections.forEach(function(j) {
+      _.forEach(j, d => {
+        console.log('d', d)
+        d.year = +d.year;
+        d.value = +d.value;
+      });
     });
 
+    const g = this.g
+    _.each(this._aggregatedDataCountrySelections, set => {
+      g.append("path")
+        .attr("class", "chart-line")
+        .attr("fill", "none")
+        .attr("stroke", this.color(this._countryNames[0]))
+        .attr("stroke-with", "5px")
+        .attr("d", line(set.data));
 
+      console.log('another color', this.color(this._countryNames[0]))
 
-    // Add line to chart
-    this.g.append("path")
-      .attr("class", "chart-line")
-      .attr("fill", "none")
-      .attr("stroke", this.color(this._countryNames[0]))
-      .attr("stroke-with", "5px")
-      .attr("d", line(this._selectedInitial));
-
-    console.log('another color', this.color(this._countryNames[0]))
-
-    this.g.append("path")
-      .attr("class", "line")
-      .attr("fill", "none")
-      .attr("stroke", "red")
-      .attr("stroke-with", "4px")
-      .attr("d", line(this._selectedAverage));
+      g.append("path")
+        .attr("class", "line")
+        .attr("fill", "none")
+        .attr("stroke", "red")
+        .attr("stroke-with", "4px")
+        .attr("d", line(set.data));
+    }) ;
+    // // Add line to chart
+    // this.g.append("path")
+    //   .attr("class", "chart-line")
+    //   .attr("fill", "none")
+    //   .attr("stroke", this.color(this._countryNames[0]))
+    //   .attr("stroke-with", "5px")
+    //   .attr("d", line(this._selectedInitial));
+    //
+    // console.log('another color', this.color(this._countryNames[0]))
+    //
+    // this.g.append("path")
+    //   .attr("class", "line")
+    //   .attr("fill", "none")
+    //   .attr("stroke", "red")
+    //   .attr("stroke-with", "4px")
+    //   .attr("d", line(this._selectedAverage));
 
     //  //exit old elements
 
-    //this.timeLabel.text(+(this.time));
   }
 
 

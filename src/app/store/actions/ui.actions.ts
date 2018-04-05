@@ -1,0 +1,6 @@
+import { Action } from '@ngrx/store';
+
+export const UPDATE_COUNTRIES_SELECTION = 'UPDATE_COUNTRIES_SELECTION';
+
+export const UPDATE_ATTRIBUTES_SELECTION = 'UPDATE_ATTRIBUTES_SELECTION';
+
