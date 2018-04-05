@@ -7,6 +7,7 @@ import {
 } from 'd3-ng2-service';
 import * as topojson from "topojson-client";
 import {topo as worldTopo} from '../../../assets/topojson/world-topo';
+import { worldCode as topoWorld } from '../../../assets/topojson/world-code';
 
 @Component({
   selector: 'app-world-map',
@@ -68,9 +69,11 @@ export class WorldMapComponent implements OnInit {
   }
 
   setJSON() {
-    this.svg.append('path', '.graticule')
-      .datum(topojson.feature(worldTopo, worldTopo.objects.land))
-      .attr('class', 'land')
+    this.svg.append('g', '.graticule')
+      .attr('class', 'countries')
+      .selectAll('path')
+        .data(topojson.feature(topoWorld, topoWorld.objects.countries))
+      .enter().append('path')
       .attr('id', function(d) {
         console.log('TOPO-JSON', worldTopo);
         console.log('d', d)
@@ -80,7 +83,23 @@ export class WorldMapComponent implements OnInit {
       .on('click', d => {
         console.log('clicked 2!', d);
         console.log('this',  this);
-      })
+      });
+
+    // this.svg.selectAll('.land')
+    //   .data(topojson.feature(topoWorld, topoWorld.objects.countries))
+    //   .enter().append('path')
+    //   .attr('class', 'state-boundary')
+    //   .attr('id', function(d) {
+    //     console.log('TOPO-JSON d', worldTopo);
+    //     console.log('d ddd', d)
+    //     return d.country_code;
+    //   })
+    //   .attr('d', this.path)
+    //   .style('fill', 'red')
+    //   .on('click', function (d) {
+    //     console.log('big d', d);
+    //   });
+
 
     this.svg.append('path')
       .datum(topojson.mesh(worldTopo, worldTopo.objects.countries, (a, b)  => {
@@ -91,16 +110,16 @@ export class WorldMapComponent implements OnInit {
       .attr('d', this.path)
 
 
-    this.svg.append('g')
-      .attr('class', 'boundary')
-      .selectAll('boundary')
-      .data(topojson.feature(worldTopo, worldTopo.objects.countries))
-      .enter().append('path')
-      .on('click', d => {
-        console.log('clicked 2!', d);
-        console.log('this',  this);
-      })
-      .attr('d', this.path);
+    // this.svg.append('g')
+    //   .attr('class', 'boundary')
+    //   .selectAll('boundary')
+    //   .data(topojson.feature(worldTopo, worldTopo.objects.countries))
+    //   .enter().append('path')
+    //   .on('click', d => {
+    //     console.log('clicked 2!', d);
+    //     console.log('this',  this);
+    //   })
+    //   .attr('d', this.path);
 
     // this.svg.selectAll('boundary')
     //   .on('mousedown', d => {
