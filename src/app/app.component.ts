@@ -136,7 +136,6 @@ export class AppComponent implements OnInit, OnDestroy {
       this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
     });
     this.climateStateSub = this.climateModelState$.subscribe(state => {
-      console.log('state', state.climateData.climateIndicatorData.data);
       this.colorMap = state.uiModel.colorSet;
       this.attrSelection = state.uiModel.selectedAttribute;
       this.countrySelections = state.uiModel.selectedCountries;

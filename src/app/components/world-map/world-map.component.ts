@@ -123,8 +123,6 @@ export class WorldMapComponent implements OnInit {
         let countryConversion = classContext.updateLocalCountrySetToGetColor(countryCode, classContext);
         store.dispatch({ type: 'UPDATE_COUNTRIES_SELECTION', payload: countryCode});
         const index = _.indexOf(classContext.countryCodes, countryConversion);
-        console.log('color',  countryConversion)
-        console.log('color',  classContext.color(countryConversion))
 
         let selected = d3.select(this).classed('selected')
           d3.select(this).classed('selected', selected ? false : true);
@@ -189,7 +187,6 @@ export class WorldMapComponent implements OnInit {
       return this.color(d)
     }));
     this.store.dispatch({ type: 'UPDATE_COLOR_MAP', payload: newObj});
-    console.log('new obj', newObj);
 
     return alpha3_conversion
   }

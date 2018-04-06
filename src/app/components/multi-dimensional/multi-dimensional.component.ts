@@ -76,7 +76,6 @@ export class MultiDimensionalComponent implements OnInit {
 
   onInputChange(sliderEvent) {
     let sliderValue = sliderEvent.value
-    console.log('value', sliderValue);
     this.time = sliderValue;
     this.update();
   }

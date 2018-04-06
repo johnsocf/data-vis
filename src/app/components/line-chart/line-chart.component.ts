@@ -493,11 +493,14 @@ export class LineChartComponent implements OnInit {
     const averageDomain = this.d3.extent(this._selectedAverage, d => d['value']);
     let selectedRange = [];
     let selectedDomain = [];
+    let setInitialMin = false;
+    let setInitialMax = false;
 
     _.forEach(this._aggregatedDataCountrySelections, j => {
       var possibleRange = this.d3.extent(j.data, d => {
         return d['year'];
       })
+      console.log('possible ranges', possibleRange);
       if (!selectedRange[0] || selectedRange[0] > possibleRange[0]) {
         selectedRange[0] = possibleRange[0];
       }
@@ -505,11 +508,17 @@ export class LineChartComponent implements OnInit {
         selectedRange[1] = possibleRange[1];
       }
       var possibleDomain = this.d3.extent(j.data, d => d['value']);
-      if (!selectedDomain[0] || selectedDomain[0] > possibleDomain[0]) {
+      let isMin = selectedDomain[1] > possibleDomain[1]
+      console.log('possible domain', possibleDomain);
+
+      if (!setInitialMin || isMin) {
         selectedDomain[0] = possibleDomain[0];
+        setInitialMin = true;
       }
-      if (!selectedDomain[1] || selectedDomain[1] < possibleDomain[1]) {
+      let isMax = selectedDomain[1] < possibleDomain[1]
+      if (!setInitialMax || isMax) {
         selectedDomain[1] = possibleDomain[1];
+        setInitialMax = true;
       }
     })
 
@@ -521,6 +530,11 @@ export class LineChartComponent implements OnInit {
     this.x.domain([setRangeMin, setRangeMax]);
     this.y.domain([averageDomainMin, averageDomainMax]);
     this.xrange = [setRangeMin, setRangeMax];
+
+    console.log('selected ranges', ([setRangeMin, setRangeMax]))
+    console.log('selected domain', ([averageDomainMin, averageDomainMax]))
+
+
     // console.log([setRangeMin, setRangeMax])
     // console.log([averageDomainMin, averageDomainMax])
 
@@ -612,8 +626,8 @@ export class LineChartComponent implements OnInit {
         .attr("stroke", this._colorMap[set.countryCode])
         .attr("stroke-width", "4px")
         .attr("d", line(set.data));
-      console.log('i', i)
-      console.log('another color',  this._colorMap[set.countryCode])
+      //console.log('i', i)
+      //console.log('another color',  this._colorMap[set.countryCode])
       //
       // g.append("path")
       //   .attr("class", "line")
