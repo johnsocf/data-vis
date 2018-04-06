@@ -4,6 +4,7 @@ import {ApiService} from "./shared/api.service";
 import {Store} from "@ngrx/store";
 import {ApplicationState} from "./store/application-state";
 import {
+  ADD_ALL_DATA,
   ADD_EDUCATION_DATA_PRIMARY_COMPLETION,
   ADD_EDUCATION_DATA_SECONDARY,
   ADD_ELECTRICITY_PRODUCTION_DATA_METRIC_FROM_RENEWABLE_EXCLUDING_HYDRO,
@@ -34,13 +35,13 @@ import {
   SOME_CASE_CLIMATE_DATA
 } from "./store/actions/climate.actions";
 import {Observable} from "rxjs/Observable";
-import {Subscription} from "rxjs/Subscription";
-import {ClimateModel} from "./shared/models/climate.model";
 import {
   IndicatorAttributesModel,
   initialIndicatorAttributes
 } from "./shared/models/climate/data/items/indicator-attributes-model";
-import {isNumber} from "util";
+import {ShareService} from "./services/shared.service";
+import {DATA_TRANSFORMS_COMPLETE} from "./store/actions/ui.actions";
+
 
 @Component({
   selector: 'app-root',
@@ -102,16 +103,19 @@ export class AppComponent implements OnInit, OnDestroy {
   private testClimateData$: Observable<IndicatorAttributesModel[]>;
   //private climateStateSub: Subscription;
   private climateStateSub: any;
-  lists;
+  lists: any = {};
   attrSelection: any;
   selectionSet: any;
   selectionSetTitle: any = 'Select Climate Change Indicator';
   countrySelections: any  [];
   colorMap: any;
+  private _shares: any;
+  loadFlag: false;
 
   constructor(
     private apiService: ApiService,
-    private store: Store<ApplicationState>
+    private store: Store<ApplicationState>,
+    private shareservice: ShareService
   ) {
     this.climateModelState$ = this.store.select(state => state);
     this.testClimateData$ = this.store.select(state => state.climateData.climateIndicatorData.data.education.primaryCompletionRate);
@@ -122,17 +126,34 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
-    this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: [initialIndicatorAttributes]});
-    this.populateFileData();
-    this.populateTemperatureFromFile('weather/av-temperature.json');
-    this.tempTestFunction();
+    //this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: [initialIndicatorAttributes]});
+    //this.populateFileData();
+    //this.populateTemperatureFromFile('weather/av-temperature.json');
+    //this.tempTestFunction();
+    this.getShares('/shares').subscribe(d => {
+      console.log('d', d);
+      this._shares = d[0];
+      this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
+    });
     this.climateStateSub = this.climateModelState$.subscribe(state => {
-      //console.log('state', state);
+      console.log('state', state.climateData.climateIndicatorData.data);
       this.colorMap = state.uiModel.colorSet;
       this.attrSelection = state.uiModel.selectedAttribute;
       this.countrySelections = state.uiModel.selectedCountries;
       this.lists = state.climateData.climateIndicatorData.data;
+      // if (state.uiModel.transformsLoaded && !this.loadFlag && !this._shares) {
+      //   debugger;
+      //   this.shareservice.addShare(state.climateData.climateIndicatorData.data);
+      //   this.loadFlag = true;
+      // }
     })
+
+
+
+  }
+
+  getShares(path) {
+    return this.shareservice.getShares(path);
   }
 
   ngOnDestroy() {}
@@ -314,19 +335,20 @@ export class AppComponent implements OnInit, OnDestroy {
     );
     this.populateFromFile(
       'population/percentage-based/urban-population-percent-of-total.json',
-      ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION
+      ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION, true
     );
 
 
 }
 
-  populateFromFile(filePath, actionType) {
+  populateFromFile(filePath, actionType, last) {
     const jsonUrl = 'assets/json/' + filePath;
     this.apiService.httpGetFile(jsonUrl)
       .subscribe(data => {
         if (data) {
           const derivedAverageSets = this.getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
           this.store.dispatch({ type: actionType, payload: derivedAverageSets});
+          if (last) {this.store.dispatch({ type: DATA_TRANSFORMS_COMPLETE, payload: true});}
         }
       });
   }

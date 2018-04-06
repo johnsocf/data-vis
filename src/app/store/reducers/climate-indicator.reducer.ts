@@ -4,6 +4,7 @@ import * as _ from 'lodash';
 import {ClimateModel, initialClimateState} from "../../shared/models/climate.model";
 import {CustomAction} from "../actions/custom.action";
 import {
+  ADD_ALL_DATA,
   ADD_EDUCATION_DATA_PRIMARY_COMPLETION, ADD_EDUCATION_DATA_SECONDARY,
   ADD_ELECTRICITY_PRODUCTION_DATA_METRIC_FROM_RENEWABLE_EXCLUDING_HYDRO,
   ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_COAL,
@@ -33,7 +34,6 @@ export function ClimateIndicatorReducer(state = initialClimateState, action: Cus
       newState.climateIndicatorData.data.education.primaryCompletionRate = action.payload;
       return newState;
     }
-
     case ADD_EDUCATION_DATA_PRIMARY_COMPLETION: {
       const newState = _.cloneDeep(state);
       newState.climateIndicatorData.data.education.primaryCompletionRate = action.payload;
@@ -217,6 +217,11 @@ export function ClimateIndicatorReducer(state = initialClimateState, action: Cus
     case ADD_WEATHER_DATA_TEMPERATURE: {
       const newState = _.cloneDeep(state);
       newState.climateIndicatorData.data.weather.averageTemperature = action.payload;
+      return newState;
+    }
+    case ADD_ALL_DATA: {
+      const newState = _.cloneDeep(state);
+      newState.climateIndicatorData.data = action.payload;
       return newState;
     }
 

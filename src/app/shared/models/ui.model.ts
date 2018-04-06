@@ -1,11 +1,13 @@
 export interface uIModel {
   selectedCountries: string[];
   selectedAttribute: string;
-  colorSet: {}
+  colorSet: {};
+  transformsLoaded: boolean;
 }
 
 export const initialUiState = {
   selectedCountries: [],
   selectedAttribute: '',
-  colorSet: {}
+  colorSet: {},
+  transformsLoaded: false
 };

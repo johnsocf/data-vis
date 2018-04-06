@@ -85,13 +85,17 @@
       <button mat-menu-item [matMenuTriggerFor]="metricBasedPopulation">metricBased</button>
     </mat-menu>
 
-    <mat-menu #percentageBasedPopulation="matMenu">
-      <button mat-menu-item (click)="selectModel('three,population,percentage,co2_gas')">co2_gas</button>
-      <button mat-menu-item (click)="selectModel('three,population,percentage,co2_solid')">co2_solid</button>
-      <button mat-menu-item (click)="selectModel('three,population,percentage,methaneChange')">methane</button>
-      <button mat-menu-item (click)="selectModel('three,population,percentage,nitrousOxide')">nitrousOxide</button>
-      <button mat-menu-item (click)="selectModel('three,population,percentage,otherGreenhouseGas')">otherGreenhouseGas</button>
-      <button mat-menu-item (click)="selectModel('three,population,percentage,totalGreenhouseGas')">totalGreenhouseGas</button>
+    <!--<mat-menu #percentageBasedPopulation="matMenu">-->
+      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,co2_gas')">co2_gas</button>-->
+      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,co2_solid')">co2_solid</button>-->
+      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,methaneChange')">methane</button>-->
+      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,nitrousOxide')">nitrousOxide</button>-->
+      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,otherGreenhouseGas')">otherGreenhouseGas</button>-->
+      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,totalGreenhouseGas')">totalGreenhouseGas</button>-->
+    <!--</mat-menu>-->
+
+    <mat-menu #renewableEnergy="matMenu">
+      <button mat-menu-item (click)="selectModel('two,renewableEnergy,renewableEnergyConsumption')">renewableEnergyConsumption</button>
     </mat-menu>
 
     <mat-menu #metricBasedPopulation="matMenu">
@@ -100,10 +104,10 @@
       <button mat-menu-item (click)="selectModel('three,population,metric,urbanPopulationGrowth')">urbanPopulationGrowth</button>
     </mat-menu>
 
-    <mat-menu #renewableEnergy="matMenu">
-      <button mat-menu-item (click)="selectModel('two,renewableEnergy,populationInUrbanAgglomerations')">populationInUrbanAgglomerations</button>
-      <button mat-menu-item (click)="selectModel('two,renewableEnergy,urbanPopulation')">urbanPopulation</button>
-      <button mat-menu-item (click)="selectModel('two,renewableEnergy,urbanPopulationGrowth')">urbanPopulationGrowth</button>
+    <mat-menu #percentageBasedPopulation="matMenu">
+      <button mat-menu-item (click)="selectModel('two,population,percentage,populationInUrbanAgglomerations')">populationInUrbanAgglomerations</button>
+      <button mat-menu-item (click)="selectModel('two,population,percentage,urbanPopulation')">urbanPopulation</button>
+      <button mat-menu-item (click)="selectModel('two,population,percentage,urbanPopulationGrowth')">urbanPopulationGrowth</button>
     </mat-menu>
 
     <mat-menu #socioEconomic="matMenu">

@@ -20,6 +20,12 @@ import {D3graphComponent} from "./components/d3graph/d3graph.component";
 import {MatSliderModule, MatSelectModule, MatFormFieldModule, MatMenuModule, MatButtonModule} from '@angular/material';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from './../environments/environment';
+import {ShareService} from "./services/shared.service";
+
 
 @NgModule({
   declarations: [
@@ -50,9 +56,12 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatFormFieldModule,
     MatMenuModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [ApiService, D3Service],
+  providers: [ApiService, D3Service, ShareService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,7 +2,10 @@
 
 import {CustomAction} from "../actions/custom.action";
 import {initialUiState, uIModel} from "../../shared/models/ui.model";
-import {UPDATE_ATTRIBUTES_SELECTION, UPDATE_COLOR_MAP, UPDATE_COUNTRIES_SELECTION} from "../actions/ui.actions";
+import {
+  DATA_TRANSFORMS_COMPLETE, UPDATE_ATTRIBUTES_SELECTION, UPDATE_COLOR_MAP,
+  UPDATE_COUNTRIES_SELECTION
+} from "../actions/ui.actions";
 import * as _ from 'lodash';
 import {countryMap} from '../../../assets/maps/country-maps';
 
@@ -24,6 +27,11 @@ export function UIStateReducer(state = initialUiState, action: CustomAction): uI
       return newState;
     case UPDATE_ATTRIBUTES_SELECTION: {
       const newState = _.cloneDeep(state);
+      return newState;
+    }
+    case DATA_TRANSFORMS_COMPLETE: {
+      const newState = _.cloneDeep(state);
+      newState.transformsLoaded = true;
       return newState;
     }
 

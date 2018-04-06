@@ -5,6 +5,7 @@ import {
   D3,
   Selection
 } from 'd3-ng2-service';
+import {countryMap} from '../../../assets/maps/country-maps';
 import * as _ from 'lodash';
 
 @Component({
@@ -204,9 +205,9 @@ export class LineChartComponent implements OnInit {
       this.scaleBand();
       this.areaLinear();
       // this.generateAxises();
-      this.parseTimeFormat();
+      //this.parseTimeFormat();
       //this.formatTime();
-      this.bisectDateFormat();
+      //this.bisectDateFormat();
       // this.addLegend();
 
       //this.addSlider();
@@ -214,7 +215,7 @@ export class LineChartComponent implements OnInit {
       //   this.flag = !this.flag;
       // }, 100);
 
-      this.generateLabels();
+      //this.generateLabels();
       //this.resetVis();
       //this.resetVis();
 
@@ -300,6 +301,8 @@ export class LineChartComponent implements OnInit {
       let legendRow = this.legend.append('g')
         .attr('transform', 'translate(0, ' + (i * 20) + ')');
 
+      const countryMapping = _.find(countryMap, {'alpha-3': country});
+
       legendRow.append('rect')
         .attr('width', 10)
         .attr('height', 10)
@@ -313,7 +316,7 @@ export class LineChartComponent implements OnInit {
         .attr("class", "legend")
         .attr('text-anchor', 'end')
         .style('text-transform', 'capitalize')
-        .text(country);
+        .text(countryMapping.name);
 
     });
 
@@ -332,7 +335,7 @@ export class LineChartComponent implements OnInit {
       .attr('text-anchor', 'end')
       .attr("class", "legend")
       .style('text-transform', 'capitalize')
-      .text('average');
+      .text('world average');
   }
 
   areaLinear() {
@@ -374,6 +377,8 @@ export class LineChartComponent implements OnInit {
       this.buildScaleBandDomain();
 
       this.addTransition();
+      //toDo: break this out
+      this.generateLabels();
 
       //this.dataTimeFilter();
 
