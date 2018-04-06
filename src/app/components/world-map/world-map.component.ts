@@ -120,7 +120,7 @@ export class WorldMapComponent implements OnInit {
       .style('fill', '#384048')
       .on('click', function (d) {
         let countryCode = d.properties.countryCode;
-        let countryConversion = classContext.updateLocalCountrySetToGetColor(countryCode);
+        let countryConversion = classContext.updateLocalCountrySetToGetColor(countryCode, classContext);
         store.dispatch({ type: 'UPDATE_COUNTRIES_SELECTION', payload: countryCode});
         const index = _.indexOf(classContext.countryCodes, countryConversion);
         console.log('color',  countryConversion)
@@ -179,11 +179,18 @@ export class WorldMapComponent implements OnInit {
     //   .attr('d', this.path);
   }
 
-  updateLocalCountrySetToGetColor(countryCode) {
+  updateLocalCountrySetToGetColor(countryCode, context) {
     const alpha3_conversion_object = _.find(countryMap, {'alpha-2': countryCode});
     const alpha3_conversion = alpha3_conversion_object['alpha-3'];
     const countryCodeSelected = _.includes(this.countryCodes, alpha3_conversion);
     countryCodeSelected ? _.pull(this.countryCodes, alpha3_conversion) : this.countryCodes.push(alpha3_conversion);
+
+    let newObj = _.zipObject(this.countryCodes, _.map(this.countryCodes, d => {
+      return this.color(d)
+    }));
+    this.store.dispatch({ type: 'UPDATE_COLOR_MAP', payload: newObj});
+    console.log('new obj', newObj);
+
     return alpha3_conversion
   }
 

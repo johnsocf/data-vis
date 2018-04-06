@@ -2,7 +2,7 @@
 
 import {CustomAction} from "../actions/custom.action";
 import {initialUiState, uIModel} from "../../shared/models/ui.model";
-import {UPDATE_ATTRIBUTES_SELECTION, UPDATE_COUNTRIES_SELECTION} from "../actions/ui.actions";
+import {UPDATE_ATTRIBUTES_SELECTION, UPDATE_COLOR_MAP, UPDATE_COUNTRIES_SELECTION} from "../actions/ui.actions";
 import * as _ from 'lodash';
 import {countryMap} from '../../../assets/maps/country-maps';
 
@@ -17,6 +17,11 @@ export function UIStateReducer(state = initialUiState, action: CustomAction): uI
       countryCodeSelected ? _.pull(newState.selectedCountries, alpha3_conversion) : newState.selectedCountries.push(alpha3_conversion);
       return newState;
     }
+    case UPDATE_COLOR_MAP:
+      const newState = _.cloneDeep(state);
+      newState.colorSet = action.payload;
+      console.log('new state color set!', newState.colorSet);
+      return newState;
     case UPDATE_ATTRIBUTES_SELECTION: {
       const newState = _.cloneDeep(state);
       return newState;

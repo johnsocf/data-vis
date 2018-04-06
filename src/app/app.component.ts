@@ -107,6 +107,7 @@ export class AppComponent implements OnInit, OnDestroy {
   selectionSet: any;
   selectionSetTitle: any = 'Select Climate Change Indicator';
   countrySelections: any  [];
+  colorMap: any;
 
   constructor(
     private apiService: ApiService,
@@ -127,6 +128,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.tempTestFunction();
     this.climateStateSub = this.climateModelState$.subscribe(state => {
       //console.log('state', state);
+      this.colorMap = state.uiModel.colorSet;
       this.attrSelection = state.uiModel.selectedAttribute;
       this.countrySelections = state.uiModel.selectedCountries;
       this.lists = state.climateData.climateIndicatorData.data;

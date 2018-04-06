@@ -20,7 +20,9 @@ export class LineChartComponent implements OnInit {
   private _selectedCountry = 'USA';
   private _selectedAverage: any = {};
   private _countryDataSetComplete: any = [];
-  private _aggregatedDataCountrySelections: any = []
+  private _aggregatedDataCountrySelections: any = [];
+  private _colorMap: any = {};
+
 
   @Input()
   set dataSet(data: any) {
@@ -37,7 +39,7 @@ export class LineChartComponent implements OnInit {
     })
 
 
-    if (!!this._indicatorName) {this.update()}
+    // if (!!this._indicatorName) {this.update()}
 
   }
 
@@ -53,6 +55,15 @@ export class LineChartComponent implements OnInit {
     console.log('data on inside', data);
   }
 
+  @Input()
+  set colorSet(data: any) {
+    if (data) {
+      this._colorMap = data;
+      console.log('color map inside!', this._colorMap)
+      if (!!this._indicatorName) {this.update()}
+    }
+  }
+
   aggregateDataSelections(data) {
 
    if (data) {
@@ -63,7 +74,7 @@ export class LineChartComponent implements OnInit {
        return _.indexOf(this._countryNames, d.countryCode) !== -1;
      })
 
-     console.log('country set', this._aggregatedDataCountrySelections);
+     // console.log('country set', this._aggregatedDataCountrySelections);
 
      this._selectedInitial = _.clone(countrySelection.data);
      this._selectedAverage = _.clone(generalAverages.data);
@@ -293,8 +304,8 @@ export class LineChartComponent implements OnInit {
         .attr('width', 10)
         .attr('height', 10)
         .attr("class", "legend")
-        .attr('fill', this.color(this._countryNames[i + 1]));
-      console.log('i', this.color(this._countryNames[i + 1]))
+        .attr('fill', this._colorMap[country]);
+      console.log('i', this._colorMap[country])
 
       legendRow.append('text')
         .attr('x', -10)
@@ -313,7 +324,7 @@ export class LineChartComponent implements OnInit {
       .attr('width', 10)
       .attr('height', 10)
       .attr("class", "legend")
-      .attr('fill', this.color('avg'));
+      .attr('fill', '#909090');
 
     legendRow.append('text')
       .attr('x', -10)
@@ -505,17 +516,17 @@ export class LineChartComponent implements OnInit {
     this.x.domain([setRangeMin, setRangeMax]);
     this.y.domain([averageDomainMin, averageDomainMax]);
     this.xrange = [setRangeMin, setRangeMax];
-    console.log([setRangeMin, setRangeMax])
-    console.log([averageDomainMin, averageDomainMax])
+    // console.log([setRangeMin, setRangeMax])
+    // console.log([averageDomainMin, averageDomainMax])
 
     this.xAxisCall = this.d3.axisBottom(this.x)
       .ticks(10)
       .tickPadding(10)
       .tickValues( this.d3.range(this.xrange[0], this.xrange[1], 5))
-      // .tickFormat( d => { return d; });
+      .tickFormat( d => { return d; });
     this.yAxisCall = this.d3.axisLeft(this.y)
       .ticks(6)
-      // .tickFormat( d => { return d; });
+      .tickFormat( d => { return d; });
 
 
 // Axis groups
@@ -529,8 +540,8 @@ export class LineChartComponent implements OnInit {
     this.xAxisGroup.call(this.xAxisCall.scale(this.x));
     this.yAxisGroup.call(this.yAxisCall.scale(this.y));
     this.yLabel.text(this._indicatorName);
-    console.log('this x', this.x);
-    console.log('this y', this.y)
+    // console.log('this x', this.x);
+    // console.log('this y', this.y)
 
   }
 
@@ -561,12 +572,12 @@ export class LineChartComponent implements OnInit {
 
     var line = this.d3.line()
       .x(function(d) {
-        console.log('d', element.x(d['year']))
+        // console.log('d', element.x(d['year']))
         return element.x(d['year']);
       })
       .y(function(d) {
-        console.log('d', element.y(d['value']))
-        console.log('d', d['value'])
+        // console.log('d', element.y(d['value']))
+        // console.log('d', d['value'])
         return element.y(d['value']);
       })
       .curve(element.d3.curveBasis);
@@ -588,16 +599,16 @@ export class LineChartComponent implements OnInit {
     const g = this.g
 
     _.each(this._aggregatedDataCountrySelections, (set, i) => {
-      console.log('set line HERE', line(set.data));
+      // console.log('set line HERE', line(set.data));
 
       g.append("path")
         .attr("class", "chart-line")
         .attr("fill", "none")
-        .attr("stroke", this.color(this._countryNames[i + 1]))
-        .attr("stroke-with", "10px")
+        .attr("stroke", this._colorMap[set.countryCode])
+        .attr("stroke-width", "4px")
         .attr("d", line(set.data));
       console.log('i', i)
-      console.log('another color', this.color(this._countryNames[i + 1]))
+      console.log('another color',  this._colorMap[set.countryCode])
       //
       // g.append("path")
       //   .attr("class", "line")
@@ -610,8 +621,8 @@ export class LineChartComponent implements OnInit {
     this.g.append("path")
       .attr("class", "chart-line")
       .attr("fill", "none")
-      .attr("stroke", this.color('avg'))
-      .attr("stroke-with", "5px")
+      .attr("stroke", '#909090')
+      .attr("stroke-width", "4px")
       .attr("d", line(this._selectedAverage));
     //
     // console.log('another color', this.color(this._countryNames[0]))
