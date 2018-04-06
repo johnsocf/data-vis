@@ -12,6 +12,7 @@ import * as _ from 'lodash';
 import {ApplicationState} from "../../store/application-state";
 import {Store} from "@ngrx/store";
 import {UPDATE_COUNTRIES_SELECTION} from "../../store/actions/ui.actions";
+import {countryMap} from '../../../assets/maps/country-maps';
 
 @Component({
   selector: 'app-world-map',
@@ -31,6 +32,7 @@ export class WorldMapComponent implements OnInit {
   graticule: any;
   land: any;
   countryCodes: any = [];
+  color: any;
 
   constructor(
     element: ElementRef,
@@ -46,6 +48,7 @@ export class WorldMapComponent implements OnInit {
   ngOnInit() {
     this.setProjection();
     this.setSVG();
+    this.setOrdinalScale();
     this.setJSON();
     this.setFrame();
   }
@@ -62,6 +65,10 @@ export class WorldMapComponent implements OnInit {
     this.graticule = this.d3.geoGraticule();
   }
 
+  setOrdinalScale() {
+    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10);
+  }
+
   setSVG() {
     let d3 = this.d3
     this.svg = this.d3.select(this.parentNativeElement)
@@ -70,7 +77,7 @@ export class WorldMapComponent implements OnInit {
       .attr('height', this.height)
         .on('mousedown', d => {
           d3.event.preventDefault();
-          console.log('clicked 1!');
+
       })
   }
 
@@ -103,23 +110,28 @@ export class WorldMapComponent implements OnInit {
     const d3 = this.d3;
     const countryCodes = this.countryCodes;
     const store = this.store;
+    const classContext = this;
     this.svg.selectAll('.countries')
       .data(features)
       .enter()
       .append('path')
       .attr('class', 'state')
       .attr('d', this.path)
-      .style('fill', '#FFC1FF')
+      .style('fill', '#384048')
       .on('click', function (d) {
-          let selected = d3.select(this).classed('selected')
-          d3.select(this).classed('selected', selected ? false : true);
-          let fillStyle = !selected ? '#90EEBF' : '#FFC1FF';
-          d3.select(this).style('fill', fillStyle);
-          let countryCode = d.properties.countryCode;
-          store.dispatch({ type: 'UPDATE_COUNTRIES_SELECTION', payload: countryCode});
+        let countryCode = d.properties.countryCode;
+        let countryConversion = classContext.updateLocalCountrySetToGetColor(countryCode);
+        store.dispatch({ type: 'UPDATE_COUNTRIES_SELECTION', payload: countryCode});
+        const index = _.indexOf(classContext.countryCodes, countryConversion);
+        console.log('color',  countryConversion)
+        console.log('color',  classContext.color(countryConversion))
 
-          console.log('selected', d3.select(this).classed('selected'))
-          console.log('big d', d.properties);
+        let selected = d3.select(this).classed('selected')
+          d3.select(this).classed('selected', selected ? false : true);
+          let fillStyle = !selected ?  classContext.color(countryConversion) : '#384048';
+          d3.select(this).style('fill', fillStyle);
+
+
         });
 
     this.svg.selectAll('path')
@@ -127,8 +139,6 @@ export class WorldMapComponent implements OnInit {
       .enter().append('path')
       .attr('class', 'state-boundary')
       .attr('id', function(d) {
-        console.log('TOPO-JSON d', worldTopo);
-        console.log('d ddd', d)
         return d.country_code;
       })
       .attr('d', this.path)
@@ -167,6 +177,14 @@ export class WorldMapComponent implements OnInit {
     //   .datum(this.graticule)
     //   .attr('class', 'graticule')
     //   .attr('d', this.path);
+  }
+
+  updateLocalCountrySetToGetColor(countryCode) {
+    const alpha3_conversion_object = _.find(countryMap, {'alpha-2': countryCode});
+    const alpha3_conversion = alpha3_conversion_object['alpha-3'];
+    const countryCodeSelected = _.includes(this.countryCodes, alpha3_conversion);
+    countryCodeSelected ? _.pull(this.countryCodes, alpha3_conversion) : this.countryCodes.push(alpha3_conversion);
+    return alpha3_conversion
   }
 
   setFrame() {

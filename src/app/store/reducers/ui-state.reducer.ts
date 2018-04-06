@@ -13,7 +13,7 @@ export function UIStateReducer(state = initialUiState, action: CustomAction): uI
       const alpha3_conversion_object = _.find(countryMap, {'alpha-2': action.payload});
       const alpha3_conversion = alpha3_conversion_object['alpha-3'];
       const countryCodeSelected = _.includes(newState.selectedCountries, alpha3_conversion);
-      console.log('country map', countryMap);
+      //console.log('country map', countryMap);
       countryCodeSelected ? _.pull(newState.selectedCountries, alpha3_conversion) : newState.selectedCountries.push(alpha3_conversion);
       return newState;
     }
