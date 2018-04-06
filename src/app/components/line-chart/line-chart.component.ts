@@ -313,7 +313,7 @@ export class LineChartComponent implements OnInit {
       .attr('width', 10)
       .attr('height', 10)
       .attr("class", "legend")
-      .attr('fill', 'red');
+      .attr('fill', this.color('avg'));
 
     legendRow.append('text')
       .attr('x', -10)
@@ -594,7 +594,7 @@ export class LineChartComponent implements OnInit {
         .attr("class", "chart-line")
         .attr("fill", "none")
         .attr("stroke", this.color(this._countryNames[i + 1]))
-        .attr("stroke-with", "5px")
+        .attr("stroke-with", "10px")
         .attr("d", line(set.data));
       console.log('i', i)
       console.log('another color', this.color(this._countryNames[i + 1]))
@@ -610,7 +610,7 @@ export class LineChartComponent implements OnInit {
     this.g.append("path")
       .attr("class", "chart-line")
       .attr("fill", "none")
-      .attr("stroke", this.color(this._countryNames[0]))
+      .attr("stroke", this.color('avg'))
       .attr("stroke-with", "5px")
       .attr("d", line(this._selectedAverage));
     //

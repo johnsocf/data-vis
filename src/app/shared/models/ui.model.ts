@@ -4,6 +4,6 @@ export interface uIModel {
 }
 
 export const initialUiState = {
-  selectedCountries: ['USA'],
+  selectedCountries: [],
   selectedAttribute: ''
 };
