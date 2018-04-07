@@ -621,14 +621,16 @@ export class LineChartComponent implements OnInit {
     let element = this;
     // data join
 
+    console.log('this extent', this.extent);
+
     var line = this.d3.line()
+      .defined(d => {
+        return parseInt(d['year']) >= this.extent[0] && parseInt(d['year']) <= this.extent[1];
+      })
       .x(function(d) {
-        // console.log('d', element.x(d['year']))x
         return element.x(d['year']);
       })
       .y(function(d) {
-        // console.log('d', element.y(d['value']))
-        // console.log('d', d['value'])
         return element.y(d['value']);
       })
       .curve(element.d3.curveBasis);
