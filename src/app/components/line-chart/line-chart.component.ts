@@ -22,6 +22,7 @@ export class LineChartComponent implements OnInit {
   private _selectedAverage: any = {};
   private _countryDataSetComplete: any = [];
   private _aggregatedDataCountrySelections: any = [];
+  private _aggregatedDataCountrySelectionsNoData: any = [];
   private _colorMap: any = {};
 
 
@@ -36,8 +37,13 @@ export class LineChartComponent implements OnInit {
 
     this._aggregatedDataCountrySelections = _.filter(this._countryDataSetComplete, d => {
       //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
-      return _.indexOf(this._countryNames, d.countryCode) !== -1;
-    })
+      return _.indexOf(this._countryNames, d.countryCode) !== -1 && d.hasOwnProperty('data');
+    });
+
+    this._aggregatedDataCountrySelectionsNoData = _.filter(this._countryDataSetComplete, d => {
+      //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
+      return _.indexOf(this._countryNames, d.countryCode) !== -1 && !d.hasOwnProperty('data');
+    });
 
 
     // if (!!this._indicatorName) {this.update()}
@@ -71,9 +77,16 @@ export class LineChartComponent implements OnInit {
      const generalAverages = _.find(data.averages, {countryName: "general averages"})
      const countrySelection = _.find(data.countryData, {countryCode: "BWA"})
      this._countryDataSetComplete = data.countryData;
+
      this._aggregatedDataCountrySelections = _.filter(this._countryDataSetComplete, d => {
-       return _.indexOf(this._countryNames, d.countryCode) !== -1;
-     })
+       //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
+       return _.indexOf(this._countryNames, d.countryCode) !== -1 && d.hasOwnProperty('data');
+     });
+
+     this._aggregatedDataCountrySelectionsNoData = _.filter(this._countryDataSetComplete, d => {
+       //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
+       return _.indexOf(this._countryNames, d.countryCode) !== -1 && !d.hasOwnProperty('data');
+     });
 
      // console.log('country set', this._aggregatedDataCountrySelections);
 
@@ -100,7 +113,7 @@ export class LineChartComponent implements OnInit {
   xAxisCall: any;
   yAxisCall: any;
 
-  margin = {top: 20, right: 170, bottom: 150, left: 100};
+  margin = {top: 20, right: 370, bottom: 150, left: 100};
   width: number = 400;
   height: number = 400;
   y: any;
@@ -180,7 +193,7 @@ export class LineChartComponent implements OnInit {
   }
 
   buildScaleBandDomain() {
-    this.x.domain([0, 2019]);
+    //this.x.domain([0, 2019]);
   }
 
   setOrdinalScale() {
@@ -295,7 +308,7 @@ export class LineChartComponent implements OnInit {
 
   addLegend() {
     this.legend = this.g.append('g')
-      .attr('transform', 'translate(' + (this.width + 110) + ',' + (this.height - 40) + ')');
+      .attr('transform', 'translate(' + (this.width + 50) + ',' + (0) + ')');
 
     this._countryNames.forEach((country, i) => {
       let legendRow = this.legend.append('g')
@@ -311,10 +324,10 @@ export class LineChartComponent implements OnInit {
       console.log('i', this._colorMap[country])
 
       legendRow.append('text')
-        .attr('x', -10)
+        .attr('x', 20)
         .attr('y', 10)
         .attr("class", "legend")
-        .attr('text-anchor', 'end')
+        .attr('text-anchor', 'start')
         .style('text-transform', 'capitalize')
         .text(countryMapping.name);
 
@@ -330,9 +343,9 @@ export class LineChartComponent implements OnInit {
       .attr('fill', '#909090');
 
     legendRow.append('text')
-      .attr('x', -10)
+      .attr('x', 20)
       .attr('y', 10)
-      .attr('text-anchor', 'end')
+      .attr('text-anchor', 'start')
       .attr("class", "legend")
       .style('text-transform', 'capitalize')
       .text('world average');
@@ -495,29 +508,43 @@ export class LineChartComponent implements OnInit {
     let selectedDomain = [];
     let setInitialMin = false;
     let setInitialMax = false;
+    let setInitialMinRange = false;
+    let setInitialMaxRange = false;
 
     _.forEach(this._aggregatedDataCountrySelections, j => {
       var possibleRange = this.d3.extent(j.data, d => {
-        return d['year'];
+        return +d['year'];
       })
       console.log('possible ranges', possibleRange);
-      if (!selectedRange[0] || selectedRange[0] > possibleRange[0]) {
-        selectedRange[0] = possibleRange[0];
+      let isMinRange = selectedRange[0] > possibleRange[0]
+      let isMaxRange = selectedRange[1] < possibleRange[1]
+
+      if (!setInitialMinRange || isMinRange) {
+        selectedRange[0] = _.clone(+possibleRange[0]);
+        setInitialMinRange = true;
       }
-      if (!selectedRange[1] || selectedRange[1] < possibleRange[1]) {
-        selectedRange[1] = possibleRange[1];
+
+      if (!setInitialMaxRange || isMaxRange) {
+        selectedRange[1] = _.clone(+possibleRange[1]);
+        setInitialMaxRange = true;
       }
+      // if (!selectedRange[0] || selectedRange[0] > possibleRange[0]) {
+      //   selectedRange[0] = _.clone(possibleRange[0]);
+      // }
+      // if (!selectedRange[1] || selectedRange[1] < possibleRange[1]) {
+      //   selectedRange[1] = _.clone(possibleRange[1]);
+      // }
       var possibleDomain = this.d3.extent(j.data, d => d['value']);
-      let isMin = selectedDomain[1] > possibleDomain[1]
+      let isMin = selectedDomain[0] > possibleDomain[0]
       console.log('possible domain', possibleDomain);
 
       if (!setInitialMin || isMin) {
-        selectedDomain[0] = possibleDomain[0];
+        selectedDomain[0] = _.clone(possibleDomain[0]);
         setInitialMin = true;
       }
       let isMax = selectedDomain[1] < possibleDomain[1]
       if (!setInitialMax || isMax) {
-        selectedDomain[1] = possibleDomain[1];
+        selectedDomain[1] = _.clone(possibleDomain[1]);
         setInitialMax = true;
       }
     })
@@ -527,9 +554,13 @@ export class LineChartComponent implements OnInit {
     const setRangeMax = averageRange[1] > selectedRange[1] ? averageRange[1] : selectedRange[1];
     const averageDomainMin = averageDomain[0] < selectedDomain[0] ? averageDomain[0] : selectedDomain[0];
     const averageDomainMax = averageDomain[1] > selectedDomain[1] ? averageDomain[1] : selectedDomain[1];
-    this.x.domain([setRangeMin, setRangeMax]);
+    //this.x.domain([setRangeMin, setRangeMax]);
+    this.extent = selectedRange
+    console.log('this extent', this.extent);
+    this.x.domain(this.extent);
     this.y.domain([averageDomainMin, averageDomainMax]);
-    this.xrange = [setRangeMin, setRangeMax];
+    // this.xrange = [setRangeMin, setRangeMax];
+    this.xrange = this.extent;
 
     console.log('selected ranges', ([setRangeMin, setRangeMax]))
     console.log('selected domain', ([averageDomainMin, averageDomainMax]))
@@ -591,7 +622,7 @@ export class LineChartComponent implements OnInit {
 
     var line = this.d3.line()
       .x(function(d) {
-        // console.log('d', element.x(d['year']))
+        // console.log('d', element.x(d['year']))x
         return element.x(d['year']);
       })
       .y(function(d) {

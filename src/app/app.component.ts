@@ -146,7 +146,10 @@ export class AppComponent implements OnInit, OnDestroy {
       //   this.loadFlag = true;
       // }
     })
-
+    this.populateFromFile(
+      'electricity-production/percentage-based/electrical-production-from-coal-percentage.json',
+      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_COAL
+    );
 
 
   }
@@ -334,20 +337,20 @@ export class AppComponent implements OnInit, OnDestroy {
     );
     this.populateFromFile(
       'population/percentage-based/urban-population-percent-of-total.json',
-      ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION, true
+      ADD_POPULATION_DATA_PERCENTAGE_URBAN_POPULATION
     );
 
 
 }
 
-  populateFromFile(filePath, actionType, last) {
+  populateFromFile(filePath, actionType) {
     const jsonUrl = 'assets/json/' + filePath;
     this.apiService.httpGetFile(jsonUrl)
       .subscribe(data => {
         if (data) {
           const derivedAverageSets = this.getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
           this.store.dispatch({ type: actionType, payload: derivedAverageSets});
-          if (last) {this.store.dispatch({ type: DATA_TRANSFORMS_COMPLETE, payload: true});}
+          //if (last) {this.store.dispatch({ type: DATA_TRANSFORMS_COMPLETE, payload: true});}
         }
       });
   }
@@ -436,8 +439,13 @@ export class AppComponent implements OnInit, OnDestroy {
         indicatorCode: thisCountry['indicatorCode'],
         data: filteredSet
       });
+      if (thisTotalSet.countryCode == 'WSM') {
+        // debugger;
+        console.log('this total set', thisTotalSet)
+      }
       return thisTotalSet;
     });
+
 
     return totalSet;
 
