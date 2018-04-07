@@ -381,6 +381,7 @@ export class LineChartComponent implements OnInit {
       this.svg.selectAll('path.line').remove();
       this.svg.selectAll(".chart-line").remove();
       this.svg.selectAll(".x-axis").remove();
+      this.svg.selectAll(".axis-label").remove();
       this.svg.selectAll(".y-axis").remove();
       this.svg.selectAll(".legend").remove();
 

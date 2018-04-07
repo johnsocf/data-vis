@@ -20,4 +20,11 @@ export class ShareService {
     return this.db.list(path).valueChanges();
   }
 
+  deleteShares() {
+    const obj = this.db.database.ref(this.basePath);
+    obj.remove().then(d => {
+      console.log('remove succeeded')
+    });
+  }
+
 }

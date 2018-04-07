@@ -3,7 +3,7 @@ export interface IndicatorAttributesModel {
   countryCode: string;
   indicatorName: string;
   indicatorCode: string;
-  data: {year: number, value: number}[];
+  data: {year: number, value: number, rank: number}[];
 }
 
 export const initialIndicatorAttributes = {
@@ -11,5 +11,5 @@ export const initialIndicatorAttributes = {
   countryCode: "ABW",
   indicatorName: "Primary completion rate, total (% of relevant age group)",
   indicatorCode: "SE.PRM.CMPT.ZS",
-  data: [{year: 1960, value: 0}]
+  data: [{year: 1960, value: 0, rank: 0}]
 };

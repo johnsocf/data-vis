@@ -127,29 +127,37 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     //this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: [initialIndicatorAttributes]});
-    //this.populateFileData();
-    //this.populateTemperatureFromFile('weather/av-temperature.json');
-    //this.tempTestFunction();
-    this.getShares('/shares').subscribe(d => {
-      console.log('d', d);
-      this._shares = d[0];
-      this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
-    });
+    this.populateFileData();
+    this.populateTemperatureFromFile('weather/av-temperature.json');
+    this.tempTestFunction();
+    // this.getShares('/shares').subscribe(d => {
+    //   console.log('d', d);
+    //   this._shares = d[0];
+    //   this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
+    // });
+    this.shareservice.deleteShares();
     this.climateStateSub = this.climateModelState$.subscribe(state => {
       this.colorMap = state.uiModel.colorSet;
       this.attrSelection = state.uiModel.selectedAttribute;
       this.countrySelections = state.uiModel.selectedCountries;
       this.lists = state.climateData.climateIndicatorData.data;
-      // if (state.uiModel.transformsLoaded && !this.loadFlag && !this._shares) {
-      //   debugger;
-      //   this.shareservice.addShare(state.climateData.climateIndicatorData.data);
-      //   this.loadFlag = true;
-      // }
-    })
-    this.populateFromFile(
-      'electricity-production/percentage-based/electrical-production-from-coal-percentage.json',
-      ADD_ELECTRICITY_PRODUCTION_DATA_PERCENTAGE_COAL
-    );
+      console.log('climate list', this.lists);
+
+        setTimeout(d => {
+          if (!this.loadFlag) {
+          console.log('share')
+          this.shareservice.addShare(this.lists);
+          this.loadFlag = true;
+          }
+
+        }, 140000);
+
+
+    });
+    // this.populateFromFile(
+    //   'electricity-production/metric/electricity-production-from-renewable-excluding-hydro-percentage-kwh.json',
+    //   ADD_ELECTRICITY_PRODUCTION_DATA_METRIC_FROM_RENEWABLE_EXCLUDING_HYDRO
+    // );
 
 
   }
@@ -349,6 +357,58 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe(data => {
         if (data) {
           const derivedAverageSets = this.getDataAverages(data, data[0]['indicatorName'], data[0]['indicatorCode']);
+          const maxRow = {};
+          const minRow = {};
+          const countObjForAvg = {};
+          let countIndexes = 0;
+          const controller = this;
+          console.log('derived average sets', derivedAverageSets)
+          _.forEach(derivedAverageSets.countryData, function(countryObj) {
+            _.forEach(countryObj.data, function(value, key) {
+              if (!isNaN(parseInt(value.year))) {
+                let newValue = parseInt(value.value);
+                let maxValue;
+                let minValue;
+
+                // if data entry has a value
+                if (!isNaN(newValue) && (newValue !== 0)) {
+                  // set index to 1 on counter or get value of count if one exists
+                  countIndexes = !isNaN(parseInt(countObjForAvg[value.year])) ? parseInt(countObjForAvg[value.year]) : 0;
+                  if (countIndexes === 0) {
+                    maxValue = 0;
+                    minValue = 0;
+                  } else {
+                    maxValue = !isNaN(parseInt(maxRow[value.year])) ? parseInt(maxRow[value.year]) : 0;
+                    minValue = !isNaN(parseInt(minRow[value.year])) ? parseInt(minRow[value.year]) : 0;
+                  }
+
+                  let setMinValue;
+                  if (minValue === 0) {
+                    setMinValue = newValue;
+                  } else {
+                    setMinValue = minValue < newValue ? minValue : newValue;
+                  }
+
+                  const setValue = maxValue > newValue ? maxValue : newValue;
+                  const countIndex = countIndexes + 1;
+                  _.assign(maxRow, {[value.year]: controller.precisionRound(setValue, 2)});
+                  _.assign(minRow, {[value.year]: controller.precisionRound(setMinValue, 2)});
+                  _.assign(countObjForAvg, {[value.year]: controller.precisionRound(countIndex, 2)});
+                }
+              }
+            });
+          });
+          derivedAverageSets['maxRow'] = maxRow;
+          derivedAverageSets['minRow'] = minRow;
+          let newSets = _.forEach(derivedAverageSets.countryData, function(countryObj) {
+            return _.map(countryObj.data, function(value) {
+              const calculated = Math.ceil((value['value'] - minRow[value['year']]) / (maxRow[value['year']] - minRow[value['year']]) * 10);
+              const numIsFinite = isFinite(calculated) && !isNaN(calculated) ? calculated : 0;
+              console.log('calculated', numIsFinite);
+              value['rank'] = numIsFinite;
+            });
+          });
+          derivedAverageSets.countryData = newSets;
           this.store.dispatch({ type: actionType, payload: derivedAverageSets});
           //if (last) {this.store.dispatch({ type: DATA_TRANSFORMS_COMPLETE, payload: true});}
         }
@@ -422,6 +482,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   resetCountryData(data) {
+    //let maxValue = _.maxBy(data, })
+
     let totalSet = _.map(data, (key, value) => {
       let thisCountry = key;
 
@@ -432,6 +494,7 @@ export class AppComponent implements OnInit, OnDestroy {
           filteredSet.push({year: key, value: value});
         }
       });
+
       const thisTotalSet = _.assign({}, {
         countryName: thisCountry['countryName'],
         countryCode: thisCountry['countryCode'],
@@ -439,10 +502,7 @@ export class AppComponent implements OnInit, OnDestroy {
         indicatorCode: thisCountry['indicatorCode'],
         data: filteredSet
       });
-      if (thisTotalSet.countryCode == 'WSM') {
-        // debugger;
-        console.log('this total set', thisTotalSet)
-      }
+
       return thisTotalSet;
     });
 
