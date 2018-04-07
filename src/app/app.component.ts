@@ -127,15 +127,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     //this.store.dispatch({ type: SOME_CASE_CLIMATE_DATA, payload: [initialIndicatorAttributes]});
-    this.populateFileData();
-    this.populateTemperatureFromFile('weather/av-temperature.json');
-    this.tempTestFunction();
-    // this.getShares('/shares').subscribe(d => {
-    //   console.log('d', d);
-    //   this._shares = d[0];
-    //   this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
-    // });
-    this.shareservice.deleteShares();
+    //this.populateFileData();
+    //this.populateTemperatureFromFile('weather/av-temperature.json');
+    //this.tempTestFunction();
+    this.getShares('/shares').subscribe(d => {
+      console.log('d', d);
+      this._shares = d[0];
+      this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
+    });
+
     this.climateStateSub = this.climateModelState$.subscribe(state => {
       this.colorMap = state.uiModel.colorSet;
       this.attrSelection = state.uiModel.selectedAttribute;
@@ -143,14 +143,16 @@ export class AppComponent implements OnInit, OnDestroy {
       this.lists = state.climateData.climateIndicatorData.data;
       console.log('climate list', this.lists);
 
-        setTimeout(d => {
-          if (!this.loadFlag) {
-          console.log('share')
-          this.shareservice.addShare(this.lists);
-          this.loadFlag = true;
-          }
-
-        }, 140000);
+        // setTimeout(d => {
+        //
+        //   if (!this.loadFlag) {
+        //   //this.shareservice.deleteShares();
+        //   console.log('share')
+        //   this.shareservice.addShare(this.lists);
+        //   this.loadFlag = true;
+        //   }
+        //
+        // }, 10000);
 
 
     });
@@ -404,7 +406,7 @@ export class AppComponent implements OnInit, OnDestroy {
             return _.map(countryObj.data, function(value) {
               const calculated = Math.ceil((value['value'] - minRow[value['year']]) / (maxRow[value['year']] - minRow[value['year']]) * 10);
               const numIsFinite = isFinite(calculated) && !isNaN(calculated) ? calculated : 0;
-              console.log('calculated', numIsFinite);
+              // console.log('calculated', numIsFinite);
               value['rank'] = numIsFinite;
             });
           });
