@@ -41,6 +41,7 @@ import {
 } from "./shared/models/climate/data/items/indicator-attributes-model";
 import {ShareService} from "./services/shared.service";
 import {DATA_TRANSFORMS_COMPLETE} from "./store/actions/ui.actions";
+import {hasOwnProperty} from "tslint/lib/utils";
 
 
 @Component({
@@ -111,6 +112,7 @@ export class AppComponent implements OnInit, OnDestroy {
   colorMap: any;
   private _shares: any;
   loadFlag: false;
+  attributeListSelection: any;
 
   constructor(
     private apiService: ApiService,
@@ -131,7 +133,7 @@ export class AppComponent implements OnInit, OnDestroy {
     //this.populateTemperatureFromFile('weather/av-temperature.json');
     //this.tempTestFunction();
     this.getShares('/shares').subscribe(d => {
-      console.log('d', d);
+      //console.log('d', d);
       this._shares = d[0];
       this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
     });
@@ -141,7 +143,52 @@ export class AppComponent implements OnInit, OnDestroy {
       this.attrSelection = state.uiModel.selectedAttribute;
       this.countrySelections = state.uiModel.selectedCountries;
       this.lists = state.climateData.climateIndicatorData.data;
-      console.log('climate list', this.lists);
+
+      let selectionSet = {};
+      let secondTeirSelectionSet = {}
+
+      _.forEach(this.countrySelections, d => {
+        selectionSet[d] = [];
+        secondTeirSelectionSet[d] = [];
+      })
+      let attrSelection = _.forEach(this._shares, (d, e) => {
+
+        for (var key in d) {
+          //console.log('key', key);
+             //console.log('what is key', d[key])
+
+          if (d[key].hasOwnProperty('countryData')) {
+               for (var j in selectionSet) {
+                 //console.log('for j', j);
+                 let countrySetInAttributes = _.find(d[key]['countryData'], {countryCode: j})
+                 selectionSet[j].push({attribute: countrySetInAttributes['indicatorName'], shortAttrName: e, attrCode: countrySetInAttributes['indicatorCode'], rankings: countrySetInAttributes.data})
+               }
+          } else {
+            for (var j in selectionSet) {
+              console.log('D', d);
+              console.log('e', e);
+              console.log('key', key);
+              secondTeirSelectionSet[j][e] = [];
+              for (var subkey in d[key]) {
+                if (d[key][subkey].hasOwnProperty('countryData')) {
+                  let countrySetInAttributes = _.find(d[key][subkey]['countryData'], {countryCode: j})
+                  secondTeirSelectionSet[j][e].push({
+                    attribute: countrySetInAttributes['indicatorName'],
+                    shortAttrName: e,
+                    attrCode: countrySetInAttributes['indicatorCode'],
+                    rankings: countrySetInAttributes.data
+                  })
+                }
+              }
+            }
+            //selectionSet
+            console.log('DLIST', key)
+            console.log('DLIST', d[key])
+          }
+        }
+      })
+      console.log('SELECTION SET', selectionSet);
+      console.log('SECOND SELECTION SET', secondTeirSelectionSet);
 
         // setTimeout(d => {
         //
@@ -364,7 +411,7 @@ export class AppComponent implements OnInit, OnDestroy {
           const countObjForAvg = {};
           let countIndexes = 0;
           const controller = this;
-          console.log('derived average sets', derivedAverageSets)
+         // console.log('derived average sets', derivedAverageSets)
           _.forEach(derivedAverageSets.countryData, function(countryObj) {
             _.forEach(countryObj.data, function(value, key) {
               if (!isNaN(parseInt(value.year))) {

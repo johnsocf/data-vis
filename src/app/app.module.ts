@@ -25,6 +25,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from './../environments/environment';
 import {ShareService} from "./services/shared.service";
+import {AttrRankGraphComponent} from "./components/attr-rank-graph/attr-rank-graph.component";
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {ShareService} from "./services/shared.service";
     LineChartComponent,
     LineChartComponent,
     KeysPipePipe,
-    WorldMapComponent
+    WorldMapComponent,
+    AttrRankGraphComponent
   ],
   imports: [
     BrowserModule,

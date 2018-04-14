@@ -11,7 +11,7 @@ import { worldCode as topoWorld } from '../../../assets/topojson/world-code';
 import * as _ from 'lodash';
 import {ApplicationState} from "../../store/application-state";
 import {Store} from "@ngrx/store";
-import {UPDATE_COUNTRIES_SELECTION} from "../../store/actions/ui.actions";
+import {UPDATE_ATTRIBUTE_SET_FOR_COUNTRY, UPDATE_COUNTRIES_SELECTION} from "../../store/actions/ui.actions";
 import {countryMap} from '../../../assets/maps/country-maps';
 
 @Component({
@@ -122,6 +122,7 @@ export class WorldMapComponent implements OnInit {
         let countryCode = d.properties.countryCode;
         let countryConversion = classContext.updateLocalCountrySetToGetColor(countryCode, classContext);
         store.dispatch({ type: 'UPDATE_COUNTRIES_SELECTION', payload: countryCode});
+       // store.dispatch({ type: UPDATE_ATTRIBUTE_SET_FOR_COUNTRY});
         const index = _.indexOf(classContext.countryCodes, countryConversion);
 
         let selected = d3.select(this).classed('selected')

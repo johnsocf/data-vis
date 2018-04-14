@@ -59,14 +59,14 @@ export class LineChartComponent implements OnInit {
       this.aggregateDataSelections(data);
       this.update();
     }
-    console.log('data on inside', data);
+    //console.log('data on inside', data);
   }
 
   @Input()
   set colorSet(data: any) {
     if (data) {
       this._colorMap = data;
-      console.log('color map inside!', this._colorMap)
+      //console.log('color map inside!', this._colorMap)
       if (!!this._indicatorName) {this.update()}
     }
   }
@@ -97,7 +97,7 @@ export class LineChartComponent implements OnInit {
 
 
      //console.log('selected average', this._selectedAverage);
-     console.log('this country names', this._countryNames);
+     //console.log('this country names', this._countryNames);
    }
   }
 
@@ -169,7 +169,7 @@ export class LineChartComponent implements OnInit {
 
   onInputChange(sliderEvent) {
     let sliderValue = sliderEvent.value
-    console.log('value', sliderValue);
+    //console.log('value', sliderValue);
     this.time = sliderValue;
     this.update();
   }
@@ -275,7 +275,7 @@ export class LineChartComponent implements OnInit {
     this.extent = this.d3.extent(this.rectData, d => {
       return d['year'];
     })
-    console.log('this extent', this.extent);
+    //console.log('this extent', this.extent);
     this.minSlider = this.extent[0];
     this.maxSlider = this.extent[1];
   }
@@ -321,7 +321,6 @@ export class LineChartComponent implements OnInit {
         .attr('height', 10)
         .attr("class", "legend")
         .attr('fill', this._colorMap[country]);
-      console.log('i', this._colorMap[country])
 
       legendRow.append('text')
         .attr('x', 20)
@@ -386,9 +385,8 @@ export class LineChartComponent implements OnInit {
       this.svg.selectAll(".legend").remove();
 
 
-      console.log('update');
 
-      this.buildScaleBandDomain();
+     // this.buildScaleBandDomain();
 
       this.addTransition();
       //toDo: break this out
@@ -516,7 +514,7 @@ export class LineChartComponent implements OnInit {
       var possibleRange = this.d3.extent(j.data, d => {
         return +d['year'];
       })
-      console.log('possible ranges', possibleRange);
+
       let isMinRange = selectedRange[0] > possibleRange[0]
       let isMaxRange = selectedRange[1] < possibleRange[1]
 
@@ -537,7 +535,6 @@ export class LineChartComponent implements OnInit {
       // }
       var possibleDomain = this.d3.extent(j.data, d => d['value']);
       let isMin = selectedDomain[0] > possibleDomain[0]
-      console.log('possible domain', possibleDomain);
 
       if (!setInitialMin || isMin) {
         selectedDomain[0] = _.clone(possibleDomain[0]);
@@ -557,14 +554,11 @@ export class LineChartComponent implements OnInit {
     const averageDomainMax = averageDomain[1] > selectedDomain[1] ? averageDomain[1] : selectedDomain[1];
     //this.x.domain([setRangeMin, setRangeMax]);
     this.extent = selectedRange
-    console.log('this extent', this.extent);
     this.x.domain(this.extent);
     this.y.domain([averageDomainMin, averageDomainMax]);
     // this.xrange = [setRangeMin, setRangeMax];
     this.xrange = this.extent;
 
-    console.log('selected ranges', ([setRangeMin, setRangeMax]))
-    console.log('selected domain', ([averageDomainMin, averageDomainMax]))
 
 
     // console.log([setRangeMin, setRangeMax])
@@ -574,10 +568,10 @@ export class LineChartComponent implements OnInit {
       .ticks(10)
       .tickPadding(10)
       .tickValues( this.d3.range(this.xrange[0], this.xrange[1], 5))
-      .tickFormat( d => { return d; });
+      .tickFormat( d => d);
     this.yAxisCall = this.d3.axisLeft(this.y)
       .ticks(6)
-      .tickFormat( d => { return d; });
+      .tickFormat( d => d);
 
 
 // Axis groups
