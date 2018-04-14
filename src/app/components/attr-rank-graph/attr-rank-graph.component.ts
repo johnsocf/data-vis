@@ -91,18 +91,20 @@ export class AttrRankGraphComponent implements OnInit {
 
     if (data) {
 
-      this._setByDateSet = _.map(data, j => {
+      this._setByDateSet = _.map(data, (j, k) => {
+        console.log('k', k);
         let smallMap =
           _(j)
-            .filter(d => {
+            .filter((d, e) => {
               return _.find(d.rankings, {year: this._year.toString()});
             })
-            .map(d => {
-              let rankForYear = _.find(d.rankings, {year: this._year.toString()});
+            .map((d, e) => {
+
+              let rankForYearObj = _.find(d.rankings, {year: this._year.toString()});
               //if (rankForYear) {
-                let rankForYear = rankForYear.rank;
-                d.rankings = {attribute: d.attribute, year: this._year, ranking: rankForYear};
-                let model = {rankings: null,shortAttrName: null};
+                let rankForYear = rankForYearObj.rank;
+                d.rankings = {attribute: d.attribute, year: this._year, ranking: rankForYear, countryCode: k};
+                let model = {rankings: null,shortAttrName: null, countryCode: null};
                 let result = _.pick(d, _.keys(model));
                 console.log('result rankings', result['rankings']);
                 console.log('d rankings', d.rankings);
@@ -190,11 +192,19 @@ export class AttrRankGraphComponent implements OnInit {
 
   buildScales() {
     this.y = this.d3.scaleLinear()
+      .domain([0, 10])
       .range([this.height, 0]);
   }
 
   scaleBand() {
+    let testArray = _.map(this._setByDateSet[0], d => {
+      console.log('d scale band', d)
+      return d['rankings']['attribute'];
+    });
+    console.log('test array', testArray)
+
     this.x = this.d3.scaleBand()
+      .domain(testArray)
       .range([0, 400])
       .paddingInner(0.3)
       .paddingOuter(0.3)
@@ -207,7 +217,10 @@ export class AttrRankGraphComponent implements OnInit {
       .attr('class', 'x-axis')
       .attr('transform', 'translate(0,' + this.height + ')')
 
-    this.yAxisCall = this.d3.axisLeft(this.y);
+    this.yAxisCall = this.d3.axisLeft(this.y)
+      .tickFormat(function(d){
+        return d;
+      });
     this.yAxisGroup = this.g.append('g')
       .attr('class', 'y-axis');
   }
@@ -215,7 +228,8 @@ export class AttrRankGraphComponent implements OnInit {
 
 
   generateAxisesCalls() {
-    this.yAxisGroup.transition(this.t).call(this.yAxisCall);
+    this.yAxisGroup.transition(this.t).call(this.yAxisCall)
+
     this.xAxisGroup.transition(this.t).call(this.xAxisCall)
       .selectAll("text")
       .attr("y", '10')
@@ -256,46 +270,44 @@ export class AttrRankGraphComponent implements OnInit {
     // data join
     if (Object.getOwnPropertyNames(this._setByDateSet).length > 0) {
       _.each(this._setByDateSet, (countryGroup, i) => {
-        if(countryGroup.length > 0) {
-          //_.each(countryGroup, countryGroup => {
-          console.log('set', countryGroup);
-          var rectangles = this.g.selectAll('rect')
-            .data(countryGroup, d => {
-              console.log('d attr', d)
-              return d.rankings.ranking;
-            });
-          //exit old elements
-          // rectangles.exit()
-          //   .attr('fill', 'red')
-          // .transition(this.t)
-          //   .attr('y', this.y(0))
-          //   .attr('height', 0)
-          //   .remove();
 
-          // enter
-          rectangles.enter()
-            .append('rect')
-            .attr('y', d => this.y(0))
-            .attr('x', (d, i) => {
-              console.log('d rankings', i)
-              return this.x(i);
-            })
-            .attr('width', this.x.bandwidth)
-            .attr('height', 0)
-            .attr('fill', this.color)
-            .merge(rectangles)
-            .transition(this.t)
-            .attr('y', d => {
-              console.log('d attr', d['shortAttrName'])
-              return this.y(d.rankings.ranking);
-            })
-            .attr('width', this.x.bandwidth)
-            .attr('x', (d, i) => {return this.x(i)})
-            .attr('height', d => {
-              return this.height - this.y(d.rankings.ranking)
-            })
-        //})
-       }
+            console.log('set', countryGroup);
+            console.log('i', i)
+            var rectangles = this.g.selectAll('rect')
+              .data( this._setByDateSet[0]);
+            //exit old elements
+            // rectangles.exit()
+            //   .attr('fill', 'red')
+            // .transition(this.t)
+            //   .attr('y', this.y(0))
+            //   .attr('height', 0)
+            //   .remove();
+
+            // enter
+
+            rectangles.enter()
+              .append('rect')
+              .attr('y', d => this.y(d.rankings.ranking))
+              .attr('x', (d, i) => {
+                console.log('d rankings', d)
+                return this.x(d.rankings.attribute);
+              })
+              .attr('width', this.x.bandwidth)
+              .attr('height', 0)
+              .attr('fill', d => {return this._colorMap[d.rankings.countryCode]})
+              .merge(rectangles)
+              .transition(this.t)
+              .attr('y', d => {
+                console.log('d attr', d['shortAttrName'])
+                return this.y(d.rankings.ranking);
+              })
+              .attr('width', this.x.bandwidth)
+              .attr('x', (d, i) => {return this.x(d.rankings.attribute)})
+              .attr('height', d => {
+                return this.height - this.y(d.rankings.ranking)
+              })
+        });
+      }
 
     }
 
