@@ -26,6 +26,7 @@ export class AttrRankGraphComponent implements OnInit {
   private _singleAttrSet: any = {}
   private _multiTierAttrSet: any = {};
   private _year: number = 2001;
+  private _setByDateSet: any;
 
   @Input()
   set multiTierAttrSet(data: any) {
@@ -38,7 +39,7 @@ export class AttrRankGraphComponent implements OnInit {
     console.log('single attr set', this._singleAttrSet);
     this.aggregateDataSelections(data);
     //console.log('agg data selections', this.aggregateDataSelections())
-    //this.update();
+    this.update();
   }
 
 
@@ -90,31 +91,31 @@ export class AttrRankGraphComponent implements OnInit {
 
     if (data) {
 
-      const setByDateSet = _.forEach(data, j => {
-        return _.map(j, d => {
-          console.log('d inside', d);
-          let rankForYear = _.find(d.rankings, {year: this._year.toString()});
-          if (rankForYear) {
-            rankForYear = rankForYear.rank;
-            console.log('this set', {attribute: d.attribute, year: this._year, ranking: rankForYear})
-            d.rankings = {attribute: d.attribute, year: this._year, ranking: rankForYear}
-
-            let model = {
-              rankings: null,
-              shortAttrName: null
-            };
-
-            let result = _.pick(d, _.keys(model));
-
-            console.log('result', result);
-
-            return result;
-          }
-        })
+      this._setByDateSet = _.map(data, j => {
+        let smallMap =
+          _(j)
+            .filter(d => {
+              return _.find(d.rankings, {year: this._year.toString()});
+            })
+            .map(d => {
+              let rankForYear = _.find(d.rankings, {year: this._year.toString()});
+              //if (rankForYear) {
+                let rankForYear = rankForYear.rank;
+                d.rankings = {attribute: d.attribute, year: this._year, ranking: rankForYear};
+                let model = {rankings: null,shortAttrName: null};
+                let result = _.pick(d, _.keys(model));
+                console.log('result rankings', result['rankings']);
+                console.log('d rankings', d.rankings);
+                return result;
+              //}
+            }).valueOf();
+        console.log('small map', smallMap);
+        return smallMap
 
       });
 
-      console.log('set by date set', setByDateSet)
+
+      console.log('set by date set', this._setByDateSet)
     }
   }
 
@@ -164,33 +165,20 @@ export class AttrRankGraphComponent implements OnInit {
     if (this.parentNativeElement !== null) {
       this.setSVG();
       this.setOrdinalScale();
+      this.buildScales();
+      this.scaleBand();
+      this.generateAxises()
     }
 
   }
 
-  setMinAndMax() {
-    console.log('test', this._aggregatedDataCountrySelections);
-    this.min = this.d3.min( this._aggregatedDataCountrySelections, d => {
-      return d['height'];
-    });
-    this.max = this.d3.max( this._aggregatedDataCountrySelections, d => {
-      return d['height'];
-    })
-    this.extent = this.d3.extent( this._aggregatedDataCountrySelections, d => {
-      return d['height'];
-    })
-  }
-
-  scaleBand() {
-    this.x = this.d3.scaleBand()
-      .range([0, 400])
-      .paddingInner(0.3)
-      .paddingOuter(0.3)
-  }
-
-  buildScaleBandDomain() {
-    console.log('test', this._aggregatedDataCountrySelections);
-    this.x.domain( this._aggregatedDataCountrySelections.data.map(d => { return d.rank}));
+  setSVG() {
+    this.svg = this.d3.select(this.parentNativeElement)
+      .append('svg')
+      .attr('width', this.width + this.margin.left + this.margin.right)
+      .attr('height', this.height + this.margin.top + this.margin.bottom)
+    this.g = this.svg.append('g')
+      .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')')
   }
 
   setOrdinalScale() {
@@ -205,103 +193,11 @@ export class AttrRankGraphComponent implements OnInit {
       .range([this.height, 0]);
   }
 
-  buildScaleDomain() {
-    let extent = this.d3.extent(this.newData, d => {return d[this.valueType]});
-    let x = parseInt(extent[0]);
-    let y = parseInt(extent[1]);
-    this.y.domain([x, y]);
-  }
-
-
-  getRevenuesBuildRectangles() {
-
-    this.http.get<any[]>('../assets/data/revenues.json').subscribe(res =>{
-      this.rectData = res;
-      this.rectData.forEach(d => {
-        d.revenue = +d.revenue;
-        d.profit = +d.profit;
-      });
-      //this.buildScales();
-      //this.scaleBand();
-      //this.generateAxises();
-      this.d3.interval(d => {
-        //this.newData = this.rectData;
-        this.newData = this.flag ? this.rectData : this.rectData.slice(1);
-        //this.update();
-        this.flag = !this.flag;
-      }, 1000);
-      //this.generateLabels();
-
-    },error =>{console.log('Error')});
-
-    // this.buildScales();
-    // this.scaleBand();
-    // this.generateAxises();
-    // this.update();
-    //this.generateLabels();
-  }
-
-  update() {
-    if (this.svg) {
-      this.svg.selectAll('path.line').remove();
-      this.svg.selectAll(".chart-line").remove();
-      this.svg.selectAll(".x-axis").remove();
-      this.svg.selectAll(".axis-label").remove();
-      this.svg.selectAll(".y-axis").remove();
-      this.svg.selectAll(".legend").remove();
-      this.buildScales();
-      this.scaleBand();
-      this.generateAxises();
-      //this.setMinAndMax();
-
-      //this.buildScaleBandDomain();
-
-
-      this.addTransition();
-      this.buildRectangles();
-      //toDo: break this out
-      this.generateLabels();
-
-      //this.dataTimeFilter();
-
-
-    }
-
-    //this.valueType = this.flag ? 'revenue' : 'profit';
-
-    //this.buildScaleDomain();
-    //this.generateAxisesCalls();
-    //this.addTransition();
-    //this.buildRectangles();
-    //this.updateLabelText();
-  }
-
-  updateLabelText() {
-    this.yLabel.text(this.valueType);
-  }
-
-  addTransition() {
-    this.t = this.d3.transition().duration(750);
-  }
-
-
-  generateLabels() {
-    this.xLabel = this.g.append("text")
-      .attr('class', 'x axis-label')
-      .attr('x', this.width/ 2)
-      .attr('y', this.height + 140)
-      .attr('font-size', '20px')
-      .attr('text-anchor', 'middle')
-      .text(this.valueType);
-
-    this.yLabel = this.g.append('text')
-      .attr('class', 'y axis-label')
-      .attr('x', -(this.height/ 2))
-      .attr('y', -60)
-      .attr('font-size', '20px')
-      .attr('text-anchor', 'middle')
-      .attr('transform', 'rotate(-90)')
-      .text(this.valueType + ' (m)');
+  scaleBand() {
+    this.x = this.d3.scaleBand()
+      .range([0, 400])
+      .paddingInner(0.3)
+      .paddingOuter(0.3)
   }
 
   generateAxises() {
@@ -316,6 +212,8 @@ export class AttrRankGraphComponent implements OnInit {
       .attr('class', 'y-axis');
   }
 
+
+
   generateAxisesCalls() {
     this.yAxisGroup.transition(this.t).call(this.yAxisCall);
     this.xAxisGroup.transition(this.t).call(this.xAxisCall)
@@ -326,72 +224,85 @@ export class AttrRankGraphComponent implements OnInit {
       .attr("transform", "rotate(-40)");
   }
 
-  setSVG() {
-    this.svg = this.d3.select(this.parentNativeElement)
-      .append('svg')
-      .attr('width', this.width + this.margin.left + this.margin.right)
-      .attr('height', this.height + this.margin.top + this.margin.bottom)
-    this.g = this.svg.append('g')
-      .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')')
+
+  update() {
+    if (this.svg) {
+      this.svg.selectAll('path.line').remove();
+      this.svg.selectAll(".chart-line").remove();
+      this.svg.selectAll(".x-axis").remove();
+      this.svg.selectAll(".axis-label").remove();
+      this.svg.selectAll(".y-axis").remove();
+      this.svg.selectAll(".legend").remove();
+      this.buildScales();
+      this.scaleBand();
+      this.generateAxises();
+      this.generateAxisesCalls();
+      this.addTransition();
+      this.buildRectangles();
+    }
+
   }
+
+
+  addTransition() {
+    this.t = this.d3.transition().duration(750);
+  }
+
 
   buildRectangles() {
 
-    console.log('test', this._aggregatedDataCountrySelections);
+    console.log('test', this._setByDateSet);
 
     // data join
-    var rectangles = this.g.selectAll('rect')
-      .data(this.newData, d => {
-        return d.rank;
-      });
+    if (Object.getOwnPropertyNames(this._setByDateSet).length > 0) {
+      _.each(this._setByDateSet, (countryGroup, i) => {
+        if(countryGroup.length > 0) {
+          //_.each(countryGroup, countryGroup => {
+          console.log('set', countryGroup);
+          var rectangles = this.g.selectAll('rect')
+            .data(countryGroup, d => {
+              console.log('d attr', d)
+              return d.rankings.ranking;
+            });
+          debugger;
+          //exit old elements
+          // rectangles.exit()
+          //   .attr('fill', 'red')
+          // .transition(this.t)
+          //   .attr('y', this.y(0))
+          //   .attr('height', 0)
+          //   .remove();
 
-    // exit old elements
-    rectangles.exit()
-      .attr('fill', 'red')
-    .transition(this.t)
-      .attr('y', this.y(0))
-      .attr('height', 0)
-      .remove();
+          // enter
+          rectangles.enter()
+            .append('rect')
+            .attr('y', d => this.y(0))
+            .attr('x', (d, i) => {
+              console.log('d rankings', d.rankings.ranking)
+              return this.x(d.rankings.ranking)
+            })
+            .attr('width', this.x.bandwidth)
+            .attr('height', 0)
+            .attr('fill', 'blue')
+            .merge(rectangles)
+            .transition(this.t)
+            .attr('y', d => {
+              console.log('d attr', d['shortAttrName'])
+              return this.y('test')
+            })
+            .attr('width', this.x.bandwidth)
+            .attr('x', (d, i) => {return this.x(d.rankings.ranking)})
+            .attr('height', d => {
 
-    // enter
-    rectangles.enter()
-      .append('rect')
-      .attr('y', d => this.y(0))
-      .attr('x', (d, i) => {return this.x(d.month)})
-      .attr('width', this.x.bandwidth)
-      .attr('height', 0)
-      .attr('fill', 'blue')
-      .merge(rectangles)
-      .transition(this.t)
-          .attr('y', d => {return this.y(d[this.valueType])})
-          .attr('width', this.x.bandwidth)
-          .attr('x', (d, i) => {return this.x(d.month)})
-          .attr('height', d => {return this.height - this.y(d[this.valueType])})
+              return this.height - this.y('test')
+            })
+        //})
+       }
+
+    }
 
   }
 
-  buildCircles() {
-    var circles = this.g.selectAll('circle')
-      .data(this.data);
-
-
-    circles.enter()
-      .append('circle')
-      .attr('cx', (d, i) => {
-        return 50 + i * 50;
-      })
-      .attr('cy', 100)
-      .attr('r', (d) => {
-        return d.age * 2;
-      })
-      .attr('fill', d =>{
-        if (d.month == 'March') {
-          return 'blue'
-        } else {
-          return 'pink'
-        }
-      })
-  }
 
 
 }
