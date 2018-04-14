@@ -23,6 +23,23 @@ export class AttrRankGraphComponent implements OnInit {
   private _aggregatedDataCountrySelections: any = [];
   private _aggregatedDataCountrySelectionsNoData: any = [];
   private _colorMap: any = {};
+  private _singleAttrSet: any = {}
+  private _multiTierAttrSet: any = {};
+  private _year: number = 1998;
+
+  @Input()
+  set multiTierAttrSet(data: any) {
+    this._multiTierAttrSet = data;
+  }
+
+  @Input()
+  set singleAttrSet(data: any) {
+    this._singleAttrSet = data;
+    console.log('single attr set', this._singleAttrSet);
+    //this.aggregateDataSelections(data);
+    //console.log('agg data selections', this.aggregateDataSelections())
+    //this.update();
+  }
 
 
   @Input()
@@ -54,8 +71,8 @@ export class AttrRankGraphComponent implements OnInit {
       //this._countryNames = [data['countrySelection']['countryName']];
       // for each set it will be, in teh update.
       // iterate through selected Initial list.
-      this.aggregateDataSelections(data);
-      this.update();
+      // this.aggregateDataSelections(data);
+      // this.update();
     }
     //console.log('data on inside', data);
   }

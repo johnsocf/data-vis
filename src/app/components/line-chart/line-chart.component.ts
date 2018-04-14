@@ -390,6 +390,7 @@ export class LineChartComponent implements OnInit {
 
       this.addTransition();
       //toDo: break this out
+      //
       this.generateLabels();
 
       //this.dataTimeFilter();

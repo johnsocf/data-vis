@@ -113,6 +113,8 @@ export class AppComponent implements OnInit, OnDestroy {
   private _shares: any;
   loadFlag: false;
   attributeListSelection: any;
+  attrSelectionSet:any;
+  secondTeirSelectionSet:any;
 
   constructor(
     private apiService: ApiService,
@@ -144,12 +146,12 @@ export class AppComponent implements OnInit, OnDestroy {
       this.countrySelections = state.uiModel.selectedCountries;
       this.lists = state.climateData.climateIndicatorData.data;
 
-      let selectionSet = {};
-      let secondTeirSelectionSet = {}
+      let copyAttrSelectionSet = {};
+      let copySecondTeirSelectionSet = {};
 
       _.forEach(this.countrySelections, d => {
-        selectionSet[d] = [];
-        secondTeirSelectionSet[d] = [];
+        copyAttrSelectionSet[d] = [];
+        copySecondTeirSelectionSet[d] = [];
       })
       let attrSelection = _.forEach(this._shares, (d, e) => {
 
@@ -158,21 +160,18 @@ export class AppComponent implements OnInit, OnDestroy {
              //console.log('what is key', d[key])
 
           if (d[key].hasOwnProperty('countryData')) {
-               for (var j in selectionSet) {
+               for (var j in copyAttrSelectionSet) {
                  //console.log('for j', j);
                  let countrySetInAttributes = _.find(d[key]['countryData'], {countryCode: j})
-                 selectionSet[j].push({attribute: countrySetInAttributes['indicatorName'], shortAttrName: e, attrCode: countrySetInAttributes['indicatorCode'], rankings: countrySetInAttributes.data})
+                 copyAttrSelectionSet[j].push({attribute: countrySetInAttributes['indicatorName'], shortAttrName: e, attrCode: countrySetInAttributes['indicatorCode'], rankings: countrySetInAttributes.data})
                }
           } else {
-            for (var j in selectionSet) {
-              console.log('D', d);
-              console.log('e', e);
-              console.log('key', key);
-              secondTeirSelectionSet[j][e] = [];
+            for (var j in copyAttrSelectionSet) {
+              copySecondTeirSelectionSet[j][e] = [];
               for (var subkey in d[key]) {
                 if (d[key][subkey].hasOwnProperty('countryData')) {
                   let countrySetInAttributes = _.find(d[key][subkey]['countryData'], {countryCode: j})
-                  secondTeirSelectionSet[j][e].push({
+                  copySecondTeirSelectionSet[j][e].push({
                     attribute: countrySetInAttributes['indicatorName'],
                     shortAttrName: e,
                     attrCode: countrySetInAttributes['indicatorCode'],
@@ -181,15 +180,12 @@ export class AppComponent implements OnInit, OnDestroy {
                 }
               }
             }
-            //selectionSet
-            console.log('DLIST', key)
-            console.log('DLIST', d[key])
           }
         }
       })
-      console.log('SELECTION SET', selectionSet);
-      console.log('SECOND SELECTION SET', secondTeirSelectionSet);
-
+      console.log('copy!', this.attrSelectionSet);
+      this.attrSelectionSet = copyAttrSelectionSet;
+      this.secondTeirSelectionSet = copySecondTeirSelectionSet;
         // setTimeout(d => {
         //
         //   if (!this.loadFlag) {
