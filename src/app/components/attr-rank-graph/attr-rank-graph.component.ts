@@ -25,7 +25,7 @@ export class AttrRankGraphComponent implements OnInit {
   private _colorMap: any = {};
   private _singleAttrSet: any = {}
   private _multiTierAttrSet: any = {};
-  private _year: number = 1998;
+  private _year: number = 2001;
 
   @Input()
   set multiTierAttrSet(data: any) {
@@ -36,7 +36,7 @@ export class AttrRankGraphComponent implements OnInit {
   set singleAttrSet(data: any) {
     this._singleAttrSet = data;
     console.log('single attr set', this._singleAttrSet);
-    //this.aggregateDataSelections(data);
+    this.aggregateDataSelections(data);
     //console.log('agg data selections', this.aggregateDataSelections())
     //this.update();
   }
@@ -89,30 +89,56 @@ export class AttrRankGraphComponent implements OnInit {
   aggregateDataSelections(data) {
 
     if (data) {
-      const generalAverages = _.find(data.averages, {countryName: "general averages"})
-      const countrySelection = _.find(data.countryData, {countryCode: "BWA"})
-      this._countryDataSetComplete = data.countryData;
 
-      this._aggregatedDataCountrySelections = _.filter(this._countryDataSetComplete, d => {
-        //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
-        return _.indexOf(this._countryNames, d.countryCode) !== -1 && d.hasOwnProperty('data');
+      const setByDateSet = _.forEach(data, j => {
+        return _.map(j, d => {
+          console.log('d inside', d);
+          let rankForYear = _.find(d.rankings, {year: this._year.toString()});
+          if (rankForYear) {
+            rankForYear = rankForYear.rank;
+            console.log('this set', {attribute: d.attribute, year: this._year, ranking: rankForYear})
+            d.rankings = {attribute: d.attribute, year: this._year, ranking: rankForYear}
+
+            let model = {
+              rankings: {},
+              shortAttrName: null
+            };
+
+            let result = _.pick(d, _.keys(model));
+
+            return d;
+          }
+        })
+
       });
 
-      this._aggregatedDataCountrySelectionsNoData = _.filter(this._countryDataSetComplete, d => {
-        //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
-        return _.indexOf(this._countryNames, d.countryCode) !== -1 && !d.hasOwnProperty('data');
-      });
-
-      // console.log('country set', this._aggregatedDataCountrySelections);
-
-      this._selectedInitial = _.clone(countrySelection.data);
-      this._selectedAverage = _.clone(generalAverages.data);
-      this._indicatorName = countrySelection['indicatorName'];
-
-
-
-      //console.log('selected average', this._selectedAverage);
-      //console.log('this country names', this._countryNames);
+      console.log('set by date set', setByDateSet)
+      //
+      //
+      // const generalAverages = _.find(data.averages, {countryName: "general averages"})
+      // const countrySelection = _.find(data.countryData, {countryCode: "BWA"})
+      // this._countryDataSetComplete = data.countryData;
+      //
+      // this._aggregatedDataCountrySelections = _.filter(this._countryDataSetComplete, d => {
+      //   //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
+      //   return _.indexOf(this._countryNames, d.countryCode) !== -1 && d.hasOwnProperty('data');
+      // });
+      //
+      // this._aggregatedDataCountrySelectionsNoData = _.filter(this._countryDataSetComplete, d => {
+      //   //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
+      //   return _.indexOf(this._countryNames, d.countryCode) !== -1 && !d.hasOwnProperty('data');
+      // });
+      //
+      // // console.log('country set', this._aggregatedDataCountrySelections);
+      //
+      // this._selectedInitial = _.clone(countrySelection.data);
+      // this._selectedAverage = _.clone(generalAverages.data);
+      // this._indicatorName = countrySelection['indicatorName'];
+      //
+      //
+      //
+      // //console.log('selected average', this._selectedAverage);
+      // //console.log('this country names', this._countryNames);
     }
   }
 
