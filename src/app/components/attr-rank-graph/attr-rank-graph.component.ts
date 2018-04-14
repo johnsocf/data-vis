@@ -294,7 +294,12 @@ export class AttrRankGraphComponent implements OnInit {
               })
               .attr('width', this.x.bandwidth)
               .attr('height', 0)
-              .attr('fill', d => {return this._colorMap[d.rankings.countryCode]})
+              .attr('fill', d => {
+                console.log('color', this._colorMap)
+                console.log('color code', d.rankings.countryCode)
+                console.log('mapped', this._colorMap[d.rankings.countryCode])
+                return this._colorMap[d.rankings.countryCode]
+              })
               .merge(rectangles)
               .transition(this.t)
               .attr('y', d => {
