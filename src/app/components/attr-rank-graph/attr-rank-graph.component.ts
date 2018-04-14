@@ -264,7 +264,6 @@ export class AttrRankGraphComponent implements OnInit {
               console.log('d attr', d)
               return d.rankings.ranking;
             });
-          debugger;
           //exit old elements
           // rectangles.exit()
           //   .attr('fill', 'red')
@@ -278,23 +277,22 @@ export class AttrRankGraphComponent implements OnInit {
             .append('rect')
             .attr('y', d => this.y(0))
             .attr('x', (d, i) => {
-              console.log('d rankings', d.rankings.ranking)
-              return this.x(d.rankings.ranking)
+              console.log('d rankings', i)
+              return this.x(i);
             })
             .attr('width', this.x.bandwidth)
             .attr('height', 0)
-            .attr('fill', 'blue')
+            .attr('fill', this.color)
             .merge(rectangles)
             .transition(this.t)
             .attr('y', d => {
               console.log('d attr', d['shortAttrName'])
-              return this.y('test')
+              return this.y(d.rankings.ranking);
             })
             .attr('width', this.x.bandwidth)
-            .attr('x', (d, i) => {return this.x(d.rankings.ranking)})
+            .attr('x', (d, i) => {return this.x(i)})
             .attr('height', d => {
-
-              return this.height - this.y('test')
+              return this.height - this.y(d.rankings.ranking)
             })
         //})
        }
