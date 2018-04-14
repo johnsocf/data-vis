@@ -100,45 +100,21 @@ export class AttrRankGraphComponent implements OnInit {
             d.rankings = {attribute: d.attribute, year: this._year, ranking: rankForYear}
 
             let model = {
-              rankings: {},
+              rankings: null,
               shortAttrName: null
             };
 
             let result = _.pick(d, _.keys(model));
 
-            return d;
+            console.log('result', result);
+
+            return result;
           }
         })
 
       });
 
       console.log('set by date set', setByDateSet)
-      //
-      //
-      // const generalAverages = _.find(data.averages, {countryName: "general averages"})
-      // const countrySelection = _.find(data.countryData, {countryCode: "BWA"})
-      // this._countryDataSetComplete = data.countryData;
-      //
-      // this._aggregatedDataCountrySelections = _.filter(this._countryDataSetComplete, d => {
-      //   //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
-      //   return _.indexOf(this._countryNames, d.countryCode) !== -1 && d.hasOwnProperty('data');
-      // });
-      //
-      // this._aggregatedDataCountrySelectionsNoData = _.filter(this._countryDataSetComplete, d => {
-      //   //console.log('index of', _.indexOf(this._countryNames, d.CountryCode))
-      //   return _.indexOf(this._countryNames, d.countryCode) !== -1 && !d.hasOwnProperty('data');
-      // });
-      //
-      // // console.log('country set', this._aggregatedDataCountrySelections);
-      //
-      // this._selectedInitial = _.clone(countrySelection.data);
-      // this._selectedAverage = _.clone(generalAverages.data);
-      // this._indicatorName = countrySelection['indicatorName'];
-      //
-      //
-      //
-      // //console.log('selected average', this._selectedAverage);
-      // //console.log('this country names', this._countryNames);
     }
   }
 
