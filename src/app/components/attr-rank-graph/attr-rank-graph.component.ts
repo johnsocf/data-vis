@@ -14,11 +14,8 @@ import * as _ from 'lodash';
 })
 export class AttrRankGraphComponent implements OnInit {
   private _dataSet = {};
-  private _selectedInitial: any = {};
   private _indicatorName = '';
   private _countryNames = [];
-  private _selectedCountry = 'USA';
-  private _selectedAverage: any = {};
   private _countryDataSetComplete: any = [];
   private _aggregatedDataCountrySelections: any = [];
   private _aggregatedDataCountrySelectionsNoData: any = [];
@@ -112,7 +109,8 @@ export class AttrRankGraphComponent implements OnInit {
               //}
             }).valueOf();
         console.log('small map', smallMap);
-        return smallMap
+        return {countryCode: k, data: smallMap}
+        //return smallMap
 
       });
 
@@ -124,9 +122,7 @@ export class AttrRankGraphComponent implements OnInit {
 
   private d3: D3;
   private parentNativeElement: any;
-  private d3Svg: Selection<SVGSVGElement, any, null, undefined>;
   data: any;
-  rectData: any;
   svg: any;
   g: any;
   xAxisCall: any;
@@ -140,17 +136,9 @@ export class AttrRankGraphComponent implements OnInit {
   color: any;
   countryDomain = ["Africa", "N.America", "Europe",
     "S. America", "Asia", "Australia"];
-  min: any;
-  max: any;
-  extent: any;
   yAxisGroup: any;
   xAxisGroup: any;
-  yLabel: any;
-  xLabel: any;
-  flag: boolean = true;
-  valueType: string;
   t: any;
-  newData: any;
 
   constructor(
     element: ElementRef,
@@ -168,7 +156,7 @@ export class AttrRankGraphComponent implements OnInit {
       this.setSVG();
       this.setOrdinalScale();
       this.buildScales();
-      this.scaleBand();
+      //this.scaleBand();
       this.generateAxises()
     }
 
@@ -197,17 +185,20 @@ export class AttrRankGraphComponent implements OnInit {
   }
 
   scaleBand() {
-    let testArray = _.map(this._setByDateSet[0], d => {
-      console.log('d scale band', d)
-      return d['rankings']['attribute'];
-    });
-    console.log('test array', testArray)
+    console.log('scale band', this._setByDateSet)
+    if (this._setByDateSet[0] && this._setByDateSet[0].hasOwnProperty('data')) {
+      let testArray = _.map(this._setByDateSet[0]['data'], d => {
+        console.log('d scale band', d)
+        return d['rankings']['attribute'];
+      });
+      console.log('test array', testArray)
 
-    this.x = this.d3.scaleBand()
-      .domain(testArray)
-      .range([0, 400])
-      .paddingInner(0.3)
-      .paddingOuter(0.3)
+      this.x = this.d3.scaleBand()
+        .domain(testArray)
+        .range([0, 400])
+        .paddingInner(0.3)
+        .paddingOuter(0.3)
+    }
   }
 
   generateAxises() {
@@ -219,6 +210,7 @@ export class AttrRankGraphComponent implements OnInit {
 
     this.yAxisCall = this.d3.axisLeft(this.y)
       .tickFormat(function(d){
+        console.log('this is d', d);
         return d;
       });
     this.yAxisGroup = this.g.append('g')
@@ -266,7 +258,7 @@ export class AttrRankGraphComponent implements OnInit {
   buildRectangles() {
 
     console.log('test', this._setByDateSet);
-
+    debugger;
     // data join
     if (Object.getOwnPropertyNames(this._setByDateSet).length > 0) {
       _.each(this._setByDateSet, (countryGroup, i) => {
@@ -274,7 +266,7 @@ export class AttrRankGraphComponent implements OnInit {
             console.log('set', countryGroup);
             console.log('i', i)
             var rectangles = this.g.selectAll('rect')
-              .data( this._setByDateSet[0]);
+              .data(countryGroup.data);
             //exit old elements
             // rectangles.exit()
             //   .attr('fill', 'red')

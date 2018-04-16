@@ -135,7 +135,7 @@ export class AppComponent implements OnInit, OnDestroy {
     //this.populateTemperatureFromFile('weather/av-temperature.json');
     //this.tempTestFunction();
     this.getShares('/shares').subscribe(d => {
-      //console.log('d', d);
+      console.log('d', d);
       this._shares = d[0];
       this.store.dispatch({type: ADD_ALL_DATA, payload: d[0]});
     });
