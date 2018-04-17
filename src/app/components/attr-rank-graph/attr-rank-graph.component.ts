@@ -80,16 +80,16 @@ export class AttrRankGraphComponent implements OnInit {
   set colorSet(data: any) {
     if (data) {
       this._colorMap = data;
-      console.log('color map inside!', this._colorMap)
-      if (!!this._indicatorName) {this.update()}
+      console.log('color map inside!', this._colorMap.length > 1)
+      if (this._singleAttrSet) {this.update()}
     }
   }
 
   aggregateDataSelections(data) {
 
-    if (data && this._colorMap) {
+    if (this._singleAttrSet && this._colorMap && _.keysIn(this._colorMap).length > 0) {
 
-      this._setByDateSet = _.map(data, (j, k) => {
+      this._setByDateSet = _.map(this._singleAttrSet, (j, k) => {
         console.log('k', k);
         let smallMap =
           _(j)
@@ -300,9 +300,14 @@ export class AttrRankGraphComponent implements OnInit {
           this.x2.domain(keys).rangeRound([0, this.x.bandwidth()]);
 
 
-          let rects = this.g.append('g')
+          let rects = this.svg.append('g')
+            .attr("transform", d => {
+              //console.log('translation value', parentclassobj.x(d.rankings.attribute));
+              return "translate(20,20)";
+            })
             .selectAll('g')
-            .data(countryGroup.data);
+            .data(countryGroup.data)
+
             rects.exit()
               .attr('fill', 'red')
             .transition(this.t)
