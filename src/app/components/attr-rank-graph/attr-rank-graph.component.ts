@@ -24,6 +24,7 @@ export class AttrRankGraphComponent implements OnInit {
   private _multiTierAttrSet: any = {};
   private _year: number = 2001;
   private _setByDateSet: any;
+  private _attrCategories: any;
 
   @Input()
   set multiTierAttrSet(data: any) {
@@ -36,7 +37,7 @@ export class AttrRankGraphComponent implements OnInit {
     console.log('single attr set', this._singleAttrSet);
     this.aggregateDataSelections(data);
     //console.log('agg data selections', this.aggregateDataSelections())
-    this.update();
+    // this.update();
   }
 
 
@@ -115,10 +116,19 @@ export class AttrRankGraphComponent implements OnInit {
       });
 
 
-      console.log('set by date set', this._setByDateSet)
+      this._attrCategories = _.reduce(this._setByDateSet, (flattened, country) => {
+        if (this.dataLoaded(country)) {
+          return _.uniq(flattened.concat(_.map(country.data, d => d.rankings.attribute)));
+        }
+      }, []);
+      this.update();
+
     }
   }
 
+  dataLoaded(country) {
+    return (country.data.length > 0) && (country.data[0].hasOwnProperty('rankings'));
+  }
 
   private d3: D3;
   private parentNativeElement: any;
@@ -211,8 +221,8 @@ export class AttrRankGraphComponent implements OnInit {
 
   generateAxises() {
     this.xAxisCall = this.d3.axisBottom(this.x)
-      .ticks(10)
-      .tickPadding(10)
+      //.ticks(10)
+      .tickPadding(1)
 
     this.xAxisGroup = this.g.append('g')
       .attr('class', 'x-axis')
@@ -220,7 +230,7 @@ export class AttrRankGraphComponent implements OnInit {
 
     console.log('this y', this.y)
     this.yAxisCall = this.d3.axisLeft(this.y)
-      .ticks(6)
+      //.ticks(6)
 
     console.log('this y', this.yAxisCall)
     this.yAxisGroup = this.g.append('g')
@@ -243,6 +253,7 @@ export class AttrRankGraphComponent implements OnInit {
 
   update() {
     if (this.svg) {
+      this.svg.selectAll(".chart-bar").remove();
       this.svg.selectAll('path.line').remove();
       this.svg.selectAll(".chart-line").remove();
       this.svg.selectAll(".x-axis").remove();
@@ -273,7 +284,7 @@ export class AttrRankGraphComponent implements OnInit {
     console.log('test', this._setByDateSet);
     // data join
     let parentclassobj = this;
-    if (Object.getOwnPropertyNames(this._setByDateSet).length > 0) {
+    if (Object.getOwnPropertyNames(this._setByDateSet).length > 0 && this._attrCategories.length > 0) {
       _.each(this._setByDateSet, (countryGroup, i) => {
 
         if (countryGroup.data && countryGroup.data.length && countryGroup.data[0].hasOwnProperty('rankings')) {
@@ -282,7 +293,7 @@ export class AttrRankGraphComponent implements OnInit {
           console.log('keys', keys);
           console.log('data', countryGroup.data)
 
-          this.x.domain(countryGroup.data.map(d => { return d.rankings['attribute']; }));
+          this.x.domain(this._attrCategories);
           this.x2.domain(keys).rangeRound([0, this.x.bandwidth()]);
 
           let rects = this.g.append('g')
@@ -312,15 +323,23 @@ export class AttrRankGraphComponent implements OnInit {
               });
             })
             .enter().append('rect')
-            .attr('x', d => {return this.x(d.key)})
-            .attr('y', d => {return this.y(d.value)})
-            .attr('width', this.x2.bandwidth)
-            .attr('height', d => {
-              return this.height - this.y(d.value)
-            })
-            .attr('fill', d => {
-              return this._colorMap[d.code]
-            })
+            .attr("class", "chart-bar")
+            .attr('y', d => this.y(0))
+            .attr('x', (d, i) => {return this.x(d.month)})
+            .attr('width', this.x.bandwidth)
+            .attr('height', 0)
+            .attr('fill', 'blue')
+            .merge(rects)
+            .transition(this.t)
+              .attr('x', d => {return this.x(d.key)})
+              .attr('y', d => {return this.y(d.value)})
+              .attr('width', this.x2.bandwidth)
+              .attr('height', d => {
+                return this.height - this.y(d.value)
+              })
+              .attr('fill', d => {
+                return this._colorMap[d.code]
+              })
         }
 
 
