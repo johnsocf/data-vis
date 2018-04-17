@@ -80,14 +80,14 @@ export class AttrRankGraphComponent implements OnInit {
   set colorSet(data: any) {
     if (data) {
       this._colorMap = data;
-      //console.log('color map inside!', this._colorMap)
+      console.log('color map inside!', this._colorMap)
       if (!!this._indicatorName) {this.update()}
     }
   }
 
   aggregateDataSelections(data) {
 
-    if (data) {
+    if (data && this._colorMap) {
 
       this._setByDateSet = _.map(data, (j, k) => {
         console.log('k', k);
@@ -139,7 +139,7 @@ export class AttrRankGraphComponent implements OnInit {
   yAxisCall: any;
 
   margin = {top: 20, right: 10, bottom: 150, left: 100};
-  width: number = 400;
+  width: number = 800;
   height: number = 400;
   y: any;
   x: any;
@@ -205,8 +205,8 @@ export class AttrRankGraphComponent implements OnInit {
       console.log('test array', testArray)
 
       this.x = this.d3.scaleBand()
-        .domain(testArray)
-        .range([0, 400])
+        .domain(this._attrCategories)
+        .range([0, this.width])
         .paddingInner(0.3)
         .paddingOuter(0.3)
 
@@ -240,14 +240,17 @@ export class AttrRankGraphComponent implements OnInit {
 
 
   generateAxisesCalls() {
+    console.log('bandwidth?', this.x.bandwidth())
     this.yAxisGroup.transition(this.t).call(this.yAxisCall)
 
     this.xAxisGroup.transition(this.t).call(this.xAxisCall)
       .selectAll("text")
-      .attr("y", '10')
-      .attr("x", '-5')
+      //.call(this.wrap, this.x.bandwidth(), this)
+      .attr("y", '0')
+      .attr("x", '0')
       .attr("text-anchor", "end")
-      .attr("transform", "rotate(-40)");
+      .attr("transform", "rotate(-40)")
+
   }
 
 
@@ -260,13 +263,14 @@ export class AttrRankGraphComponent implements OnInit {
       this.svg.selectAll(".y-axis").remove();
       this.addTransition();
       this.buildScales();
-      if (this._setByDateSet[0] && this._setByDateSet[0].hasOwnProperty('data')) {
+      if (this._attrCategories && this._setByDateSet[0] && this._setByDateSet[0].hasOwnProperty('data')) {
         this.scaleBand();
         this.generateAxises();
         this.generateAxisesCalls();
+        this.buildRectangles();
       }
 
-      this.buildRectangles();
+
     }
 
   }
@@ -280,9 +284,10 @@ export class AttrRankGraphComponent implements OnInit {
   buildRectangles() {
 
     console.log('test', this._setByDateSet);
+    console.log('bandwidth', this.x2.bandwidth);
     // data join
     let parentclassobj = this;
-    if (Object.getOwnPropertyNames(this._setByDateSet).length > 0 && this._attrCategories.length > 0) {
+    if (Object.getOwnPropertyNames(this._setByDateSet) && Object.getOwnPropertyNames(this._setByDateSet).length > 0 && this._attrCategories.length > 0) {
       _.each(this._setByDateSet, (countryGroup, i) => {
 
         if (countryGroup.data && countryGroup.data.length && countryGroup.data[0].hasOwnProperty('rankings')) {
@@ -294,6 +299,7 @@ export class AttrRankGraphComponent implements OnInit {
           this.x.domain(this._attrCategories);
           this.x2.domain(keys).rangeRound([0, this.x.bandwidth()]);
 
+
           let rects = this.g.append('g')
             .selectAll('g')
             .data(countryGroup.data);
@@ -304,17 +310,22 @@ export class AttrRankGraphComponent implements OnInit {
               .attr('height', 0)
               .remove();
             rects.enter().append('g')
-              .attr("transform", function(d) { return "translate(" + parentclassobj.x(d.rankings.attribute) + ",0)"; })
+              .attr("transform", function(d) {
+                console.log('translation value', parentclassobj.x(d.rankings.attribute));
+                return "translate(" + parentclassobj.x(d.rankings.attribute) + ",0)";
+              })
             .selectAll('rect')
             .data(d => {
               return keys.map(key => {
-                console.log('key', key.rankings);
+                console.log('actual k for this', key)
+                console.log('key attr', key.rankings);
+                console.log('ranking', d.rankings['ranking'])
                 console.log('return obj', {
-                  key: key.rankings['attribute'],
+                  key: d.rankings['attribute'],
                   value: d.rankings['ranking']
                 });
                 return {
-                  key: key.rankings['attribute'],
+                  key: d.rankings['attribute'],
                   value: d.rankings['ranking'],
                   code: d.rankings['countryCode']
                 };
@@ -323,17 +334,25 @@ export class AttrRankGraphComponent implements OnInit {
             .enter().append('rect')
             .attr("class", "chart-bar")
             .attr('y', d => this.y(0))
-            .attr('x', (d, i) => {return this.x(d.month)})
+            .attr('x', (d, i) => {return this.x(d.key)})
             .attr('width', this.x.bandwidth)
             .attr('height', 0)
             .attr('fill', 'blue')
             .merge(rects)
             .transition(this.t)
-              .attr('x', d => {return this.x(d.key)})
-              .attr('y', d => {return this.y(d.value)})
+              .attr('x', d => {
+                console.log('x', d.key)
+                console.log('initial x', this.x(d.key))
+                return this.x(d.key)
+              })
+              .attr('y', d => {
+                console.log('y', d.value)
+                console.log('initial y', this.y(d.value))
+                return this.y(d.value)
+              })
               .attr('width', this.x2.bandwidth)
               .attr('height', d => {
-                return this.height - this.y(d.value)
+                return this.height - this.y(d.value);
               })
               .attr('fill', d => {
                 return this._colorMap[d.code]
@@ -387,7 +406,6 @@ export class AttrRankGraphComponent implements OnInit {
     }
 
   }
-
 
 
 }
