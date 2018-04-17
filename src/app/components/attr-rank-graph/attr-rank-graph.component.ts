@@ -314,7 +314,7 @@ export class AttrRankGraphComponent implements OnInit {
             .enter().append('rect')
             .attr('x', d => {return this.x(d.key)})
             .attr('y', d => {return this.y(d.value)})
-            .attr('width', this.x.bandwidth)
+            .attr('width', this.x2.bandwidth)
             .attr('height', d => {
               return this.height - this.y(d.value)
             })
