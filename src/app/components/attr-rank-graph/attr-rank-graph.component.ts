@@ -255,11 +255,9 @@ export class AttrRankGraphComponent implements OnInit {
     if (this.svg) {
       this.svg.selectAll(".chart-bar").remove();
       this.svg.selectAll('path.line').remove();
-      this.svg.selectAll(".chart-line").remove();
       this.svg.selectAll(".x-axis").remove();
       this.svg.selectAll(".axis-label").remove();
       this.svg.selectAll(".y-axis").remove();
-      this.svg.selectAll(".legend").remove();
       this.addTransition();
       this.buildScales();
       if (this._setByDateSet[0] && this._setByDateSet[0].hasOwnProperty('data')) {
