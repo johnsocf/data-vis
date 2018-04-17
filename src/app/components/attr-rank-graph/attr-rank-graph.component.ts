@@ -133,6 +133,7 @@ export class AttrRankGraphComponent implements OnInit {
   height: number = 400;
   y: any;
   x: any;
+  x2: any;
   color: any;
   countryDomain = ["Africa", "N.America", "Europe",
     "S. America", "Asia", "Australia"];
@@ -198,6 +199,13 @@ export class AttrRankGraphComponent implements OnInit {
         .range([0, 400])
         .paddingInner(0.3)
         .paddingOuter(0.3)
+
+
+      this.x.rangeRound([0, this.width])
+        .paddingInner(0.1);
+
+      this.x2 = this.d3.scaleBand()
+        .padding(0.05);
     }
   }
 
@@ -273,10 +281,20 @@ export class AttrRankGraphComponent implements OnInit {
           const keys = countryGroup.data.slice(1);
           console.log('keys', keys);
           console.log('data', countryGroup.data)
-          this.g.append('g')
+
+          this.x.domain(countryGroup.data.map(d => { return d.rankings['attribute']; }));
+          this.x2.domain(keys).rangeRound([0, this.x.bandwidth()]);
+
+          let rects = this.g.append('g')
             .selectAll('g')
-            .data(countryGroup.data)
-            .enter().append('g')
+            .data(countryGroup.data);
+            rects.exit()
+              .attr('fill', 'red')
+            .transition(this.t)
+              .attr('y', this.y(0))
+              .attr('height', 0)
+              .remove();
+            rects.enter().append('g')
               .attr("transform", function(d) { return "translate(" + parentclassobj.x(d.rankings.attribute) + ",0)"; })
             .selectAll('rect')
             .data(d => {
