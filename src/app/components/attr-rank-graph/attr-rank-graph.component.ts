@@ -264,29 +264,32 @@ export class AttrRankGraphComponent implements OnInit {
 
     console.log('test', this._setByDateSet);
     // data join
-
+    let parentclassobj = this;
     if (Object.getOwnPropertyNames(this._setByDateSet).length > 0) {
       _.each(this._setByDateSet, (countryGroup, i) => {
 
         if (countryGroup.data && countryGroup.data.length && countryGroup.data[0].hasOwnProperty('rankings')) {
           console.log('keys', countryGroup.data.slice(1));
-          const keys = countryGroup.data.slice(i + 1);
+          const keys = countryGroup.data.slice(1);
           console.log('keys', keys);
           console.log('data', countryGroup.data)
           this.g.append('g')
+            .selectAll('g')
             .data(countryGroup.data)
             .enter().append('g')
+              .attr("transform", function(d) { return "translate(" + parentclassobj.x(d.rankings.attribute) + ",0)"; })
             .selectAll('rect')
             .data(d => {
               return keys.map(key => {
-                console.log('key', key);
+                console.log('key', key.rankings);
                 console.log('return obj', {
-                  key: key['attribute'],
-                  value: d['ranking']
+                  key: key.rankings['attribute'],
+                  value: d.rankings['ranking']
                 });
                 return {
-                  key: key['attribute'],
-                  value: d['ranking']
+                  key: key.rankings['attribute'],
+                  value: d.rankings['ranking'],
+                  code: d.rankings['countryCode']
                 };
               });
             })
@@ -298,7 +301,7 @@ export class AttrRankGraphComponent implements OnInit {
               return this.height - this.y(d.value)
             })
             .attr('fill', d => {
-              return this._colorMap[d.rankings.countryCode]
+              return this._colorMap[d.code]
             })
         }
 
