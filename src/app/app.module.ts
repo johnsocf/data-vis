@@ -26,6 +26,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from './../environments/environment';
 import {ShareService} from "./services/shared.service";
 import {AttrRankGraphComponent} from "./components/attr-rank-graph/attr-rank-graph.component";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import {AttrRankGraphComponent} from "./components/attr-rank-graph/attr-rank-gra
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FlexLayoutModule
   ],
   providers: [ApiService, D3Service, ShareService],
   bootstrap: [AppComponent]

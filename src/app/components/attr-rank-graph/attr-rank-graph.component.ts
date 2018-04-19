@@ -9,7 +9,7 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'attr-rank-bar-graph',
-  template: '<div id="canvas" width="400" height="60"></div>',
+  template: '<div id="canvas" width="800" height="60"></div>',
   styleUrls: ['./attr-rank-graph.component.css']
 })
 export class AttrRankGraphComponent implements OnInit {
@@ -57,7 +57,7 @@ export class AttrRankGraphComponent implements OnInit {
       return _.indexOf(this._countryNames, d.countryCode) !== -1 && !d.hasOwnProperty('data');
     });
 
-
+    this.aggregateDataSelections(data);
 
   }
 
@@ -77,7 +77,7 @@ export class AttrRankGraphComponent implements OnInit {
   set colorSet(data: any) {
     if (data) {
       this._colorMap = data;
-      if (this._singleAttrSet) {this.update()}
+      if (this._singleAttrSet) {this.aggregateDataSelections(data);}
     }
   }
 
@@ -127,7 +127,7 @@ export class AttrRankGraphComponent implements OnInit {
   yAxisCall: any;
 
   margin = {top: 20, right: 10, bottom: 150, left: 100};
-  width: number = 800;
+  width: number = 400;
   height: number = 400;
   y: any;
   x: any;
@@ -188,7 +188,7 @@ export class AttrRankGraphComponent implements OnInit {
       let testArray = _.map(this._setByDateSet[0]['data'], d => {
         return d['rankings']['attribute'];
       });
-
+      console.log('this attr categories', this._attrCategories);
       this.x = this.d3.scaleBand()
         .domain(this._attrCategories)
         .range([0, this.width])
@@ -266,14 +266,13 @@ export class AttrRankGraphComponent implements OnInit {
 
   buildRectangles() {
 
-    console.log('bandwidth x2', this.x2.bandwidth);
-    console.log('bandwidth x1', this.x.bandwidth);
     // data join
     let parentclassobj = this;
     let currentWidth = this._setByDateSet.length;
     if (Object.getOwnPropertyNames(this._setByDateSet) && Object.getOwnPropertyNames(this._setByDateSet).length > 0 && this._attrCategories.length > 0) {
       _.each(this._setByDateSet, (countryGroup, i) => {
-
+        console.log('country set', countryGroup)
+        console.log('country group', countryGroup.countryCode)
         if (countryGroup.data && countryGroup.data.length && countryGroup.data[0].hasOwnProperty('rankings')) {
           const keys = countryGroup.data.slice(1);
           this.x.domain(this._attrCategories);
@@ -282,7 +281,7 @@ export class AttrRankGraphComponent implements OnInit {
 
           let rects = this.svg.append('g')
             .attr("transform", d => {
-              return "translate(0,20)";
+              return "translate(0,1)";
             })
             .selectAll('g')
             .data(countryGroup.data)
@@ -295,6 +294,7 @@ export class AttrRankGraphComponent implements OnInit {
               .remove();
             rects.enter().append('g')
               .attr("transform", function(d) {
+                console.log('translation', parentclassobj.x(d.rankings.attribute))
                 return "translate(" + parentclassobj.x(d.rankings.attribute) + ",0)";
               })
             .selectAll('rect')
@@ -311,15 +311,18 @@ export class AttrRankGraphComponent implements OnInit {
             .attr("class", "chart-bar")
             .attr('y', d => this.y(0))
             .attr('x', (d, i) => {return this.x(d.key) + (i * this.x2.bandwidth()/currentWidth) + 5})
-            .attr('width', this.x.bandwidth())
+            .attr('width', this.x2.bandwidth()/currentWidth)
             .attr('height', 0)
             .attr('fill', 'blue')
             .merge(rects)
             .transition(this.t)
               .attr('x', d => {
+                console.log('attribute d', d.key);
+                console.log('scaled key', this.x(d.key));
                 return this.x(d.key) + (i * this.x2.bandwidth()/currentWidth) + 5;
               })
               .attr('y', d => {
+                console.log('ranking value in d', d.value)
                 return this.y(d.value)
               })
               .attr('width', this.x2.bandwidth()/currentWidth)

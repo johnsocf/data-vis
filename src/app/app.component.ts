@@ -183,7 +183,6 @@ export class AppComponent implements OnInit, OnDestroy {
           }
         }
       })
-      console.log('copy!', this.attrSelectionSet);
       this.attrSelectionSet = copyAttrSelectionSet;
       this.secondTeirSelectionSet = copySecondTeirSelectionSet;
         // setTimeout(d => {

@@ -141,10 +141,7 @@ export class WorldMapComponent implements OnInit {
         return d.country_code;
       })
       .attr('d', this.path)
-      .style('fill', 'red')
-      .on('click', function (d) {
-        console.log('big d', d);
-      });
+      .style('fill', 'red');
 
 
     this.svg.append('path')

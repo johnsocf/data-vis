@@ -1,0 +1,7 @@
+.chart-container {
+  flex-wrap: wrap;
+}
+
+.world-map {
+  max-height: 450px;
+}

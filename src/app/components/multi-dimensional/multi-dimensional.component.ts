@@ -145,7 +145,6 @@ export class MultiDimensionalComponent implements OnInit {
     this.extent = this.d3.extent(this.rectData, d => {
       return d['year'];
     })
-    console.log('this extent', this.extent);
     this.minSlider = this.extent[0];
     this.maxSlider = this.extent[1];
   }

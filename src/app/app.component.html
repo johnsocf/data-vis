@@ -121,13 +121,13 @@
 
   <!--</mat-form-field>-->
 </div>
-<div>
-  <app-world-map></app-world-map>
-  <attr-rank-bar-graph [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></attr-rank-bar-graph>
+<div class="chart-container" fxLayout="row" fxLayoutWrap>
+  <app-world-map class="world-map"></app-world-map>
+  <attr-rank-bar-graph class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></attr-rank-bar-graph>
   <!--<app-d3graph></app-d3graph>-->
   <!--<app-rev-bar-graph></app-rev-bar-graph>-->
   <!--<app-scatter-plot></app-scatter-plot>-->
   <!--<app-multi-dimensional></app-multi-dimensional>-->
-  <app-line-chart [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></app-line-chart>
+  <app-line-chart class="line-chart" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></app-line-chart>
 </div>
 

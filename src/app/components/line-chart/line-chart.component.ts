@@ -216,7 +216,7 @@ export class LineChartComponent implements OnInit {
       //this.newData = this.formatData();
       this.buildScales();
       this.scaleBand();
-      this.areaLinear();
+
       // this.generateAxises();
       //this.parseTimeFormat();
       //this.formatTime();
@@ -339,7 +339,7 @@ export class LineChartComponent implements OnInit {
       .attr('width', 10)
       .attr('height', 10)
       .attr("class", "legend")
-      .attr('fill', '#909090');
+      .attr('fill', '#E8E8E8');
 
     legendRow.append('text')
       .attr('x', 20)
@@ -350,30 +350,7 @@ export class LineChartComponent implements OnInit {
       .text('world average');
   }
 
-  areaLinear() {
-    this.area = this.d3.scaleLinear()
-      .range([25*Math.PI, 1500*Math.PI])
-      .domain([2000, 1400000000]);
-  }
 
-  formatData() {
-    let thisData =  this.rectData.map(function(year){
-      let filteredCountries = year["countries"].filter(function(country){
-        return (country.income && country.life_exp);
-      }).map(function(country){
-        country.income = +country.income;
-        country.life_exp = +country.life_exp;
-        return country;
-      });
-      return {
-        countries: filteredCountries,
-        year: +year['year']
-      };
-    });
-    return thisData;
-
-
-  }
 
   update() {
     if (this.svg) {
@@ -383,25 +360,17 @@ export class LineChartComponent implements OnInit {
       this.svg.selectAll(".axis-label").remove();
       this.svg.selectAll(".y-axis").remove();
       this.svg.selectAll(".legend").remove();
-
-
-
-     // this.buildScaleBandDomain();
+      console.log('line chart update')
 
       this.addTransition();
       //toDo: break this out
       //
       this.generateLabels();
-
-      //this.dataTimeFilter();
-
-
-
       this.generateAxises();
-      this.generateAxisesCalls();
-      this.buildRectangles();
 
-      this.buildScaleDomain();
+      this.buildRectangles();
+      this.generateAxisesCalls();
+      //this.buildScaleDomain();
       this.updateLabelText();
       this.addLegend();
     }
@@ -575,7 +544,12 @@ export class LineChartComponent implements OnInit {
       .tickFormat( d => d);
 
 
-// Axis groups
+    // console.log('this y', this.y)
+
+  }
+
+  generateAxisesCalls() {
+    // Axis groups
     this.xAxisGroup = this.g.append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + this.height + ")");
@@ -587,11 +561,7 @@ export class LineChartComponent implements OnInit {
     this.yAxisGroup.call(this.yAxisCall.scale(this.y));
     this.yLabel.text(this._indicatorName);
     // console.log('this x', this.x);
-    // console.log('this y', this.y)
 
-  }
-
-  generateAxisesCalls() {
     // Generate axes once scales have been set
     this.yAxisGroup.transition(this.t).call(this.yAxisCall.scale(this.y));
     this.xAxisGroup.transition(this.t).call(this.xAxisCall.scale(this.x))
@@ -630,6 +600,17 @@ export class LineChartComponent implements OnInit {
       })
       .curve(element.d3.curveBasis);
 
+    //this.areaLinear();
+    this.area = this.d3.area()
+      .defined(d => {
+        return parseInt(d['year']) >= this.extent[0] && parseInt(d['year']) <= this.extent[1];
+      })
+      .x(function(d) {
+        return element.x(d['year']);
+      })
+      .y0(this.height)
+      .y1(function(d) { return element.y(d['value']); });
+
     this._aggregatedDataCountrySelections.forEach(function(j) {
       _.forEach(j.data, d => {
         d.year = +d.year;
@@ -646,9 +627,22 @@ export class LineChartComponent implements OnInit {
 
     const g = this.g
 
+    this.g.append("path")
+      .attr("class", "chart-line area")
+      .attr("fill", "#E8E8E8")
+      .attr("stroke", '#E8E8E8')
+      .attr("stroke-width", "4px")
+      .attr("d", this.area(this._selectedAverage));
+
+    this.g.append("path")
+      .attr("class", "chart-line")
+      .attr("fill", "none")
+      .attr("stroke", '#E8E8E8')
+      .attr("stroke-width", "4px")
+      .attr("d", line(this._selectedAverage));
+
     _.each(this._aggregatedDataCountrySelections, (set, i) => {
       // console.log('set line HERE', line(set.data));
-
       g.append("path")
         .attr("class", "chart-line")
         .attr("fill", "none")
@@ -666,12 +660,7 @@ export class LineChartComponent implements OnInit {
       //   .attr("d", line(set.data));
     }) ;
     // // Add line to chart
-    this.g.append("path")
-      .attr("class", "chart-line")
-      .attr("fill", "none")
-      .attr("stroke", '#909090')
-      .attr("stroke-width", "4px")
-      .attr("d", line(this._selectedAverage));
+
     //
     // console.log('another color', this.color(this._countryNames[0]))
     //

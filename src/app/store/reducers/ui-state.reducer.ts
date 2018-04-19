@@ -27,7 +27,6 @@ export function UIStateReducer(state = initialUiState, action: CustomAction): uI
     case UPDATE_COLOR_MAP:
       const newState = _.cloneDeep(state);
       newState.colorSet = action.payload;
-      console.log('new state color set!', newState.colorSet);
       return newState;
     case UPDATE_ATTRIBUTES_SELECTION: {
       const newState = _.cloneDeep(state);
