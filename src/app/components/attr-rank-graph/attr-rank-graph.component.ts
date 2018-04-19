@@ -325,7 +325,7 @@ export class AttrRankGraphComponent implements OnInit {
               .attr('y', d => {
                 //console.log('ranking value in y', d.value);
                 //console.log('ranking value in y scaled', this.y(d.value));
-                if (d.value == 0) { d.value = .1}
+                if (d.value == 0) { d.value = .05}
                 return this.y(d.value);
               })
               .attr('width', this.x2.bandwidth()/currentWidth)
