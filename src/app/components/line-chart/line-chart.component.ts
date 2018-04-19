@@ -582,6 +582,7 @@ export class LineChartComponent implements OnInit {
   }
 
   buildRectangles() {
+    class('build rects');
 
     let element = this;
     // data join
