@@ -146,6 +146,7 @@ export class LineChartComponent implements OnInit {
   dataTimeFiltered: any;
   xrange: any;
 
+
   constructor(
     element: ElementRef,
     private ngZone: NgZone,

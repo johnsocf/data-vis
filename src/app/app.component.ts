@@ -187,6 +187,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
       ///
     });
+
+    this.yearSet = 2001;
   }
 
   getShares(path) {
