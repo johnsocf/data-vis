@@ -100,6 +100,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   };
 
+
   climateModelState$: Observable<ApplicationState>;
   private testClimateData$: Observable<IndicatorAttributesModel[]>;
   //private climateStateSub: Subscription;
@@ -115,6 +116,7 @@ export class AppComponent implements OnInit, OnDestroy {
   attributeListSelection: any;
   attrSelectionSet:any;
   secondTeirSelectionSet:any;
+  yearSet: number;
 
   constructor(
     private apiService: ApiService,
@@ -751,6 +753,11 @@ export class AppComponent implements OnInit, OnDestroy {
   precisionRound(number, precision) {
     const factor = Math.pow(10, precision);
     return Math.round(number * factor) / factor;
+  }
+
+  stateChanged(message: any) {
+    console.log('something', message);
+    this.yearSet = message;
   }
 
 }

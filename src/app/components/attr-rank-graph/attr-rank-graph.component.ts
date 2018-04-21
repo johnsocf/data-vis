@@ -28,6 +28,13 @@ export class AttrRankGraphComponent implements OnInit {
   private _renderTimeout: any;
 
   @Input()
+
+  set year(data: any) {
+    this._year = data;
+    this.aggregateDataSelections(data);
+  }
+
+  @Input()
   set multiTierAttrSet(data: any) {
     this._multiTierAttrSet = data;
   }

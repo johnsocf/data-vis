@@ -1,3 +1,10 @@
-<p>
-  timeline-slider works!
-</p>
+<mat-slider
+class="example-margin"
+[max]="maxSlider"
+[min]="minSlider"
+[step]="1"
+[thumb-label]="true"
+[tick-interval]="1"
+(input)="onInputChange($event)"
+>
+</mat-slider>

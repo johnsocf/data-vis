@@ -120,12 +120,13 @@
 
 
   <!--</mat-form-field>-->
+  <app-timeline-slider (change)="stateChanged($event)" ></app-timeline-slider>
 </div>
 <div class="chart-container" fxLayout="row" fxLayoutWrap>
   <app-world-map class="world-map"></app-world-map>
-  <app-starburst class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></app-starburst>
+  <app-starburst [year]="yearSet" class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></app-starburst>
 
-  <attr-rank-bar-graph class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></attr-rank-bar-graph>
+  <attr-rank-bar-graph [year]="yearSet" class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></attr-rank-bar-graph>
   <!--<app-d3graph></app-d3graph>-->
   <!--<app-rev-bar-graph></app-rev-bar-graph>-->
   <!--<app-scatter-plot></app-scatter-plot>-->

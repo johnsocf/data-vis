@@ -29,6 +29,12 @@ export class StarburstComponent implements OnInit {
   private _renderTimeout: any;
 
   @Input()
+  set year(data: any) {
+    this._year = data;
+    this.aggregateData();
+  }
+
+  @Input()
   set multiTierAttrSet(data: any) {
     this._multiTierAttrSet = data;
     this.aggregateData();
