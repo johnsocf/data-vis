@@ -121,6 +121,7 @@ export class StarburstComponent implements OnInit {
   margin = {top: 20, right: 10, bottom: 150, left: 100};
   width: number = 400;
   height: number = 400;
+  radius:number = (Math.min(this.width, this.height) / 2) - 10;
   y: any;
   x: any;
   x2: any;
