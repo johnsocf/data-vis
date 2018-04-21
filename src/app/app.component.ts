@@ -154,14 +154,9 @@ export class AppComponent implements OnInit, OnDestroy {
         copySecondTeirSelectionSet[d] = [];
       })
       let attrSelection = _.forEach(this._shares, (d, e) => {
-
         for (var key in d) {
-          //console.log('key', key);
-             //console.log('what is key', d[key])
-
           if (d[key].hasOwnProperty('countryData')) {
                for (var j in copyAttrSelectionSet) {
-                 //console.log('for j', j);
                  let countrySetInAttributes = _.find(d[key]['countryData'], {countryCode: j})
                  copyAttrSelectionSet[j].push({attribute: countrySetInAttributes['indicatorName'], shortAttrName: e, attrCode: countrySetInAttributes['indicatorCode'], rankings: countrySetInAttributes.data})
                }
@@ -185,25 +180,11 @@ export class AppComponent implements OnInit, OnDestroy {
       })
       this.attrSelectionSet = copyAttrSelectionSet;
       this.secondTeirSelectionSet = copySecondTeirSelectionSet;
-        // setTimeout(d => {
-        //
-        //   if (!this.loadFlag) {
-        //   //this.shareservice.deleteShares();
-        //   console.log('share')
-        //   this.shareservice.addShare(this.lists);
-        //   this.loadFlag = true;
-        //   }
-        //
-        // }, 10000);
 
+      ///
 
+      ///
     });
-    // this.populateFromFile(
-    //   'electricity-production/metric/electricity-production-from-renewable-excluding-hydro-percentage-kwh.json',
-    //   ADD_ELECTRICITY_PRODUCTION_DATA_METRIC_FROM_RENEWABLE_EXCLUDING_HYDRO
-    // );
-
-
   }
 
   getShares(path) {

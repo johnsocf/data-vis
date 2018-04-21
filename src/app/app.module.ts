@@ -27,6 +27,8 @@ import { environment } from './../environments/environment';
 import {ShareService} from "./services/shared.service";
 import {AttrRankGraphComponent} from "./components/attr-rank-graph/attr-rank-graph.component";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { StarburstComponent } from './components/starburst/starburst.component';
+import { TimelineSliderComponent } from './components/timeline-slider/timeline-slider.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     LineChartComponent,
     KeysPipePipe,
     WorldMapComponent,
-    AttrRankGraphComponent
+    AttrRankGraphComponent,
+    StarburstComponent,
+    TimelineSliderComponent
   ],
   imports: [
     BrowserModule,
