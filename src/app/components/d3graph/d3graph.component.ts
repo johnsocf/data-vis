@@ -105,7 +105,7 @@ export class D3graphComponent implements OnInit {
   setOrdinalScale() {
     this.color = this.d3.scaleOrdinal()
       .domain(this.countryDomain)
-      .range(this.d3.schemeCategory10);
+      .range(this.d3.schemeCategory10.reverse());
 
   }
 

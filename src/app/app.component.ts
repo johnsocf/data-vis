@@ -758,7 +758,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   stateChanged(message: any) {
-    console.log('something', message);
+    //console.log('something', message);
     this.yearSet = message;
   }
 

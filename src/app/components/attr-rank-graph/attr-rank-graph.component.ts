@@ -42,7 +42,7 @@ export class AttrRankGraphComponent implements OnInit {
   @Input()
   set singleAttrSet(data: any) {
     this._singleAttrSet = data;
-    console.log('single attr set', this._singleAttrSet);
+    //console.log('single attr set', this._singleAttrSet);
     this.aggregateDataSelections(data);
 
     //console.log('agg data selections', this.aggregateDataSelections())
@@ -99,7 +99,7 @@ export class AttrRankGraphComponent implements OnInit {
         let smallMap =
           _(j)
             .filter((d) => {
-              console.log('find rankings for year', _.find(d.rankings, {year: this._year.toString()}))
+              //console.log('find rankings for year', _.find(d.rankings, {year: this._year.toString()}))
               return _.find(d.rankings, {year: this._year.toString()});
             })
             .map((d) => {
@@ -121,8 +121,8 @@ export class AttrRankGraphComponent implements OnInit {
         }
       }, []);
       this.update();
-      console.log('data by set', this._setByDateSet);
-      console.log('attr categories', this._attrCategories);
+      //console.log('data by set', this._setByDateSet);
+      //console.log('attr categories', this._attrCategories);
     }
   }
 
@@ -182,7 +182,7 @@ export class AttrRankGraphComponent implements OnInit {
   setOrdinalScale() {
     this.color = this.d3.scaleOrdinal()
       .domain(this.countryDomain)
-      .range(this.d3.schemeCategory10);
+      .range(this.d3.schemeCategory10.reverse());
   }
 
   buildScales() {
@@ -196,7 +196,7 @@ export class AttrRankGraphComponent implements OnInit {
       let testArray = _.map(this._setByDateSet[0]['data'], d => {
         return d['rankings']['attribute'];
       });
-      console.log('this attr categories', this._attrCategories);
+     // console.log('this attr categories', this._attrCategories);
       this.x = this.d3.scaleBand()
         .domain(this._attrCategories)
         .range([0, this.width])
@@ -231,13 +231,12 @@ export class AttrRankGraphComponent implements OnInit {
 
 
   generateAxisesCalls() {
-    console.log('bandwidth?', this.x.bandwidth())
     this.yAxisGroup.transition(this.t).call(this.yAxisCall)
 
     this.xAxisGroup.transition(this.t).call(this.xAxisCall)
       .selectAll("text")
       //.call(this.wrap, this.x.bandwidth(), this)
-      .attr("y", '0')
+      .attr("y", -(this.x2.bandwidth()/2))
       .attr("x", '0')
       .attr("text-anchor", "end")
       .attr("transform", "rotate(-40)")
@@ -285,9 +284,9 @@ export class AttrRankGraphComponent implements OnInit {
           const keys = countryGroup.data.slice(1);
           this.x.domain(this._attrCategories);
           this.x2.domain(keys).rangeRound([0, this.x.bandwidth()]);
-          console.log('current width', currentWidth);
-        console.log('bandwith', this.x2.bandwidth())
-        console.log('tests', (this.x2.bandwidth()/(currentWidth + 1)))
+          //console.log('current width', currentWidth);
+        //console.log('bandwith', this.x2.bandwidth())
+        //console.log('tests', (this.x2.bandwidth()/(currentWidth + 1)))
           let rects = this.svg.append('g')
             .attr('transform', 'translate(' + (this.margin.left - (this.x2.bandwidth()/2)) + ',' + this.margin.top + ')')
             .selectAll('g')
@@ -393,4 +392,31 @@ export class AttrRankGraphComponent implements OnInit {
   }
 
 
+  wrap(text, width) {
+    text.each(function ()
+    {
+      let text = this.d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 1,
+        lineHeight = 2,
+        x = text.attr("x"),
+        y = text.attr("y"),
+      tspan = text.text(null).append("tspan").attr("x", x).attr("y", y);
+
+      while (word = words.pop())
+      {
+        line.push(word);
+        tspan.text(line.join(" "));
+        if (tspan.node().getComputedTextLength() > width)
+        {
+          line.pop();
+          tspan.text(line.join(" "));
+          line = [word];
+          tspan = text.append("tspan").attr("x", x).attr("y", ++lineNumber * lineHeight + y).text(word);
+        }
+      }
+    });
+  }
 }

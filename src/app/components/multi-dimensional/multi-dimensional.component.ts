@@ -103,7 +103,7 @@ export class MultiDimensionalComponent implements OnInit {
   }
 
   setOrdinalScale() {
-    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10);
+    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10.reverse());
 
   }
 
