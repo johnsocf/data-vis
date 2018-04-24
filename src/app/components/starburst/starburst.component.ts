@@ -5,8 +5,9 @@ import {
   D3,
   Selection
 } from 'd3-ng2-service';
-import {countryMap} from '../../../assets/maps/country-maps';
 import * as _ from 'lodash';
+import {colorSet20b, colorSetRed, colorSetGreen, colorSetBlue} from '../../../assets/colorSets/color-set';
+import {electricityChildren, emissionsChildren, populationChildren} from '../../../assets/colorSets/color-legend';
 
 @Component({
   selector: 'app-starburst',
@@ -41,7 +42,9 @@ export class StarburstComponent implements OnInit {
   set multiTierAttrSet(data: any) {
     this._multiTierAttrSet = data;
     console.log('aggregate data');
-    this.aggregateData();
+    if (this._countryNames) {
+      this.aggregateData();
+    }
   }
 
   @Input()
@@ -77,7 +80,7 @@ export class StarburstComponent implements OnInit {
   @Input()
   set colorSet(data: any) {
      if (data) {
-    //   this._colorMap = data;
+    this._colorMap = data;
        if (this._multiTierAttrSet) {this.aggregateData();}
     }
   }
@@ -124,8 +127,8 @@ export class StarburstComponent implements OnInit {
   svg: any;
   g: any;
   margin = {top: 20, right: 10, bottom: 150, left: 100};
-  width: number = 960;
-  height: number = 700;
+  width: number = 360;
+  height: number = 300;
   radius:number = (Math.min(this.width, this.height) / 2) - 10;
   y: any;
   x: any;
@@ -137,6 +140,10 @@ export class StarburstComponent implements OnInit {
   text: any;
   arc: any;
   _dataloaded: boolean = false;
+
+  colorReds: any;
+  colorGreens: any;
+  colorBlues: any;
 
   constructor(
     element: ElementRef,
@@ -182,8 +189,25 @@ export class StarburstComponent implements OnInit {
       .attr('class', 'starburst-path')
       .attr('d', this.arc)
         .style('fill', d => {
-          return this.color((d.children ? d : d.parent).data.name)}
-        )
+          if ('flare' == d.data.name) {
+            return '#000000';
+          }
+          if (d.children && this._countryNames.includes(d.data.name)) {
+            return this.color(d.data.name);
+          }
+          if (electricityChildren.includes(d.data.name)) {
+            console.log('this reds', d.data.name, this.colorReds(d.data.name));
+            return this.colorReds(d.data.name);
+          } else if (emissionsChildren.includes(d.data.name)) {
+            console.log('this blues', d.data.name, this.colorBlues(d.data.name));
+            return this.colorGreens(d.data.name);
+          } else if (populationChildren.includes(d.data.name)) {
+            console.log('this greens', d.data.name, this.colorGreens(d.data.name));
+            return this.colorBlues(d.data.name);
+          }
+          return '#BADA55';
+
+        })
       .on('click', d => {
         classObj.svg.transition()
           .duration(750)
@@ -214,38 +238,13 @@ export class StarburstComponent implements OnInit {
       });
 
     this.text = this.g.append('text')
-      .attr('transform', d => {return 'rotate(' + ((this.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180) + ')';})
+      .attr('transform', d => {return 'rotate(' + ((this.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180) + ')'})
       .attr('x', d => { return this.y(d.y0); })
       .attr('dx', '6') // margin
       .attr('dy', '.35em') // vertical-align
       .text(function(d) {
         return d.data.name === 'root' ? '' : d.data.name;
       });
-  }
-
-  click(d) {
-    let classObj = this;
-    classObj.svg.transition()
-      .duration(750)
-      .tween('scale', () => {
-        let xd = this.d3.interpolate(this.x.domain(), [d.x0, d.x1]),
-          yd = this.d3.interpolate(this.y.domain(), [d.y0, 1]),
-          yr = this.d3.interpolate(this.y.range(), [d.y0 ? 20 : 0, this.radius]);
-        return t => { classObj.x.domain(xd(t)); classObj.y.domain(yd(t)).range(yr(t)); };
-      })
-      .selectAll('path')
-      .attrTween('d', function(d) { return function() { return this.arc(d); }; });
-  }
-
-  arcTween(d) {
-    var xd = this.d3.interpolate(this.x.domain(), [d.x, d.x + d.dx]),
-      yd = this.d3.interpolate(this.y.domain(), [d.y, 1]),
-      yr = this.d3.interpolate(this.y.range(), [d.y ? 20 : 0, this.radius]);
-    return function(d, i) {
-      return i
-        ? function(t) { return this.arc(d); }
-        : function(t) { this.x.domain(xd(t)); this.y.domain(yd(t)).range(yr(t)); return this.arc(d); };
-    };
   }
 
   setSVG() {
@@ -258,7 +257,14 @@ export class StarburstComponent implements OnInit {
   }
 
   setOrdinalScale() {
-    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10);
+    console.log('color set 20b', colorSet20b);
+    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10).reverse();
+    this.colorReds = this.d3.scaleOrdinal(colorSetRed.reverse())
+      .domain(emissionsChildren);
+    this.colorGreens = this.d3.scaleOrdinal(colorSetGreen.reverse())
+      .domain(electricityChildren);
+    this.colorBlues = this.d3.scaleOrdinal(colorSetBlue.reverse())
+      .domain(populationChildren);
   }
 
   update() {
@@ -267,12 +273,14 @@ export class StarburstComponent implements OnInit {
       this.svg.selectAll('path').remove();
       this.svg.selectAll('g').remove();
       this.svg.selectAll('text').remove();
+      this.d3.select('#legend-svg').remove();
 
       this.setOrdinalScale();
       this.buildXYScales();
       this.partitionAdd();
       this.arcFunction();
       this.buildStarburst();
+      this.drawLegend();
     }
   }
 
@@ -284,5 +292,67 @@ export class StarburstComponent implements OnInit {
       .range([0, this.radius]);
   }
 
+  drawLegend() {
+
+    let totalLegendKey = [...electricityChildren, ...emissionsChildren, ...populationChildren];
+    // Dimensions of legend item: width, height, spacing, radius of rounded rect.
+    const li = {
+      w: 75, h: 15, s: 3, r: 3
+    };
+
+    const legend = this.d3.select('#legend').append('svg:svg')
+      .attr('id', 'legend-svg')
+      .attr('width', '700px')
+      .attr('height', d => {
+        return totalLegendKey.length * (li.h + li.s);
+      });
+    let objElement = this;
+    console.log('this d3 entries', objElement.color);
+
+
+    let g = legend.selectAll('g')
+      .attr('id', 'legend')
+      .data(totalLegendKey)
+      .enter().append('svg:g')
+      .attr('transform', function(d, i) {
+        return 'translate(0,' + i * (li.h + li.s) + ')';
+      });
+
+    g.append('svg:rect')
+      .attr('rx', li.r)
+      .attr('ry', li.r)
+      .attr('width', d => {
+        return d.length * 10;
+      })
+      .attr('height', li.h)
+      .style('fill', d => {
+        console.log('d', d);
+        if ('flare' == d) {
+          return '#FFFFFF';
+        }
+        if (electricityChildren.includes(d)) {
+          console.log('this reds', d, this.colorReds(d));
+          return this.colorReds(d);
+        } else if (emissionsChildren.includes(d)) {
+          console.log('this blues', d, this.colorBlues(d));
+          return this.colorGreens(d);
+        } else if (populationChildren.includes(d)) {
+          console.log('this greens', d, this.colorGreens(d));
+          return this.colorBlues(d);
+        }
+        return '#BADA55';
+      })
+
+    g.append('svg:text')
+      .attr('width', d => {
+        return d.length * 10;
+      })
+      .attr('y', li.h / 2)
+      .attr('dy', '0.25em')
+      .attr('text-anchor', 'left')
+      .text(function(d) {
+        return d;
+      });
+  }
 
 }

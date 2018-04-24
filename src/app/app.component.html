@@ -9,6 +9,7 @@
         <!--{{ list }}-->
       <!--</mat-option>-->
     <!--</mat-select>-->
+  <div class="selection-indicator" fxLayout="row">
     <button mat-button [matMenuTriggerFor]="climateIndicator">{{this.selectionSetTitle}}</button>
     <mat-menu #climateIndicator="matMenu">
       <button mat-menu-item [matMenuTriggerFor]="education">Education</button>
@@ -86,12 +87,12 @@
     </mat-menu>
 
     <!--<mat-menu #percentageBasedPopulation="matMenu">-->
-      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,co2_gas')">co2_gas</button>-->
-      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,co2_solid')">co2_solid</button>-->
-      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,methaneChange')">methane</button>-->
-      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,nitrousOxide')">nitrousOxide</button>-->
-      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,otherGreenhouseGas')">otherGreenhouseGas</button>-->
-      <!--<button mat-menu-item (click)="selectModel('three,population,percentage,totalGreenhouseGas')">totalGreenhouseGas</button>-->
+    <!--<button mat-menu-item (click)="selectModel('three,population,percentage,co2_gas')">co2_gas</button>-->
+    <!--<button mat-menu-item (click)="selectModel('three,population,percentage,co2_solid')">co2_solid</button>-->
+    <!--<button mat-menu-item (click)="selectModel('three,population,percentage,methaneChange')">methane</button>-->
+    <!--<button mat-menu-item (click)="selectModel('three,population,percentage,nitrousOxide')">nitrousOxide</button>-->
+    <!--<button mat-menu-item (click)="selectModel('three,population,percentage,otherGreenhouseGas')">otherGreenhouseGas</button>-->
+    <!--<button mat-menu-item (click)="selectModel('three,population,percentage,totalGreenhouseGas')">totalGreenhouseGas</button>-->
     <!--</mat-menu>-->
 
     <mat-menu #renewableEnergy="matMenu">
@@ -118,9 +119,11 @@
       <button mat-menu-item (click)="selectModel('two,weather,averagePrecipitationDepth')">averagePrecipitationDepth</button>
     </mat-menu>
 
+  </div>
+
 
   <!--</mat-form-field>-->
-  <app-timeline-slider (change)="stateChanged($event)" ></app-timeline-slider>
+  <app-timeline-slider fxLayout="row"  (change)="stateChanged($event)" ></app-timeline-slider>
 </div>
 <div class="chart-container" fxLayout="row" fxLayoutWrap>
   <app-world-map class="world-map"></app-world-map>
