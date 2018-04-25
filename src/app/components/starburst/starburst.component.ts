@@ -8,6 +8,7 @@ import {
 import * as _ from 'lodash';
 import {colorSet20b, colorSetRed, colorSetGreen, colorSetBlue} from '../../../assets/colorSets/color-set';
 import {electricityChildren, emissionsChildren, populationChildren} from '../../../assets/colorSets/color-legend';
+import {legendMap} from '../../../assets/colorSets/legend-map';
 
 @Component({
   selector: 'app-starburst',
@@ -209,8 +210,6 @@ export class StarburstComponent implements OnInit {
 
         })
       .on('click', d => {
-          console.log('clicked', d);
-          console.log('this clicked', this);
           let parentElem = d.data.name;
           classObj.selectedName = parentElem;
           classObj.svg.transition()
@@ -230,19 +229,25 @@ export class StarburstComponent implements OnInit {
             if (e.x0 > d.x0 && e.x0 < d.x1) {
               // get a selection of the associated text element
               const arcText = classObj.d3.select(this.parentNode).select('text');
-              console.log('this', this);
-              console.log('this', this.parentElement.textContent);
 
               //let allText = classObj.d3.selectAll('.text-node').attr('display', 'none');
-
+              // let rotateValue = ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180);
+              // let reverse = false;
+              // if ((rotateValue > 100) || (rotateValue < -90)) {
+              //   reverse = true;
+              // }
               // fade in the text element and recalculate positions
               arcText.transition().duration(750)
                 .attr('opacity', 1)
                 .attr('class', 'visible')
-                .attr('transform', d => { return 'rotate(' +  ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180) + ')' })
+                .attr('transform', d => {
+                  let rotateValue = ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180);
+                  console.log('rotateValue', rotateValue)
+                  return 'rotate(' +  ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180) + ')'
+                })
                 .attr('x', d => { return classObj.y(d.y0); })
                 .style('display', d => {
-                  console.log('d', d);
+                  //console.log('d', d);
                   if (d.parent.data.name === parentElem && !d.children && d.data.name !== 'weather') {
                   //if (!d.children) {
                     return 'block';
@@ -250,7 +255,19 @@ export class StarburstComponent implements OnInit {
                   return 'none';
                 })
                 .text(d => {
-                  return d.data.name === 'root' ? '' : d.data.name
+                  const thisText = d.data.name;
+                  const needsMapping = _.find(legendMap, j => {
+                    const trimmed = j.name.replace(/\s/g, '');
+                    return trimmed.includes(thisText.replace(/\s/g, ''));
+                  });
+                  let displayName = '';
+                  if (needsMapping) {
+                    displayName = needsMapping.legendMap;
+                  } else {
+                    displayName = d.data.name;
+                  }
+                  
+                  return displayName;
                 });
             } else {
               const arcText = classObj.d3.select(this.parentNode).select('text');
@@ -258,7 +275,7 @@ export class StarburstComponent implements OnInit {
               arcText.transition().duration(750)
                 .attr('opacity', 0)
                 .style('display', d => {
-                  console.log('d', d);
+                  //console.log('d', d);
                   // if (classObj.totalLegendKey.includes(d.data.name) && d.data.name !== 'weather') {
                   //   return 'block';
                   // }
@@ -279,7 +296,19 @@ export class StarburstComponent implements OnInit {
       .attr('dy', '.35em') // vertical-align
       .style('display','none')
       .text(function(d) {
-        return d.data.name === 'root' ? '' : d.data.name;
+        const thisText = d.data.name;
+        const needsMapping = _.find(legendMap, j => {
+          const trimmed = j.name.replace(/\s/g, '');
+          return trimmed.includes(thisText.replace(/\s/g, ''));
+        });
+        let displayName = '';
+        if (needsMapping) {
+          displayName = needsMapping.legendMap;
+        } else {
+          displayName = d.data.name;
+        }
+        console.log('display name', displayName);
+        return displayName;
       });
   }
 
