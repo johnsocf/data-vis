@@ -126,7 +126,7 @@ export class StarburstComponent implements OnInit {
   data: any;
   svg: any;
   g: any;
-  margin = {top: 20, right: 10, bottom: 150, left: 100};
+  margin = {top: 40, right: 40, bottom: 60, left: 120};
   width: number = 360;
   height: number = 300;
   radius:number = (Math.min(this.width, this.height) / 2) - 10;
@@ -242,7 +242,7 @@ export class StarburstComponent implements OnInit {
                 .attr('class', 'visible')
                 .attr('transform', d => {
                   let rotateValue = ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180);
-                  console.log('rotateValue', rotateValue)
+                  //console.log('rotateValue', rotateValue)
                   return 'rotate(' +  ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180) + ')'
                 })
                 .attr('x', d => { return classObj.y(d.y0); })
@@ -266,7 +266,7 @@ export class StarburstComponent implements OnInit {
                   } else {
                     displayName = d.data.name;
                   }
-                  
+
                   return displayName;
                 });
             } else {
@@ -318,7 +318,7 @@ export class StarburstComponent implements OnInit {
       .attr('width', this.width + this.margin.left + this.margin.right)
       .attr('height', this.height + this.margin.top + this.margin.bottom)
       .append('g')
-      .attr('transform', 'translate(' + this.width / 2 + ',' + (this.height / 2 + 10) + ')');
+      .attr('transform', 'translate(' + ((this.width + this.margin.left + this.margin.right) / 2) + ',' + ((this.height + this.margin.top + this.margin.bottom) / 2 + 10) + ')');
   }
 
   setOrdinalScale() {
@@ -386,7 +386,7 @@ export class StarburstComponent implements OnInit {
       .attr('rx', li.r)
       .attr('ry', li.r)
       .attr('width', d => {
-        return d.length * 6;
+        return d.length * 9;
       })
       .attr('height', li.h)
       .style('fill', d => {
@@ -405,10 +405,10 @@ export class StarburstComponent implements OnInit {
 
     g.append('svg:text')
       .attr('width', d => {
-        return d.length * 7;
+        return d.length * 9;
       })
       .attr('y', li.h / 2)
-      .attr('dy', '0.25em')
+      .attr('dy', '0.19em')
       .attr('text-anchor', 'left')
       .text(function(d) {
         return d;

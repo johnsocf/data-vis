@@ -288,9 +288,11 @@ export class AttrRankGraphComponent implements OnInit {
         //console.log('bandwith', this.x2.bandwidth())
         //console.log('tests', (this.x2.bandwidth()/(currentWidth + 1)))
           let rects = this.svg.append('g')
-            .attr('transform', 'translate(' + (this.margin.left - (this.x2.bandwidth()/2)) + ',' + this.margin.top + ')')
+            .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')')
             .selectAll('g')
             .data(countryGroup.data)
+
+          //.attr('transform', 'translate(' + (this.margin.left - (this.x2.bandwidth()/2)) + ',' + this.margin.top + ')')
 
             // rects.exit()
             //   .attr('fill', 'red')
