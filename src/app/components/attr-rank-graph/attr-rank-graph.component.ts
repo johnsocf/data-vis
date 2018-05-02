@@ -26,6 +26,7 @@ export class AttrRankGraphComponent implements OnInit {
   private _setByDateSet: any;
   private _attrCategories: any;
   private _renderTimeout: any;
+  showBarChart = false;
 
   @Input()
 
@@ -138,7 +139,7 @@ export class AttrRankGraphComponent implements OnInit {
   xAxisCall: any;
   yAxisCall: any;
 
-  margin = {top: 20, right: 10, bottom: 150, left: 100};
+  margin = {top: 20, right: 10, bottom: 250, left: 320};
   width: number = 400;
   height: number = 400;
   y: any;
@@ -251,6 +252,7 @@ export class AttrRankGraphComponent implements OnInit {
       this.svg.selectAll(".x-axis").remove();
       this.svg.selectAll(".axis-label").remove();
       this.svg.selectAll(".y-axis").remove();
+      this.showBarChart = true;
       this.addTransition();
       this.buildScales();
       clearTimeout(this._renderTimeout);

@@ -29,8 +29,15 @@ export const colorSetRed = [
 '#df65b0',
 '#e7298a',
 '#ce1256',
-'#980043',
+'#67001f',
 '#67001f'
+];
+
+export const redSetComplimentWhiteText = [
+  '#67001f',
+  '#67001f',
+  '#ce1256',
+  '#e7298a'
 ];
 
 export const colorSetGreen = [
@@ -45,6 +52,13 @@ export const colorSetGreen = [
 '#004529'
 ];
 
+export const greenSetComplimentWhiteText = [
+  '#004529',
+  '#006837',
+  '#238443',
+  '#41ab5d'
+];
+
 export const colorSetBlue = [
 '#fff7fb',
 '#ece7f2',
@@ -55,4 +69,11 @@ export const colorSetBlue = [
 '#0570b0',
 '#045a8d',
 '#023858'
-]
+];
+
+export const blueSetComplimentWhiteText = [
+  '#023858',
+  '#045a8d',
+  '#0570b0',
+  '#3690c0'
+];

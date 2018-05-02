@@ -1,13 +1,17 @@
-<p>for attribute rankings, for a certain year slide to adjust:</p>
-<label>1960</label>
-<mat-slider
-class="example-margin"
-[max]="maxSlider"
-[min]="minSlider"
-[step]="1"
-[thumb-label]="true"
-[tick-interval]="1"
-(input)="onInputChange($event)"
->
-</mat-slider>
-<label>current</label>
+<div class="slider-container" fxLayout="column" fxLayoutAlign="center">
+  <p>adjust to investigate data for a certain year</p>
+  <div class="slider-set">
+    <label>1960</label>
+    <mat-slider
+      class="example-margin"
+      [max]="maxSlider"
+      [min]="minSlider"
+      [step]="1"
+      [thumb-label]="true"
+      [tick-interval]="1"
+      (input)="onInputChange($event)"
+    >
+    </mat-slider>
+    <label>current</label>
+  </div>
+</div>

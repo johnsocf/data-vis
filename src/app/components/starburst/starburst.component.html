@@ -1,6 +1,14 @@
-<h2>Attribute Rank World Scale</h2>
-<div id="legend"></div>
-<h3 [hidden]="!selectedName">Selected Closeup: {{selectedName}}</h3>
+<h2 [hidden]="!showStarburst">Attribute Rank World Scale MultiTiered Data</h2>
+
+<div id="breadcrumbs"></div>
+
+<div [hidden]="!selectedName">
+  <h3 class="country">Country: {{selectedCountry}}</h3>
+  <h3 class="country">Set: {{selectedSet}}</h3>
+  <h3 class="name">Indicator: {{selectedName}} </h3>
+  <h3 [hidden]="!selectedValue">World Rank value (1-10) contextual: {{selectedValue}}</h3></div>
 <div id="starburst-canvas" width="960" height="700"></div>
+<div id="legend"></div>
+
 
 

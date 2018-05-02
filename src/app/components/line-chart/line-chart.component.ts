@@ -113,7 +113,7 @@ export class LineChartComponent implements OnInit {
   xAxisCall: any;
   yAxisCall: any;
 
-  margin = {top: 20, right: 370, bottom: 150, left: 100};
+  margin = {top: 20, right: 370, bottom: 90, left: 150};
   width: number = 400;
   height: number = 400;
   y: any;

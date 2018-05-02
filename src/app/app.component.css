@@ -5,3 +5,35 @@
 .world-map {
   max-height: 450px;
 }
+
+h1, h2, h3 {
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 23px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 23px;
+  span {
+    font-weight: 600;
+  }
+}
+h3 {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+p, span {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}

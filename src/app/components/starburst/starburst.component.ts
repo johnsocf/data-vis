@@ -6,7 +6,9 @@ import {
   Selection
 } from 'd3-ng2-service';
 import * as _ from 'lodash';
-import {colorSet20b, colorSetRed, colorSetGreen, colorSetBlue} from '../../../assets/colorSets/color-set';
+import {
+  colorSet20b, colorSetRed, colorSetGreen, colorSetBlue,
+  redSetComplimentWhiteText, blueSetComplimentWhiteText, greenSetComplimentWhiteText} from '../../../assets/colorSets/color-set';
 import {electricityChildren, emissionsChildren, populationChildren} from '../../../assets/colorSets/color-legend';
 import {legendMap} from '../../../assets/colorSets/legend-map';
 
@@ -31,6 +33,10 @@ export class StarburstComponent implements OnInit {
   private _renderTimeout: any;
   private _nodeDataArray: any;
   private _classObj: any = this;
+  breadcrumbs;
+  lastCrumb;
+  selectedSet;
+  selectedCountry;
 
 
   @Input()
@@ -146,7 +152,23 @@ export class StarburstComponent implements OnInit {
   colorBlues: any;
 
   selectedName: string;
+  selectedValue: string;
   totalLegendKey:[];
+  showStarburst = false;
+
+  b = {
+    w: 60,
+    h: 30,
+    s: 3,
+    t: 10
+  };
+
+  li = {
+    w: 75,
+    h: 30,
+    s: 3,
+    r: 3
+  };
 
   constructor(
     element: ElementRef,
@@ -212,6 +234,8 @@ export class StarburstComponent implements OnInit {
       .on('click', d => {
           let parentElem = d.data.name;
           classObj.selectedName = parentElem;
+          console.log('selected value', d);
+          classObj.selectedValue = d.value;
           classObj.svg.transition()
           .duration(750)
           .tween('scale', () => {
@@ -288,6 +312,59 @@ export class StarburstComponent implements OnInit {
           });
       });
 
+    // const parentElem = d.data.name;
+    // console.log('hovered', d);
+    // const nodes = this.flatten(root);
+    // const n = nodes.find(d1 => {
+    //   return (d1.name === parentElem);
+    // })
+
+     this.svg.selectAll('.starburst-path').attr('opacity', 1).on('mouseover', d => {
+       const ancestors = this.getAncestors(d);
+        this.svg.selectAll('.starburst-path')
+          .attr('opacity', 0.3);
+       this.svg.selectAll('.starburst-path')
+          .filter(function(node) {
+            return (ancestors.indexOf(node) >= 0);
+          })
+          .attr('opacity', 1);
+        this.mouseOver(d);
+        let timer;
+        if (!timer) {
+          //timer = setTimeout(this.updateBreadcrumbs(ancestors, d.value, this), 1);
+          console.log('hover data', d);
+          if (d.depth == 3) {
+            classObj.selectedSet = d.parent.data.name;
+            classObj.selectedCountry = d.parent.parent.data.name;
+            classObj.selectedName = d.data.name;
+            if (d.value < 10 && d.value >= 0) {
+              classObj.selectedValue = d.value;
+            } else {
+              classObj.selectedValue = '';
+            }
+          }
+          if (d.depth == 2) {
+            classObj.selectedSet = d.data.name;
+            classObj.selectedCountry = d.parent.data.name;
+          }
+          if (d.depth == 1) {
+            classObj.selectedCountry = d.data.name;
+          }
+
+        }
+
+        //this.updateBreadcrumbs(ancestors, d.data.value);
+        //this.d3.select(this).style('cursor', 'pointer')
+
+      })
+      .on('mouseout', d => {
+        this.svg.selectAll('.starburst-path')
+          .attr('opacity', 1);
+        //console.log('mouse out', d);
+        this.d3.select('.breadcrumb-svg').remove();
+
+      });
+
     this.text = this.g.append('text')
       .attr('class', 'text-node')
       .attr('transform', d => {return 'rotate(' + ((this.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180) + ')'})
@@ -295,6 +372,29 @@ export class StarburstComponent implements OnInit {
       .attr('dx', '6') // margin
       .attr('dy', '.35em') // vertical-align
       .style('display','none')
+      .style('fill', d => {
+        let fillColor = '#000000';
+        if ('flare' == d.data.name) {
+          return '#000000';
+        }
+        if (electricityChildren.includes(d.data.name)) {
+          const color = this.colorReds(d.data.name);
+          if (redSetComplimentWhiteText.includes(color)) {
+            fillColor = '#FFFFFF';
+          }
+        } else if (emissionsChildren.includes(d.data.name)) {
+          const color = this.colorGreens(d.data.name);
+          if (greenSetComplimentWhiteText.includes(color)) {
+            fillColor = '#FFFFFF';
+          }
+        } else if (populationChildren.includes(d.data.name)) {
+          const color = this.colorBlues(d.data.name);
+          if (blueSetComplimentWhiteText.includes(color)) {
+            fillColor = '#FFFFFF';
+          }
+        }
+        return fillColor;
+      })
       .text(function(d) {
         const thisText = d.data.name;
         const needsMapping = _.find(legendMap, j => {
@@ -307,9 +407,150 @@ export class StarburstComponent implements OnInit {
         } else {
           displayName = d.data.name;
         }
-        console.log('display name', displayName);
         return displayName;
       });
+  }
+
+  breadcrumbPoints(d, i) {
+    let b = {
+      w: 100,
+      h: 30,
+      s: 3,
+      t: 10
+    }
+    var points = [];
+    points.push('0,0');
+    points.push(b.w + ',0');
+    points.push(b.w + b.t + ',' + (b.h / 2));
+    points.push(b.w + ',' + b.h);
+    points.push('0,' + b.h);
+
+    if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
+      points.push(b.t + ',' + (b.h / 2));
+    }
+    return points.join(' ');
+  }
+
+  updateBreadcrumbs(ancestors, value, context) {
+    let classObj = context;
+    classObj.drawBreadCrumbs();
+    let b = {
+      w: 60,
+      h: 30,
+      s: 3,
+      t: 10
+    };
+
+    let g = classObj.breadcrumbs.selectAll('g')
+      .data(ancestors);
+    let breadcrumb = g.enter().append('g');
+
+    breadcrumb
+      .append('polygon').classed('breadcrumbs-shape', true)
+      .attr('points', classObj.breadcrumbPoints)
+      .attr('class', 'crumb')
+      .attr('fill', d => {
+        if ('flare' == d.data.name) {
+          return '#000000';
+        }
+        if (d.children && classObj._countryNames.includes(d.data.name)) {
+          return classObj.color(d.data.name);
+        }
+        if (electricityChildren.includes(d.data.name)) {
+          return classObj.colorReds(d.data.name);
+        } else if (emissionsChildren.includes(d.data.name)) {
+          return classObj.colorGreens(d.data.name);
+        } else if (populationChildren.includes(d.data.name)) {
+          return classObj.colorBlues(d.data.name);
+        }
+        return '#BADA55';
+
+      })
+
+
+    breadcrumb
+      .append('text').classed('breadcrumbs-text', true)
+      .attr('x', (b.w + b.t) / 2)
+      .attr('y', b.h / 2)
+      .attr('dy', '0.35em')
+      .attr('font-size', '10px')
+      .attr('text-anchor', 'left')
+      .text(function(d) {
+        const thisText = d.data.name;
+        const needsMapping = _.find(legendMap, j => {
+          const trimmed = j.name.replace(/\s/g, '');
+          return trimmed.includes(thisText.replace(/\s/g, ''));
+        });
+        let displayName = '';
+        if (needsMapping) {
+          displayName = needsMapping.legendMap;
+        } else {
+          displayName = d.data.name;
+        }
+
+        return displayName;
+      });
+
+    // Set position for entering and updating nodes.
+    g.attr('class', 'g-crumb').attr('transform', function(d, i) {
+      console.log('transform i', d);
+      if (this._countryNames.includes(d)) {
+
+        return 'translate(' + 0 * (b.w + b.s) + ', 0)';
+      }
+      if (['emissions', 'population', 'electricityProduction'].includes(d)) {
+        return 'translate(' + 1 * (b.w + b.s) + ', 0)';
+      }
+      return 'translate(' + 2 * (b.w + b.s) + ', 0)';
+    });
+
+    // Remove exiting nodes.
+    g.exit().remove();
+
+    // Update percentage at the lastCrumb.
+    this.lastCrumb
+      .attr('x', (ancestors.length + 0.5) * (b.w + b.s))
+      .attr('y', b.h / 2)
+      .attr('dy', '0.35em')
+      .attr('text-anchor', 'left')
+      .attr('fill', 'black')
+      .attr('font-weight', 600)
+      .text(d => {
+        if (value < 10 && value >= 0) {
+          classObj.selectedValue = value;
+        } else {
+          classObj.selectedValue = '';
+        }
+      });
+  }
+
+  mouseOver(n) {
+    //console.log('test', n.data);
+  }
+
+  flatten(root) {
+    let nodes = [],
+      i = 0;
+
+    function recurse(node) {
+      if (node.children) {node.children.forEach(recurse)};
+      if (!node.id) {node.id = ++i};
+      nodes.push(node);
+    }
+
+    recurse(root);
+    return nodes;
+  }
+
+  getAncestors(node) {
+    var path = [];
+    var current = node;
+
+    while (current.parent) {
+      path.unshift(current);
+      current = current.parent;
+    }
+    return path;
   }
 
   setSVG() {
@@ -333,11 +574,13 @@ export class StarburstComponent implements OnInit {
 
   update() {
     if (this.svg && this._nodeDataArray && this._dataloaded) {
+      this.showStarburst = true;
       this.svg.selectAll('path.line').remove();
       this.svg.selectAll('path').remove();
       this.svg.selectAll('g').remove();
       this.svg.selectAll('text').remove();
       this.d3.select('#legend-svg').remove();
+      this.d3.select('.breadcrumb-svg').remove();
       this.selectedName = '';
 
       this.setOrdinalScale();
@@ -346,6 +589,7 @@ export class StarburstComponent implements OnInit {
       this.arcFunction();
       this.buildStarburst();
       this.drawLegend();
+      this.drawBreadCrumbs();
     }
   }
 
@@ -362,34 +606,38 @@ export class StarburstComponent implements OnInit {
     this.totalLegendKey = [...electricityChildren, ...emissionsChildren, ...populationChildren];
     // Dimensions of legend item: width, height, spacing, radius of rounded rect.
     const li = {
-      w: 75, h: 15, s: 3, r: 3
+      w: 75, h: 27, s: 3, r: 3
     };
 
     const legend = this.d3.select('#legend').append('svg:svg')
       .attr('id', 'legend-svg')
-      .attr('width', '700px')
+      .attr('width', '600px')
       .attr('height', d => {
         return this.totalLegendKey.length * (li.h + li.s);
       });
     let objElement = this;
 
-
+    let classObj = this;
     let g = legend.selectAll('g')
       .attr('id', 'legend')
       .data(this.totalLegendKey)
       .enter().append('svg:g')
       .attr('transform', function(d, i) {
-        return 'translate(0,' + i * (li.h + li.s) + ')';
+        if (['emissions', 'population', 'electricityProduction'].includes(d)) {
+          return 'translate(0,' + i * (li.h + li.s) + ')';
+        }
+        return 'translate(25,' + i * (li.h + li.s) + ')';
       });
 
     g.append('svg:rect')
       .attr('rx', li.r)
       .attr('ry', li.r)
       .attr('width', d => {
-        return d.length * 9;
+        return 700;
       })
       .attr('height', li.h)
       .style('fill', d => {
+        //console.log('legend d', d);
         if ('flare' == d) {
           return '#FFFFFF';
         }
@@ -410,9 +658,40 @@ export class StarburstComponent implements OnInit {
       .attr('y', li.h / 2)
       .attr('dy', '0.19em')
       .attr('text-anchor', 'left')
+      .attr('x', 14)
+      .style('fill', d => {
+        let fillColor = '#000000';
+        if (electricityChildren.includes(d)) {
+          const color = this.colorReds(d);
+          if (redSetComplimentWhiteText.includes(color)) {
+            fillColor = '#FFFFFF';
+          }
+        } else if (emissionsChildren.includes(d)) {
+          const color = this.colorGreens(d);
+          if (greenSetComplimentWhiteText.includes(color)) {
+            fillColor = '#FFFFFF';
+          }
+        } else if (populationChildren.includes(d)) {
+          const color = this.colorBlues(d);
+          if (blueSetComplimentWhiteText.includes(color)) {
+            fillColor = '#FFFFFF';
+          }
+        }
+        return fillColor;
+      })
       .text(function(d) {
         return d;
       });
+  }
+
+  drawBreadCrumbs() {
+    let classObj = this;
+     this.breadcrumbs = this.d3.select('#breadcrumbs').append('svg:svg')
+      .attr('class', 'breadcrumb-svg')
+      .attr('width', '600px')
+      .attr('height', '70px');
+    this.lastCrumb = this.breadcrumbs
+      .append('text').classed('lastCrumb', true);
   }
 
 }
