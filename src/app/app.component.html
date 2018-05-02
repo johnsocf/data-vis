@@ -135,14 +135,11 @@
   <div class="attr-container" fxLayout="row">
     <app-world-map class="world-map"></app-world-map>
     <app-line-chart class="line-chart" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></app-line-chart>
-
   </div>
-
 
   <div class="attr-container" fxLayout="row">
-    <app-starburst [year]="yearSet" class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></app-starburst>
-
-    <attr-rank-bar-graph [year]="yearSet" class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></attr-rank-bar-graph>
-  </div>
+    <attr-rank-bar-graph [year]="yearSet" fxFlex="35" class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></attr-rank-bar-graph>
+    <app-starburst [year]="yearSet" fxLayout="row" fxFlex="65" class="bar-chart" [singleAttrSet]="attrSelectionSet" [multiTierAttrSet]="secondTeirSelectionSet" [colorSet]="colorMap" [countryNames]="countrySelections" [selectedInitial]="selectionSet" [dataSet]="lists"></app-starburst>
+   </div>
 </div>
 

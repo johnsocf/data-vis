@@ -346,9 +346,14 @@ export class StarburstComponent implements OnInit {
           if (d.depth == 2) {
             classObj.selectedSet = d.data.name;
             classObj.selectedCountry = d.parent.data.name;
+            classObj.selectedName = '';
+            classObj.selectedValue = '';
           }
           if (d.depth == 1) {
             classObj.selectedCountry = d.data.name;
+            classObj.selectedSet = '';
+            classObj.selectedName = '';
+            classObj.selectedValue = '';
           }
 
         }

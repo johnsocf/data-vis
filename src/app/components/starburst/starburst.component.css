@@ -31,3 +31,12 @@ p, span {
   font-weight: 400;
   line-height: 23px;
 }
+
+.detail-container {
+  max-width: 405px;
+  width: 400px;
+  .detail {
+    clear: both;
+    display: block;
+  }
+}
