@@ -262,8 +262,8 @@ export class StarburstComponent implements OnInit {
               // }
               // fade in the text element and recalculate positions
               arcText.transition().duration(750)
-                .attr('opacity', 1)
-                .attr('class', 'visible')
+                //.attr('opacity', 1)
+                //.attr('class', 'visible')
                 .attr('transform', d => {
                   let rotateValue = ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180);
                   //console.log('rotateValue', rotateValue)
@@ -626,7 +626,7 @@ export class StarburstComponent implements OnInit {
     let g = legend.selectAll('g')
       .attr('id', 'legend')
       .data(this.totalLegendKey)
-      .enter().append('svg:g')
+      .enter().append('svg:g').attr('class', 'legend-text')
       .attr('transform', function(d, i) {
         if (['emissions', 'population', 'electricityProduction'].includes(d)) {
           return 'translate(0,' + i * (li.h + li.s) + ')';
@@ -660,10 +660,12 @@ export class StarburstComponent implements OnInit {
       .attr('width', d => {
         return d.length * 9;
       })
+      .attr('class', 'legend-text')
       .attr('y', li.h / 2)
       .attr('dy', '0.19em')
       .attr('text-anchor', 'left')
       .attr('x', 14)
+      .style('font-family', 'Courier New')
       .style('fill', d => {
         let fillColor = '#000000';
         if (electricityChildren.includes(d)) {

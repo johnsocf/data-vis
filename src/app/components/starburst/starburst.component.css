@@ -23,6 +23,15 @@ h3, h2 {
   font-weight: 500;
   line-height: 23px;
 }
+h2 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  vertical-align: top;
+  margin-bottom: 39px;
+  line-height: 0;
+  font-weight: 900;
+}
 p, span {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 14px;
@@ -30,6 +39,13 @@ p, span {
   font-variant: normal;
   font-weight: 400;
   line-height: 23px;
+}
+
+.legend-text {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
 }
 
 .detail-container {
@@ -40,3 +56,8 @@ p, span {
     display: block;
   }
 }
+
+.selected-value, .detail {
+  font-weight: 900;
+}
+

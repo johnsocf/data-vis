@@ -9,7 +9,7 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'attr-rank-bar-graph',
-  template: '<div id="canvas" width="800" height="60"></div>',
+  templateUrl: './attr-rank-graph.component.html',
   styleUrls: ['./attr-rank-graph.component.css']
 })
 export class AttrRankGraphComponent implements OnInit {
@@ -122,8 +122,6 @@ export class AttrRankGraphComponent implements OnInit {
         }
       }, []);
       this.update();
-      //console.log('data by set', this._setByDateSet);
-      //console.log('attr categories', this._attrCategories);
     }
   }
 

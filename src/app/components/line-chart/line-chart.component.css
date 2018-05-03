@@ -2,3 +2,13 @@
   fill: lightsteelblue;
   stroke-width: 0;
 }
+
+h2 {
+  font-weight: 900;
+  text-align: center;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 23px;
+}

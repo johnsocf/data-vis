@@ -51,7 +51,7 @@ import {hasOwnProperty} from "tslint/lib/utils";
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'C.L.I.M.A.T.E';
-  subref = 'Climate Level Indicator & Mapping And Tracking Environment';
+  subref = 'Climate Level Indicator Mapping & Tracking Environment';
   subtitle = 'select from map and attribute list';
   private highIncomeCountries;
   private upperMiddleIncomeCountries;

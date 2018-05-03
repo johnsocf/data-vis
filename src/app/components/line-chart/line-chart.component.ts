@@ -7,6 +7,7 @@ import {
 } from 'd3-ng2-service';
 import {countryMap} from '../../../assets/maps/country-maps';
 import * as _ from 'lodash';
+import {legendMap} from "../../../assets/colorSets/legend-map";
 
 @Component({
   selector: 'app-line-chart',
@@ -24,6 +25,7 @@ export class LineChartComponent implements OnInit {
   private _aggregatedDataCountrySelections: any = [];
   private _aggregatedDataCountrySelectionsNoData: any = [];
   private _colorMap: any = {};
+  showLineChart = false;
 
 
   @Input()
@@ -113,7 +115,7 @@ export class LineChartComponent implements OnInit {
   xAxisCall: any;
   yAxisCall: any;
 
-  margin = {top: 20, right: 370, bottom: 90, left: 150};
+  margin = {top: 20, right: 370, bottom: 90, left: 200};
   width: number = 400;
   height: number = 400;
   y: any;
@@ -361,7 +363,7 @@ export class LineChartComponent implements OnInit {
       this.svg.selectAll(".axis-label").remove();
       this.svg.selectAll(".y-axis").remove();
       this.svg.selectAll(".legend").remove();
-      console.log('line chart update')
+      this.showLineChart = true;
 
       this.addTransition();
       //toDo: break this out
@@ -456,7 +458,19 @@ export class LineChartComponent implements OnInit {
       .attr('font-size', '20px')
       .attr('text-anchor', 'middle')
       .attr('transform', 'rotate(-90)')
-      .text(this._indicatorName);
+      .text(t => {
+        let displayName = this._indicatorName;
+        console.log('map');
+        const needsMapping = _.find(legendMap, j => {
+          const trimmed = j.name.replace(/\s/g, '');
+          return trimmed.includes(this._indicatorName.replace(/\s/g, ''));
+        });
+        if (needsMapping) {
+          displayName = needsMapping.legendMap;
+        }
+        console.log('display name');
+        return displayName;
+      });
 
     // this.timeLabel = this.g.append('text')
     //   .attr('x', this.height - 10)

@@ -1,17 +1,17 @@
 <div class="total-container"  fxLayout="column" fxLayoutAlign="center">
   <h2 [hidden]="!showStarburst">Attribute Rank World Scale MultiTiered Data</h2>
   <div class="content-container" fxLayout="row">
-    <div fxFlex="35" id="starburst-canvas" width="960" height="700"></div>
-    <div fxFlex="25" class="detail-container" [hidden]="!showStarburst">
-      <p [hidden]="!showStarburst">(Hover and click on graph for further details)</p>
-      <span [hidden]="!selectedCountry" class="country">Country: </span>
+    <div fxFlex="30" id="starburst-canvas" width="960" height="700"></div>
+    <div fxFlex="30" class="detail-container" [hidden]="!showStarburst">
+      <p class="directions" [hidden]="!showStarburst">(Hover and click on graph for further details)</p>
+      <span [hidden]="!selectedCountry" class="country title">Country: </span>
       <h3 class="detail">{{selectedCountry}}</h3>
-      <span [hidden]="!selectedSet" class="country">Set: </span>
+      <span [hidden]="!selectedSet" class="country title">Set: </span>
       <h3 class="detail">{{selectedSet}}</h3>
-      <span [hidden]="!selectedName" class="name">Indicator:</span>
+      <span [hidden]="!selectedName" class="name title">Indicator:</span>
       <h3 class="detail">{{selectedName}}</h3>
-      <span [hidden]="!selectedValue">World Rank value (1-10) contextual: </span>
-      <h3 class="detail">{{selectedValue}}</h3>
+      <span class="title" [hidden]="!selectedValue">World Rank value (1-10) contextual: </span>
+      <h3 class="detail selected-value">{{selectedValue}}</h3>
     </div>
     <div fxFlex="40" id="legend"></div>
   </div>
