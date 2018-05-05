@@ -472,12 +472,6 @@ export class LineChartComponent implements OnInit {
         return displayName;
       });
 
-    // this.timeLabel = this.g.append('text')
-    //   .attr('x', this.height - 10)
-    //   .attr('y', this.width - 40)
-    //   .attr('font-size', '20px')
-    //   .attr('text-anchor', 'middle')
-    //   .text('1960');
   }
 
   generateAxises() {

@@ -297,7 +297,7 @@ export class StarburstComponent implements OnInit {
               const arcText = classObj.d3.select(this.parentNode).select('text');
 
               arcText.transition().duration(750)
-                .attr('opacity', 0)
+                //.attr('opacity', 0)
                 .style('display', d => {
                   //console.log('d', d);
                   // if (classObj.totalLegendKey.includes(d.data.name) && d.data.name !== 'weather') {
