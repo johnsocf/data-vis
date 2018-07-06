@@ -200,7 +200,8 @@ export class LineChartComponent implements OnInit {
   }
 
   setOrdinalScale() {
-    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10.reverse());
+    //this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10.reverse());
+    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10);
   }
 
   buildScales() {
@@ -547,10 +548,10 @@ export class LineChartComponent implements OnInit {
       .ticks(10)
       .tickPadding(10)
       .tickValues( this.d3.range(this.xrange[0], this.xrange[1], 5))
-      .tickFormat( d => d);
+      .tickFormat(d => {return d;});
     this.yAxisCall = this.d3.axisLeft(this.y)
       .ticks(6)
-      .tickFormat( d => d);
+      .tickFormat(d => {return d;});
 
 
     // console.log('this y', this.y)

@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import {
   D3Service,
   D3,
-  Selection
+  Selection,
+  Transition
 } from 'd3-ng2-service';
 import * as _ from 'lodash';
 import {
@@ -153,7 +154,7 @@ export class StarburstComponent implements OnInit {
 
   selectedName: string;
   selectedValue: string;
-  totalLegendKey:[];
+  totalLegendKey: any;
   showStarburst = false;
 
   b = {
@@ -195,10 +196,10 @@ export class StarburstComponent implements OnInit {
 
   arcFunction() {
     this.arc = this.d3.arc()
-      .startAngle(d =>  { return Math.max(0, Math.min(2 * Math.PI, this.x(d.x0))); })
-      .endAngle(d =>  { return Math.max(0, Math.min(2 * Math.PI, this.x(d.x1))); })
-      .innerRadius(d =>  {return Math.max(0, this.y(d.y0)); })
-      .outerRadius(d => { return Math.max(0, this.y(d.y1)); });
+      .startAngle(d =>  { return Math.max(0, Math.min(2 * Math.PI, this.x(d['x0']))); })
+      .endAngle(d =>  { return Math.max(0, Math.min(2 * Math.PI, this.x(d['x1']))); })
+      .innerRadius(d =>  {return Math.max(0, this.y(d['y0'])); })
+      .outerRadius(d => { return Math.max(0, this.y(d['y1'])); });
   }
 
   buildStarburst() {
@@ -252,7 +253,7 @@ export class StarburstComponent implements OnInit {
             // check if the animated element's data e lies within the visible angle span given in d
             if (e.x0 > d.x0 && e.x0 < d.x1) {
               // get a selection of the associated text element
-              const arcText = classObj.d3.select(this.parentNode).select('text');
+              classObj.d3.select(this.parentNode).select('text')
 
               //let allText = classObj.d3.selectAll('.text-node').attr('display', 'none');
               // let rotateValue = ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180);
@@ -261,25 +262,25 @@ export class StarburstComponent implements OnInit {
               //   reverse = true;
               // }
               // fade in the text element and recalculate positions
-              arcText.transition().duration(750)
+              .transition().duration(750)
                 //.attr('opacity', 1)
                 //.attr('class', 'visible')
                 .attr('transform', d => {
-                  let rotateValue = ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180);
+                  let rotateValue = ((classObj.x((d['x0'] + d['x1'])/2) - Math.PI / 2) / Math.PI * 180);
                   //console.log('rotateValue', rotateValue)
-                  return 'rotate(' +  ((classObj.x((d.x0 + d.x1)/2) - Math.PI / 2) / Math.PI * 180) + ')'
+                  return 'rotate(' +  ((classObj.x((d['x0'] + d['x1'])/2) - Math.PI / 2) / Math.PI * 180) + ')'
                 })
-                .attr('x', d => { return classObj.y(d.y0); })
+                .attr('x', d => { return classObj.y(d['y0']); })
                 .style('display', d => {
                   //console.log('d', d);
-                  if (d.parent.data.name === parentElem && !d.children && d.data.name !== 'weather') {
+                  if (d['parent']['data']['name'] === parentElem && !d['children'] && d['data']['name'] !== 'weather') {
                   //if (!d.children) {
                     return 'block';
                   }
                   return 'none';
                 })
                 .text(d => {
-                  const thisText = d.data.name;
+                  const thisText = d['data']['name'];
                   const needsMapping = _.find(legendMap, j => {
                     const trimmed = j.name.replace(/\s/g, '');
                     return trimmed.includes(thisText.replace(/\s/g, ''));
@@ -288,7 +289,7 @@ export class StarburstComponent implements OnInit {
                   if (needsMapping) {
                     displayName = needsMapping.legendMap;
                   } else {
-                    displayName = d.data.name;
+                    displayName = d['data']['name'];
                   }
 
                   return displayName;
@@ -306,7 +307,7 @@ export class StarburstComponent implements OnInit {
                   return 'none';
                 })
                 .text(d => {
-                  return d.data.name === 'root' ? '' : d.data.name
+                  return d['data']['name'] === 'root' ? '' : d['data']['name'];
                 });
             }
           });
@@ -628,7 +629,8 @@ export class StarburstComponent implements OnInit {
       .data(this.totalLegendKey)
       .enter().append('svg:g').attr('class', 'legend-text')
       .attr('transform', function(d, i) {
-        if (['emissions', 'population', 'electricityProduction'].includes(d)) {
+        console.log('d', d);
+        if (['emissions', 'population', 'electricityProduction'].includes(d.toString())) {
           return 'translate(0,' + i * (li.h + li.s) + ')';
         }
         return 'translate(25,' + i * (li.h + li.s) + ')';
@@ -646,11 +648,11 @@ export class StarburstComponent implements OnInit {
         if ('flare' == d) {
           return '#FFFFFF';
         }
-        if (electricityChildren.includes(d)) {
+        if (electricityChildren.includes(d.toString())) {
           return this.colorReds(d);
-        } else if (emissionsChildren.includes(d)) {
+        } else if (emissionsChildren.includes(d.toString())) {
           return this.colorGreens(d);
-        } else if (populationChildren.includes(d)) {
+        } else if (populationChildren.includes(d.toString())) {
           return this.colorBlues(d);
         }
         return '#BADA55';
@@ -658,7 +660,7 @@ export class StarburstComponent implements OnInit {
 
     g.append('svg:text')
       .attr('width', d => {
-        return d.length * 9;
+        return d['length'] * 9;
       })
       .attr('class', 'legend-text')
       .attr('y', li.h / 2)
@@ -668,17 +670,17 @@ export class StarburstComponent implements OnInit {
       .style('font-family', 'Courier New')
       .style('fill', d => {
         let fillColor = '#000000';
-        if (electricityChildren.includes(d)) {
+        if (electricityChildren.includes(d.toString())) {
           const color = this.colorReds(d);
           if (redSetComplimentWhiteText.includes(color)) {
             fillColor = '#FFFFFF';
           }
-        } else if (emissionsChildren.includes(d)) {
+        } else if (emissionsChildren.includes(d.toString())) {
           const color = this.colorGreens(d);
           if (greenSetComplimentWhiteText.includes(color)) {
             fillColor = '#FFFFFF';
           }
-        } else if (populationChildren.includes(d)) {
+        } else if (populationChildren.includes(d.toString())) {
           const color = this.colorBlues(d);
           if (blueSetComplimentWhiteText.includes(color)) {
             fillColor = '#FFFFFF';
@@ -687,7 +689,7 @@ export class StarburstComponent implements OnInit {
         return fillColor;
       })
       .text(function(d) {
-        return d;
+        return d.toString();
       });
   }
 

@@ -118,7 +118,7 @@ export class AttrRankGraphComponent implements OnInit {
 
       this._attrCategories = _.reduce(this._setByDateSet, (flattened, country) => {
         if (this.dataLoaded(country)) {
-          return _.uniq(flattened.concat(_.map(country.data, d => d.rankings.attribute)));
+          return _.uniq(flattened.concat(_.map(country.data, d => d['rankings']['attribute'])));
         }
       }, []);
       this.update();
@@ -181,7 +181,8 @@ export class AttrRankGraphComponent implements OnInit {
   setOrdinalScale() {
     this.color = this.d3.scaleOrdinal()
       .domain(this.countryDomain)
-      .range(this.d3.schemeCategory10.reverse());
+      .range(this.d3.schemeCategory10);
+      //.range(this.d3.schemeCategory10.reverse());
   }
 
   buildScales() {
@@ -328,7 +329,10 @@ export class AttrRankGraphComponent implements OnInit {
                 //console.log('attribute d', d.key);
                 //console.log('scaled key', this.x(d.key));
                 //console.log('strange scaled key', this.x(d.key) + (i * this.x2.bandwidth()/currentWidth) + 5);
-                return this.x(d.key) + (i * this.x2.bandwidth()/currentWidth) + 5;
+                let num = +this.x(d.key);
+                let mult_by_index = +(+i * this.x2.bandwidth());
+                let bandwidth_calc = +(mult_by_index/currentWidth);
+                return num + bandwidth_calc + 5;
               })
               .attr('y', d => {
                 //console.log('ranking value in y', d.value);

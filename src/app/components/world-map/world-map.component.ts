@@ -66,7 +66,8 @@ export class WorldMapComponent implements OnInit {
   }
 
   setOrdinalScale() {
-    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10.reverse());
+    //this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10.reverse());
+    this.color = this.d3.scaleOrdinal(this.d3.schemeCategory10);
   }
 
   setSVG() {
