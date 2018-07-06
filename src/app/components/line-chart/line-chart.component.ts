@@ -548,10 +548,10 @@ export class LineChartComponent implements OnInit {
       .ticks(10)
       .tickPadding(10)
       .tickValues( this.d3.range(this.xrange[0], this.xrange[1], 5))
-      .tickFormat(d => {return d;});
+      .tickFormat(this.d3.format(" "));
     this.yAxisCall = this.d3.axisLeft(this.y)
       .ticks(6)
-      .tickFormat(d => {return d;});
+      .tickFormat(this.d3.format(" "));
 
 
     // console.log('this y', this.y)
